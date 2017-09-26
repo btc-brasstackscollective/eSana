@@ -383,11 +383,11 @@ nav
         -webkit-box-pack: end;
         -moz-box-pack: end;
         box-pack: end;
-        -webkit-justify-content: end;
-        -moz-justify-content: end;
-        -ms-justify-content: end;
-        -o-justify-content: end;
-        justify-content: end;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+        -o-justify-content: flex-end;
+        justify-content: flex-end;
         -ms-flex-pack: end;
         display: -webkit-box;
         display: -moz-box;
@@ -705,11 +705,11 @@ footer
       -webkit-box-pack: end;
       -moz-box-pack: end;
       box-pack: end;
-      -webkit-justify-content: end;
-      -moz-justify-content: end;
-      -ms-justify-content: end;
-      -o-justify-content: end;
-      justify-content: end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      -o-justify-content: flex-end;
+      justify-content: flex-end;
       -ms-flex-pack: end; }
       body
 footer
@@ -729,11 +729,11 @@ footer
       -webkit-box-pack: end;
       -moz-box-pack: end;
       box-pack: end;
-      -webkit-justify-content: end;
-      -moz-justify-content: end;
-      -ms-justify-content: end;
-      -o-justify-content: end;
-      justify-content: end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      -o-justify-content: flex-end;
+      justify-content: flex-end;
       -ms-flex-pack: end;
       color: #f26e6d;
       line-height: 1; }

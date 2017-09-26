@@ -104,7 +104,7 @@ body
 				
 				#utility_nav_slide_right
 				{
-					@include justify-content(end);
+					@include justify-content(flex-end);
 					@include display(flex);
 					
 					#nav_links
@@ -411,7 +411,7 @@ body
 				
 		.footer_social_links
 		{
-			@include justify-content(end);
+			@include justify-content(flex-end);
 			
 			a
 			{
@@ -428,7 +428,7 @@ body
 		
 		.copyright_content
 		{
-			@include justify-content(end);
+			@include justify-content(flex-end);
 			
 			color:$brand_red;
 			line-height:1;
