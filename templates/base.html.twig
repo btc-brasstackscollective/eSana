@@ -1,0 +1,144 @@
+{# app/Resources/views/base.html.twig #}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ baseUrl }}/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	
+	<!-- Montserrat Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	
+	<!-- Site CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ baseUrl }}/assets/css/style.css" />
+</head>
+
+<body>
+
+	
+	Test {{ routeName }}
+
+	<article>
+		<!-- Header Navigation -->
+		<header>
+			<nav id="main_navigation" class="navbar" role="navigation">
+				<div id="navigation_bar_container" class="content_container va-item">
+					<div class="va-item col-xs-12 no-gutter">
+		                <div class="navbar-header">
+		                    <button type="button" class="navbar-toggle" data-toggle="" data-target="#utility_nav_slide_right">
+		                        <span class="sr-only">Toggle navigation</span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                    </button>
+		                </div>
+		
+		                <!-- eSana Logo -->
+		                <div class="esana_logo no-gutter col-md-3 col-sm-4 col-xs-10">
+		                    <a href="/" title="">
+		                        <img src="{{ baseUrl }}/assets/img/common/img-esana-logo.png" alt="eSana" class="img-responsive" />
+		                    </a>
+		                </div>
+		
+		                <div id="utility_nav_slide_right" class="utility_nav pull-right text-right col-md-9 col-sm-8">
+		                    <div id="nav_links" class="nav navbar-nav social_links">
+								<ul>
+									<li>
+										<a href="/">Home</a>
+									</li>
+									<li>
+										<a href="/plans">Plans</a>
+									</li>
+									<li>
+										<a href="/tools">Tools</a>
+									</li>
+									<li>
+										<a href="/mission">Mission</a>
+									</li>
+									<li>
+										<a href="/contact">Contact</a>
+									</li>
+								</ul>
+		                    </div>
+		                    
+		                    <div class="nav_contact_number" class="">
+		                        <span>1-800-867-5309</span>
+		                    </div>
+		                </div>
+					</div>
+	            </div>
+			</nav>
+		</header>
+		
+		<!-- Body Content -->
+		<section>
+			{% block body %}{% endblock %}
+		</section>
+	
+		<footer>
+			<div class="content_container">
+				<div class="clear">
+					<div class="col-xs-12 no-gutter va-item">
+						<div class="nav_contact_number col-xs-6 no-gutter">
+	                        <span>1-800-867-5309</span>
+	                    </div>
+	                    
+	                    <!-- Social Links -->
+	                    <div class="footer_social_links col-xs-6 va-item">
+		                    <a href="" target="_blank">
+			                    <img src="{{ baseUrl }}/assets/img/common/img-instagram-icon.png" alt="" class="img-responsive" />
+		                    </a>
+		                    <a href="" target="_blank">
+			                    <img src="{{ baseUrl }}/assets/img/common/img-facebook-icon.png" alt="" class="img-responsive" />
+		                    </a>
+		                    <a href="" target="_blank">
+			                    <img src="{{ baseUrl }}/assets/img/common/img-twitter-icon.png" alt="" class="img-responsive" />
+		                    </a>
+		                    <a href="" target="_blank">
+			                    <img src="{{ baseUrl }}/assets/img/common/img-youtube-icon.png" alt="" class="img-responsive" />
+		                    </a>
+	                    </div>
+					</div>
+				</div>
+				
+				<div class="divider col-xs-12"></div>
+				
+				<div class="clear">
+					<div class="col-xs-12 no-gutter va-item">
+						<div class="esana_logo no-gutter col-md-3 col-sm-4 col-xs-12">
+		                    <a href="/" title="">
+		                        <img src="{{ baseUrl }}/assets/img/common/img-esana-logo.png" alt="eSana" class="img-responsive" />
+		                    </a>
+		                </div>
+	                
+						<div class="copyright_content va-item col-md-9 col-sm-8 col-xs-12">
+							&copy; eSANA Health, LLC. All Rights Reserved
+							
+							<div class="copyright_content_links va-item">
+								<a class="va-item" href="">Privacy Policy</a>
+								<a class="va-item" href="">Terms of Use</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</article>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="{{ baseUrl }}/bower_components/jquery/dist/jquery.min.js"></script>
+	
+	<!-- Bootstrap JS -->
+	<script type="text/javascript" src="{{ baseUrl }}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<!-- Common JS -->
+	<script type="text/javascript" src="{{ baseUrl }}/assets/js/common.js"></script>
+</body>
+
+</html>
