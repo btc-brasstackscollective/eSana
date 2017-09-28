@@ -15,18 +15,21 @@
 	<!-- Montserrat Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	
+	<!-- Oswald Font -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> 
+	
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ baseUrl }}/assets/css/style.css" />
 </head>
 
-<body>
+<body class="{% block bodyClass %}{% endblock %}">
 
 	<article>
 		<!-- Header Navigation -->
 		<header>
 			<nav id="main_navigation" class="navbar" role="navigation">
 				<div id="navigation_bar_container" class="content_container va-item">
-					<div class="va-item col-xs-12 no-gutter">
+					<div class="va-item col-xs-12">
 		                <div class="navbar-header">
 		                    <button type="button" class="navbar-toggle" data-toggle="" data-target="#utility_nav_slide_right">
 		                        <span class="sr-only">Toggle navigation</span>
