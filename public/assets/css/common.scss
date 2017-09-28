@@ -279,6 +279,13 @@ body
 				color:$white;
 			}
 		}
+
+		&.red
+		{
+			border:solid 3px $brand_red;
+			color:$brand_blue;
+			background-color: $white;
+		}
 		
 		@media only screen and (max-width : 768px)
 		{
@@ -404,7 +411,210 @@ body
 		margin:15px 0;
 		width:100%;
 	}
+
+	.our-plans
+	{
+		margin-bottom: 75px;
+
+		h2
+		{
+			color:$brand_red;
+			font-weight: 300;
+			margin-bottom: 25px;
+		}
+
+		p
+		{
+			color:$gray_body_copy;
+		}
+	}
+
+	.price
+	{
+		height: 195px;
+		border: 6px solid $brand_red;	
+		background-color: $white;
+		border-radius: 50%;
+		text-align: center;
+		margin-top: -115px;
+
+		h3
+		{
+			color:$brand_blue;
+			font-size: 72px;
+			margin-top: 20%;
+			padding: 10px;
+
+			sup
+			{
+				font-size: 45%;
+				top: -1em;
+			}
+		}
+	}
+
+	.dental-plus
+	{
+
+		background-color:$brand_red;
+		background-image: url(/assets/img/plans/ToothPattern.png);
+
+		.content_container
+		{
+			padding: 20px 0px;
+		}
+
+		h2
+		{
+			font-size: 6.5em;
+			font-weight: 500;
+			margin-bottom:30px;
+		}
+
+		h4
+		{
+			color:$white;
+			font-size: 2.5em;
+			font-weight: 300; 
+		}
+
+		.btn.red
+		{
+			position: relative;
+			left: 45%;
+			top: 45px;
+		}
+	}
 	
+	.dental-plus-copy
+	{
+		margin: 100px 0px;
+
+		span
+		{
+			color:$brand_blue; 
+			font-size: 1.4em;
+		}
+		p, a
+		{
+			color:$gray_body_copy;
+		}
+
+		a
+		{
+			text-decoration: underline;
+			text-decoration-color:$brand_blue;
+		}
+	}
+
+	.med-plus
+	{
+
+		background-color:$brand_red;
+		background-image: url(/assets/img/plans/BandaidPattern.png);
+
+		.content_container
+		{
+			padding: 20px 0px;
+		}
+
+		h2
+		{
+			font-size: 6.5em;
+			font-weight: 500;
+			margin-bottom:30px;
+		}
+
+		h4
+		{
+			color:$white;
+			font-size: 2.5em;
+			font-weight: 300; 
+		}
+
+		.btn.red
+		{
+			position: relative;
+			left: 45%;
+			top: 45px;
+		}
+	}
+
+	.med-plus-copy
+	{
+		margin: 100px 0px;
+
+		span
+		{
+			color:$brand_blue; 
+			font-size: 1.4em;
+		}
+		p, a
+		{
+			color:$gray_body_copy;
+		}
+
+		a
+		{
+			text-decoration: underline;
+			text-decoration-color:$brand_blue;
+		}
+	}
+	
+	.deluxe-plus
+	{
+
+		background-color:$brand_red;
+		background-image: url(/assets/img/plans/ClipboardPattern.png);
+
+		.content_container
+		{
+			padding: 20px 0px;
+		}
+
+		h2
+		{
+			font-size: 6.5em;
+			font-weight: 500;
+			margin-bottom:30px;
+		}
+
+		h4
+		{
+			color:$white;
+			font-size: 2.5em;
+			font-weight: 300; 
+		}
+
+		.btn.red
+		{
+			position: relative;
+			left: 45%;
+			top: 45px;
+		}
+	}
+
+	.deluxe-plus-copy
+	{
+		margin: 100px 0px;
+
+		span
+		{
+			color:$brand_blue; 
+			font-size: 1.4em;
+		}
+		p, a
+		{
+			color:$gray_body_copy;
+		}
+
+		a
+		{
+			text-decoration: underline;
+			text-decoration-color:$brand_blue;
+		}
+	}
+
 	footer
 	{
 		margin-top:40px;
