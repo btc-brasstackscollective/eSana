@@ -603,9 +603,10 @@ body .btn.blue:hover {
 }
 
 body .btn.red {
-  border: solid 3px #f26e6d;
+  border: solid 5px #f26e6d;
   color: #79ccc9;
   background-color: white;
+  width: 150px;
 }
 
 body .btn.white {
@@ -775,6 +776,13 @@ body .our-plans h2 {
   color: #f26e6d;
   font-weight: 300;
   margin-bottom: 25px;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .our-plans h2 {
+    font-size: 26px;
+  }
 }
 
 body .our-plans p {
@@ -782,24 +790,63 @@ body .our-plans p {
 }
 
 body .price {
-  height: 195px;
+  height: 138px;
+  width: 138px;
   border: 6px solid #f26e6d;
   background-color: white;
   border-radius: 50%;
   text-align: center;
-  margin-top: -115px;
+  margin-top: -75px;
 }
 
 body .price h3 {
   color: #79ccc9;
   font-size: 72px;
-  margin-top: 20%;
+  margin-top: 12%;
   padding: 10px;
+  letter-spacing: -2px;
 }
 
 body .price h3 sup {
-  font-size: 45%;
-  top: -1em;
+  font-size: 35%;
+  top: -1.75em;
+  letter-spacing: -2px;
+}
+
+body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+  position: relative;
+  left: 42.5%;
+  top: 45px;
+}
+
+@media only screen and (max-width: 992px) {
+  body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+    left: 40.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+    left: 38.5%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+    left: 38.5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+    left: 30.5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body .dental-plus .btn.red, body .med-plus .btn.red, body .deluxe-plus .btn.red {
+    left: 20.5%;
+  }
 }
 
 body .dental-plus {
@@ -815,6 +862,13 @@ body .dental-plus h2 {
   font-size: 6.5em;
   font-weight: 500;
   margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .dental-plus h2 {
+    font-size: 26px;
+  }
 }
 
 body .dental-plus h4 {
@@ -823,28 +877,10 @@ body .dental-plus h4 {
   font-weight: 300;
 }
 
-body .dental-plus .btn.red {
-  position: relative;
-  left: 45%;
-  top: 45px;
-}
-
-body .dental-plus-copy {
-  margin: 100px 0px;
-}
-
-body .dental-plus-copy span {
-  color: #79ccc9;
-  font-size: 1.4em;
-}
-
-body .dental-plus-copy p, body .dental-plus-copy a {
-  color: #9b9b9b;
-}
-
-body .dental-plus-copy a {
-  text-decoration: underline;
-  text-decoration-color: #79ccc9;
+@media only screen and (max-width: 768px) {
+  body .dental-plus h4 {
+    font-size: 20px;
+  }
 }
 
 body .med-plus {
@@ -860,6 +896,13 @@ body .med-plus h2 {
   font-size: 6.5em;
   font-weight: 500;
   margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .med-plus h2 {
+    font-size: 26px;
+  }
 }
 
 body .med-plus h4 {
@@ -868,28 +911,10 @@ body .med-plus h4 {
   font-weight: 300;
 }
 
-body .med-plus .btn.red {
-  position: relative;
-  left: 45%;
-  top: 45px;
-}
-
-body .med-plus-copy {
-  margin: 100px 0px;
-}
-
-body .med-plus-copy span {
-  color: #79ccc9;
-  font-size: 1.4em;
-}
-
-body .med-plus-copy p, body .med-plus-copy a {
-  color: #9b9b9b;
-}
-
-body .med-plus-copy a {
-  text-decoration: underline;
-  text-decoration-color: #79ccc9;
+@media only screen and (max-width: 768px) {
+  body .med-plus h4 {
+    font-size: 20px;
+  }
 }
 
 body .deluxe-plus {
@@ -905,6 +930,13 @@ body .deluxe-plus h2 {
   font-size: 6.5em;
   font-weight: 500;
   margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .deluxe-plus h2 {
+    font-size: 26px;
+  }
 }
 
 body .deluxe-plus h4 {
@@ -913,26 +945,30 @@ body .deluxe-plus h4 {
   font-weight: 300;
 }
 
-body .deluxe-plus .btn.red {
-  position: relative;
-  left: 45%;
-  top: 45px;
+@media only screen and (max-width: 768px) {
+  body .deluxe-plus h4 {
+    font-size: 20px;
+  }
 }
 
-body .deluxe-plus-copy {
+body .dental-plus-copy, body .med-plus-copy, body .deluxe-plus-copy {
   margin: 100px 0px;
 }
 
-body .deluxe-plus-copy span {
+body .dental-plus-copy span, body .med-plus-copy span, body .deluxe-plus-copy span {
   color: #79ccc9;
   font-size: 1.4em;
 }
 
-body .deluxe-plus-copy p, body .deluxe-plus-copy a {
+body .dental-plus-copy p, body .med-plus-copy p, body .deluxe-plus-copy p {
+  font-size: 1.65em;
+}
+
+body .dental-plus-copy p, body .dental-plus-copy a, body .med-plus-copy p, body .med-plus-copy a, body .deluxe-plus-copy p, body .deluxe-plus-copy a {
   color: #9b9b9b;
 }
 
-body .deluxe-plus-copy a {
+body .dental-plus-copy a, body .med-plus-copy a, body .deluxe-plus-copy a {
   text-decoration: underline;
   text-decoration-color: #79ccc9;
 }

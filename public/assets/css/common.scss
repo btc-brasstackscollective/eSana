@@ -319,9 +319,10 @@ body
 
 		&.red
 		{
-			border:solid 3px $brand_red;
+			border:solid 5px $brand_red;
 			color:$brand_blue;
 			background-color: $white;
+			width:150px;
 		}
 		
 		&.white
@@ -480,6 +481,12 @@ body
 			color:$brand_red;
 			font-weight: 300;
 			margin-bottom: 25px;
+			font-size: 50px;
+
+			@media only screen and (max-width : 768px)
+			{
+				font-size:26px;
+			}
 		}
 
 		p
@@ -490,26 +497,66 @@ body
 
 	.price
 	{
-		height: 195px;
+		height: 138px;
+		width: 138px;
 		border: 6px solid $brand_red;	
 		background-color: $white;
 		border-radius: 50%;
 		text-align: center;
-		margin-top: -115px;
+		margin-top: -75px;
 
 		h3
 		{
 			color:$brand_blue;
 			font-size: 72px;
-			margin-top: 20%;
+			margin-top: 12%;
 			padding: 10px;
+			letter-spacing: -2px;
 
 			sup
 			{
-				font-size: 45%;
-				top: -1em;
+				font-size: 35%;
+				top: -1.75em;
+				letter-spacing: -2px;
 			}
 		}
+	}
+
+	.dental-plus, .med-plus, .deluxe-plus
+	{
+
+		.btn.red
+		{
+			position: relative;
+			left: 42.5%;
+			top: 45px;
+
+			@media only screen and (max-width : 992px)
+			{
+				left: 40.5%;
+			}
+
+			@media only screen and (max-width : 768px)
+			{
+				left: 38.5%;
+			}
+
+			@media only screen and (max-width : 620px)
+			{
+				left: 38.5%;
+			}
+			
+			@media only screen and (max-width : 480px)
+			{
+				left: 30.5%;
+			}
+			
+			@media only screen and (max-width : 400px)
+			{
+				left: 20.5%;
+			}
+		}
+
 	}
 
 	.dental-plus
@@ -528,6 +575,12 @@ body
 			font-size: 6.5em;
 			font-weight: 500;
 			margin-bottom:30px;
+			margin-top: 50px;
+
+			@media only screen and (max-width : 768px)
+			{
+				font-size:26px;
+			}
 		}
 
 		h4
@@ -535,35 +588,13 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
+
+			@media only screen and (max-width : 768px)
+			{
+				font-size:20px;
+			}
 		}
 
-		.btn.red
-		{
-			position: relative;
-			left: 45%;
-			top: 45px;
-		}
-	}
-	
-	.dental-plus-copy
-	{
-		margin: 100px 0px;
-
-		span
-		{
-			color:$brand_blue; 
-			font-size: 1.4em;
-		}
-		p, a
-		{
-			color:$gray_body_copy;
-		}
-
-		a
-		{
-			text-decoration: underline;
-			text-decoration-color:$brand_blue;
-		}
 	}
 
 	.med-plus
@@ -582,6 +613,12 @@ body
 			font-size: 6.5em;
 			font-weight: 500;
 			margin-bottom:30px;
+			margin-top: 50px;
+
+			@media only screen and (max-width : 768px)
+			{
+				font-size:26px;
+			}
 		}
 
 		h4
@@ -589,37 +626,14 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
-		}
 
-		.btn.red
-		{
-			position: relative;
-			left: 45%;
-			top: 45px;
+			@media only screen and (max-width : 768px)
+			{
+				font-size:20px;
+			}
 		}
 	}
 
-	.med-plus-copy
-	{
-		margin: 100px 0px;
-
-		span
-		{
-			color:$brand_blue; 
-			font-size: 1.4em;
-		}
-		p, a
-		{
-			color:$gray_body_copy;
-		}
-
-		a
-		{
-			text-decoration: underline;
-			text-decoration-color:$brand_blue;
-		}
-	}
-	
 	.deluxe-plus
 	{
 
@@ -636,6 +650,12 @@ body
 			font-size: 6.5em;
 			font-weight: 500;
 			margin-bottom:30px;
+			margin-top: 50px;
+
+			@media only screen and (max-width : 768px)
+			{
+				font-size:26px;
+			}
 		}
 
 		h4
@@ -643,24 +663,26 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
-		}
 
-		.btn.red
-		{
-			position: relative;
-			left: 45%;
-			top: 45px;
+			@media only screen and (max-width : 768px)
+			{
+				font-size:20px;
+			}
 		}
 	}
-
-	.deluxe-plus-copy
+	
+	.dental-plus-copy, .med-plus-copy, .deluxe-plus-copy
 	{
 		margin: 100px 0px;
-
+		
 		span
 		{
 			color:$brand_blue; 
 			font-size: 1.4em;
+		}
+		p
+		{
+			font-size: 1.65em;
 		}
 		p, a
 		{
