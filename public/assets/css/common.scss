@@ -224,35 +224,57 @@ body
 	
 	&.home
 	{
-		#home_slider_container
+		#home_hero_container
 		{
+			background-color:$brand_blue;
 			overflow:hidden;
 			position:relative;
 			
-			.inner_slider_container
+			.hero_left_content_container
 			{
-				//position:absolute;
+				padding:30px 30px 50px 30px;
 				
-				.slider_item
+				.hero_panel_item
 				{
-					background-color:$brand_blue;
-					float:left;
-
-					.slider_item_content
+					@include transition(all 500ms ease-in-out);
+					
+					visibility:hidden;
+					z-index:-1;
+					
+					&.active
 					{
-						padding:30px 30px 50px 30px;
-						
-						p
-						{
-							color:$white;
-							font-size:20px;
-							line-height:30px;
-						}
-						
-						.btn
-						{
-							font-size:19px;
-						}
+						visibility:visible;
+						z-index:1;
+					}
+					
+					p
+					{
+						color:$white;
+						font-size:20px;
+						line-height:30px;
+					}
+					
+					.btn
+					{
+						font-size:19px;
+					}
+				}
+				
+				.home_hero_panel_control_item
+				{
+					@include transition(all 500ms ease-in-out);
+					
+					border:solid 2px $white;
+					border-radius:50%;
+					cursor:pointer;
+					display:inline-block;
+					height:12px;
+					margin-right:8px;
+					width:12px;
+					
+					&.active
+					{
+						background-color:$white;
 					}
 				}
 			}
