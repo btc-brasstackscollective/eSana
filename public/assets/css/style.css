@@ -768,11 +768,11 @@ body .divider {
   width: 100%;
 }
 
-body .our-plans {
+body .our-plans, body .reach-out {
   margin-bottom: 75px;
 }
 
-body .our-plans h2 {
+body .our-plans h2, body .reach-out h2 {
   color: #f26e6d;
   font-weight: 300;
   margin-bottom: 25px;
@@ -780,13 +780,84 @@ body .our-plans h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  body .our-plans h2 {
+  body .our-plans h2, body .reach-out h2 {
     font-size: 26px;
   }
 }
 
-body .our-plans p {
+body .our-plans p, body .reach-out p {
   color: #9b9b9b;
+}
+
+body .contact .row {
+  display: flex;
+  align-items: baseline;
+}
+
+body .contact .row div {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .contact .row {
+    display: block;
+  }
+}
+
+body .contact h3 {
+  color: #f26e6d;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 15px 0px;
+}
+
+body .contact a {
+  color: #f26e6d;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+body .contact-form form {
+  margin-bottom: 100px;
+}
+
+body .contact-form .form-control {
+  border: 3px solid #79ccc9;
+  border-radius: 0px;
+  height: 51px;
+  color: #f26e6d;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+body .contact-form .form-control.textbox {
+  height: 325px;
+}
+
+body .contact-form .form-control::-moz-placeholder {
+  color: #f26e6d;
+  opacity: 0.5;
+}
+
+body .contact-form .form-control:-ms-input-placeholder {
+  color: #f26e6d;
+  opacity: 0.5;
+}
+
+body .contact-form .form-control::-webkit-input-placeholder {
+  color: #f26e6d;
+  opacity: 0.5;
+}
+
+body .contact-form .btn {
+  margin: 0 auto;
+  display: block;
+  color: #79ccc9;
+  border: 3px solid #79CCC9;
+  background-color: white;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 12px 30px;
 }
 
 body .price {

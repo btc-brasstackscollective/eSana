@@ -472,7 +472,7 @@ body
 		width:100%;
 	}
 
-	.our-plans
+	.our-plans, .reach-out
 	{
 		margin-bottom: 75px;
 
@@ -495,6 +495,90 @@ body
 		}
 	}
 
+	.contact
+	{
+		.row
+		{
+		
+			display: flex;
+			align-items: baseline;
+
+			div
+			{
+				margin-bottom: 15px;
+			}
+
+			@media only screen and (max-width : 768px)
+			{
+				display: block;
+			}
+		}
+		h3
+		{
+			color:$brand_red;
+			font-size: 20px;
+			line-height: 30px;
+			margin: 15px 0px;
+		}
+
+		a
+		{
+			color:$brand_red;
+			font-size:18px;
+			line-height: 22px;
+		}
+	}
+
+	.contact-form
+	{
+		form
+		{
+			margin-bottom: 100px;
+		}
+
+		.form-control
+		{
+			border: 3px solid $brand_blue;
+			border-radius: 0px;
+			height: 51px;
+			color:$brand_red;
+			font-size: 20px;
+			line-height: 24px;
+
+			&.textbox
+			{
+				height: 325px;
+			}
+
+			&::-moz-placeholder// Firefox
+			{ 
+				color: $brand_red;
+				opacity: 0.5;
+			 } 
+			&:-ms-input-placeholder // Internet Explorer 10+
+			{ 
+				color: $brand_red; 
+				opacity: 0.5
+			} 
+			&::-webkit-input-placeholder // Safari and Chrome
+			{ 
+				color: $brand_red; 
+				opacity: 0.5
+			} 
+		}
+
+		.btn
+		{
+			margin: 0 auto;
+			display: block;
+			color:$brand_blue;
+			border: 3px solid #79CCC9;
+			background-color: $white;
+			font-size:20px;
+			line-height: 24px;
+			padding: 12px 30px;
+		}
+	}
 	.price
 	{
 		height: 138px;
