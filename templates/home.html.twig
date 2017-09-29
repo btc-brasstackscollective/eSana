@@ -7,22 +7,43 @@
 {% block bodyClass %}home{% endblock %}
 
 {% block body %}
-	<div class="content_container">
-		<div id="home_slider_container">
-			<div class="inner_slider_container">
-				<div class="slider_item">
-					<div class="slider_item_content col-md-5 col-sm-6 col-xs-12">
-						<h2>Join eSana today and start saving!</h2>
-						<p>eSana members save an average of $600 per month for their entire household. See what you could be saving!</p>
-						
-						<a href="" class="slider_item_btn btn white">GET STARTED</a>
-					</div>
-					
-					<div class="slider_item_img center_align col-md-7 col-sm-6 col-xs-12">
-						<img src="{{ baseUrl }}/assets/img/home/img-home-slider-esana-card.png" class="img-responsive" />
-					</div>
-				</div>
+	
+	<div id="home_hero_container">
+		<div class="hero_left_content_container col-md-5 col-sm-6 col-xs-12">
+			<div class="hero_panel_item">
+				<h2>Join eSana today and start saving!</h2>
+				<p>eSana members save an average of $600 per month for their entire household. See what you could be saving!</p>
+				
+				<a href="" class="slider_item_btn btn white">GET STARTED</a>
+			</div>
+			
+			<div class="hero_panel_item">
+			
+			</div>
+			
+			<div class="hero_panel_item">
+			
+			</div>
+			
+			<div class="hero_panel_controls"></div>
+		</div>
+		
+		<div class="hero_right_container center_align col-md-7 col-sm-6 col-xs-12">
+			<div class="hero_panel_item">
+				<img src="{{ baseUrl }}/assets/img/home/img-home-slider-esana-card.png" class="img-responsive" />
+			</div>
+			
+			<div class="hero_panel_item">
+			
+			</div>
+			
+			<div class="hero_panel_item">
+			
 			</div>
 		</div>
 	</div>
+	
+	<div class="content_container">
+	</div>
+	
 {% endblock %}
