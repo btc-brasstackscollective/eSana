@@ -25,8 +25,43 @@
 			panel.settings = jQuery.extend({}, defaults, options);
 			panelItemCount = $element.find('.hero_left_content_container '+panel.settings.slideItemSelector).length;
 			panel.buildControls();
+			//panel.setPanelHeight();
 			currentPanelIndex = 0;
 			panel.changePanel();
+		}
+		
+		panel.setPanelHeight = function()
+		{
+			var maxHeight = 0;
+			
+			for(var i = 0; i < panelItemCount; i++)
+			{
+				var leftContainerItemHeight = parseFloat($element.find('.hero_left_content_container '+panel.settings.slideItemSelector+':eq('+i+')').height());
+				var rightContainerItemHeight = parseFloat($element.find('.hero_left_content_container '+panel.settings.slideItemSelector+':eq('+i+')').height());
+				
+				var innerMaxHeight = 0;
+				
+				if(leftContainerItemHeight > rightContainerItemHeight)
+					innerMaxHeight = leftContainerItemHeight;
+					
+				else if(rightContainerItemHeight > leftContainerItemHeight)
+					innerMaxHeight = rightContainerItemHeight;
+					
+				else
+					innerMaxHeight = leftContainerItemHeight;
+					
+				
+				if(innerMaxHeight > maxHeight)
+					maxHeight = innerMaxHeight;
+			}
+			
+			var contentContainerTopPadding = parseFloat($('#home_hero_container .hero_left_content_container').css('padding-top'));
+			var contentContainerBottomPadding = parseFloat($('#home_hero_container .hero_left_content_container').css('padding-bottom'));
+			var contentPanelControlsHeight = parseFloat($('#home_hero_container .hero_left_content_container .hero_panel_controls').outerHeight(true));
+			
+			var totalHeight = maxHeight + contentContainerTopPadding + contentContainerBottomPadding + contentPanelControlsHeight;
+			
+			$('#home_hero_container .content_container').height(totalHeight);
 		}
 		
 		panel.buildControls = function()
@@ -42,7 +77,7 @@
 		panel.changePanel = function()
 		{
 			$('.hero_left_content_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
-			$('.hero_right_content_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
+			$('.hero_right_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
 			
 			panel.updatePanelControlItem();
 		}
