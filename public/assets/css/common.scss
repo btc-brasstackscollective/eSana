@@ -92,12 +92,29 @@ body
 						{
 							@include transform(translate(-50%, -50%));
 	
+							background-color:$brand_blue;
 							height:3px;
 							left:50%;
 							margin:0;
 							position:absolute;
 							top:50%;
 							width:27px;
+						}
+						
+						span
+						{
+							@include transform-origin(center center);
+							@include transition(all 500ms ease-in-out);
+							
+							&:nth-child(2)
+							{
+								@include transform(translate(-50%, calc(-50% - 8px)));
+							}
+							
+							&:nth-child(4)
+							{
+								@include transform(translate(-50%, calc(-50% + 8px)));
+							}
 						}
 					}
 				}
@@ -152,7 +169,176 @@ body
 						}
 					}
 				}
+				
+				.esana_logo
+				{
+					@media only screen and (max-width : 762px)
+					{
+						@include transform(translateY(-50%));
+						
+						position:absolute;
+						top:54%;
+					}
+				}
 			}
+		}
+		
+		.utility_nav
+		{			
+			@media only screen and (max-width : 769px)
+			{
+				@include transition(all 500ms ease-in-out);
+				
+				&.slide-down
+				{
+					display:block !important;
+					height:100% !important;
+				    left:0;
+				    margin:0;
+				    min-width:0;
+				    overflow:hidden;
+				    padding-left:0;
+				    padding-right:0;
+				    padding-top:120px;
+				    position:absolute;
+				    text-align:left;
+				    top:-100%;
+				    width:100%;
+				    z-index:1029;
+				    
+				    &.slide-active
+				    {
+					    top:0;
+				    }
+				    
+				    #nav_links
+				    {
+					    li
+					    {
+						    @media only screen and (max-width : 769px)
+							{
+								border:0;
+								float:none;
+								margin-right:0;
+								padding-left:0;
+								text-align:center;
+							}
+						}
+					}
+				}
+				
+				display:block !important;
+				height:100% !important;
+			    left:-80%;
+			    margin:0;
+			    min-width:0;
+			    overflow:hidden;
+			    padding-left:0;
+			    padding-right:0;
+			    position:fixed;
+			    text-align:left;
+			    top:0;
+			    width:80%;
+			    z-index:1032;
+			    
+			    &.slide-active
+			    {
+				    left:0;
+			    }
+			}
+			
+			/*#nav_links
+			{
+				@media only screen and (max-width : 769px)
+				{
+					float:none;
+					margin:0;
+				}
+					
+			 	ul, li
+			 	{
+				 	list-style:none;
+				 	margin:0;
+				 	padding:0;
+			 	}
+			 	
+			 	li
+			 	{
+				 	float:left;
+				 	
+				 	@media only screen and (max-width : 992px)
+				 	{
+					 	margin-right:20px;	
+					}
+					
+					@media only screen and (max-width : 769px)
+					{
+						border-bottom:solid 1px $white;
+						float:none;
+						margin-right:0;
+						padding-left:20px;
+					}
+				 	
+				 	&:last-child
+				 	{
+					 	margin-right:0;
+				 	}
+				 	
+				 	a
+				 	{
+					 	color:$white;
+						display:block;
+						font-size:2.2em;
+						line-height:1;
+						padding:10px 0;
+						position:relative;
+						text-decoration:none;
+						
+						@include transition(all 300ms ease-in-out);
+						
+						@media only screen and (max-width : 1200px)
+						{
+							font-size:1.8em;
+						}
+						
+						@media only screen and (max-width : 992px)
+						{
+							font-size:1.4em;
+						}
+						
+						@media only screen and (max-width : 769px)
+						{
+							color:$white;
+							font-size:1.8em;
+							letter-spacing:.04em;
+							padding:15px 0;
+						}
+						
+						*
+						{
+							@include transition(all 300ms ease-in-out);
+						}
+						
+						&:hover
+						{
+							color:$brand_red;
+							
+							&::before
+							{
+								@include transform(translate(-50%, -50%) scale(1));
+								
+								opacity:.7;
+							}
+							
+							&::after
+							{
+								opacity:1;
+								top:100%;
+							}
+						}
+				 	}
+			 	}
+			}*/
 		}
 		
 		#navbar-height-col
@@ -208,16 +394,6 @@ body
 					    left:0;
 				    }
 				}
-				
-				.email_update_trigger
-			 	{
-				 	@include transform(translateX(-50%));
-				 	
-				 	display:inline-block !important;
-				 	left:50%;
-				 	margin:10px 0 0 0;
-				 	position:relative;
-			 	}
 			}
 		}
 	}
@@ -373,117 +549,163 @@ body
 		
 		.your_saving_plan
 		{
-			.plan_detail_info_container
+			.plan_detail_container
 			{
-				padding:0 15px;
-				position:relative;
+				margin:40px 0 100px 0;
 				
-				.plan_detail_price_container
+				> div
 				{
-					@include transform(translate(-20px, 70px)); 
+					padding-left:30px;
+					padding-right:30px;
 					
-					background-color:$white;
-					border:solid 5px $brand_red;
-					border-radius:50%;
-					height:92px;
-					text-align:center;
-					width:92px;
-					
-					h3
+					@media only screen and (max-width : 769px)
 					{
-						@include transform(translateY(-50%));
-							
-						color:$brand_blue;
-						font-size:45px;
-						letter-spacing:-1px;
-						position:relative;
-						top:50%;
+						margin-bottom:100px;
+					}
 					
-						sup
+					&:last-of-type
+					{
+						@media only screen and (max-width : 769px)
 						{
-							font-size:35%;
-							letter-spacing:0;
-							top:-1.5em;
+							margin-bottom:0;
 						}
 					}
 				}
 				
-				.plan_detail_title_container
-				{
-					@include border-top-radius(5px);
-					
+				.plan_detail_info_container
+				{	
 					background-color:$brand_red;
-					overflow:hidden;
-					text-align:center;
+					border-radius:5px;
+					position:relative;
 					
-					img
+					.plan_detail_price_container
 					{
-						margin:30px auto;
-					}
-					
-					h3
-					{
-						font-size:26px;
-						margin-bottom:15px;
-					}
-				}
-				
-				.plan_detail_tagline_container
-				{
-					background-color:$brand_blue;
-					font-size:16px;
-					line-height:1.5;
-					padding:10px 15px;
-					text-align:center;
-					
-					p
-					{
-						color:$white;
-					}
-				}
-				
-				.plan_detail_description_container
-				{
-					background-color:$brand_red;
-					padding:25px 15px;
-					
-					ul
-					{
-						list-style:none;
-						margin:0;
-						padding:0;
+						@include transform(translate(-20px, -25px)); 
 						
-						li
-						{
-							color:$white;
-							font-size:18px;
-							list-style:none;
-							margin:0 0 20px 0;
-							padding:0;
-						}
-					}
-				}
-				
-				.plan_detail_sign_up_container
-				{
-					a
-					{
 						background-color:$white;
 						border:solid 5px $brand_red;
-						color:$brand_blue;
-						font-size:20px;
-						position:relative;
+						border-radius:50%;
+						height:92px;
+						position:absolute;
+						text-align:center;
+						width:92px;
 						
-						&::after
+						h3
 						{
-							content:'+';
+							@include transform(translateY(-50%));
+								
+							color:$brand_blue;
+							font-size:45px;
+							letter-spacing:-1px;
+							position:relative;
+							top:50%;
+						
+							sup
+							{
+								font-size:35%;
+								letter-spacing:0;
+								top:-1.5em;
+							}
+						}
+					}
+					
+					.plan_detail_title_container
+					{
+						overflow:hidden;
+						text-align:center;
+						
+						img
+						{
+							margin:30px auto;
+						}
+						
+						h3
+						{
+							font-size:26px;
+							margin-bottom:15px;
+						}
+					}
+					
+					.plan_detail_tagline_container
+					{
+						background-color:$brand_blue;
+						font-size:16px;
+						line-height:1.5;
+						padding:10px 15px;
+						text-align:center;
+						
+						p
+						{
+							color:$white;
+						}
+					}
+					
+					.plan_detail_description_container
+					{
+						@include flex-grow(1);
+						
+						padding:25px 15px 0;
+						
+						ul
+						{
+							list-style:none;
+							margin:0;
+							padding:0;
+							
+							li
+							{
+								color:$white;
+								font-size:18px;
+								list-style:none;
+								margin:0 0 20px 0;
+								padding:0;
+							}
+						}
+					}
+					
+					.plan_detail_sign_up_container
+					{
+						a
+						{
+							@include transition(all 500ms ease-in-out);
+							
+							background-color:$white;
 							border:solid 5px $brand_red;
-							border-radius:50%;
-							font-size:24px;
-							font-weight:bold;
-							position:absolute;
-							right:0;
-							top:0;
+							color:$brand_blue;
+							font-size:20px;
+							padding-left:20px;
+							position:relative;
+							text-align:left;
+							top:24px;
+							
+							&::after
+							{
+								content:'+';
+								border:solid 5px $brand_red;
+								border-radius:50%;
+								color:$brand_red;
+								font-size:37px;
+								font-weight:bold;
+								height:48px;
+								position:absolute;
+								right:-5px;
+								text-align:center;
+								top:-4px;
+								width:48px;
+							}
+							
+							&:hover
+							{
+								background-color:$brand_red;
+								border-color:$brand_blue;
+								color:$white;
+							
+								&::after
+								{
+									border-color:$brand_blue;
+									color:$white;	
+								}
+							}
 						}
 					}
 				}
@@ -580,6 +802,19 @@ body
 			}
 		}
 		
+		.esana_lifestyle
+		{	
+			.sign_up_callout_container
+			{
+				margin-top:40px;
+				
+				h2, p
+				{
+					color:$brand_red;
+				}
+			}
+		}
+		
 		h1
 		{
 			color:$brand_red;
@@ -602,47 +837,56 @@ body
 		}
 	}
 	
+	h1
+	{
+		@media only screen and (max-width : 768px)
+		{
+			font-size:32px !important;
+		}
+	}
+	
 	h2
 	{
 		color:$white;
-		font-size:34px;
-		line-height:40px;
 		
 		@media only screen and (max-width : 768px)
 		{
-			font-size:26px;
+			font-size:26px !important;
 		}
 	}
 	
 	h3
 	{
 		color:$white;
-		font-size:3em;
-		letter-spacing:.05em;
 		
 		@media only screen and (max-width : 768px)
 		{
-			font-size:2em;
+			font-size:20px;
 		}
 	}
 	
 	p, ol li
 	{
-		font-size:1.4em;
 		font-weight:300;
-		line-height:1.2;
 		margin:15px 0;
 		
 		@media only screen and (max-width : 768px)
 		{
-			font-size:1em;
+			font-size:12px;
 		}
+	}
+	
+	u
+	{
+		border-bottom:solid 2px $brand_blue;
+		text-decoration:none;
 	}
 	
 	.btn
 	{
 		border-radius:100px;
 		font-size:20px;
+		font-weight:200;
 		line-height:1;
 		min-width:200px;
 		padding:10px;
@@ -699,6 +943,20 @@ body
 		}
 	}
 	
+	.row-eq-height
+	{
+		@include display(flex);
+		@include flex-wrap(wrap);
+		
+		> [class*='col-'] > div
+		{
+			@include display(flex);
+			@include flex-direction(column);
+			
+			height:100%;
+		}
+	}
+	
 	.price_text
 	{
 		font-family:'Oswald', sans-serif;
@@ -729,6 +987,11 @@ body
 	{
 		@include justify-content(center);
 		@include display(flex);
+		
+		@media only screen and (max-width : 769px)
+		{
+			display:block;
+		}
 	}
 	
 	.text_center
@@ -769,35 +1032,7 @@ body
 	}
 	
 	.esana_logo
-	{
-		/*@media only screen and (max-width : 992px)
-		{
-			width:51%;	
-		}
-		
-		@media only screen and (max-width : 769px)
-		{
-			@include transform(translateX(-50%));
-			
-			left:50%;
-			width:48%;
-		}
-		
-		@media only screen and (max-width : 620px)
-		{
-			width:60%;
-		}
-		
-		@media only screen and (max-width : 480px)
-		{
-			width:79%;
-		}
-		
-		@media only screen and (max-width : 400px)
-		{
-			width:91%;
-		}*/
-		
+	{		
 		a
 		{
 			display:inline-block;
@@ -809,12 +1044,13 @@ body
 				
 				@media only screen and (max-width : 992px)
 				{
-					max-width:95%
+					max-width:95%;
 				}
 				
 				@media only screen and (max-width : 769px)
 				{
-					max-width:100%
+					margin:0;
+					max-width:100%;
 				}
 			}
 		}
@@ -1356,8 +1592,18 @@ body
 
 	footer
 	{
-		margin-top:40px;
-				
+		margin:80px 0 20px 0;
+		overflow:hidden;
+		
+		.esana_logo
+		{
+			@media only screen and (max-width : 768px)
+			{
+				margin-bottom:15px;
+				text-align:center;
+			}
+		}
+			
 		.footer_social_links
 		{
 			@include justify-content(flex-end);
@@ -1373,6 +1619,11 @@ body
 					margin-right:0;
 				}
 			}
+			
+			@media only screen and (max-width : 768px)
+			{
+				text-align:right;	
+			}
 		}
 		
 		.copyright_content
@@ -1382,14 +1633,29 @@ body
 			color:$brand_red;
 			line-height:1;
 			
+			@media only screen and (max-width : 768px)
+			{
+				text-align:center;
+			}
+			
 			.copyright_content_links
 			{
 				margin-left:20px;
+				
+				@media only screen and (max-width : 768px)
+				{
+					margin-top:10px;
+				}
 				
 				a
 				{
 					color:$brand_red;
 					padding:0 5px;
+					
+					@media only screen and (max-width : 768px)
+					{
+						display:inline-block !important;
+					}
 					
 					&::before
 					{
@@ -1399,6 +1665,11 @@ body
 						height:25px;
 						margin-right:10px;
 						width:2px;
+						
+						@media only screen and (max-width : 768px)
+						{
+							display:none;
+						}
 					}
 					
 					&:last-child
@@ -1411,6 +1682,11 @@ body
 							margin-left:10px;
 							height:25px;
 							width:2px;
+							
+							@media only screen and (max-width : 768px)
+							{
+								display:none;
+							}
 						}
 					}
 				}	
