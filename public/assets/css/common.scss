@@ -828,7 +828,7 @@ body
 		width:100%;
 	}
 
-	.our-plans, .reach-out, .your-tools
+	.our-plans, .reach-out, .your-tools, .our-mission
 	{
 		margin-bottom: 75px;
 
@@ -991,6 +991,107 @@ body
 		.btn
 		{
 			margin-bottom: 30px;
+		}
+	}
+
+	.our-mission
+	{
+		h2, h3 
+		{
+			text-transform: uppercase;
+		}
+
+		a
+		{
+			color: $gray_body_copy;
+			border-bottom: solid 2px $brand_blue;
+			text-decoration: none;
+		}
+
+		.intro 
+		{
+			h3 
+			{
+				color: $brand_blue;
+			}
+
+			p {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			img 
+			{
+				margin: 5% 0;
+			}
+		}
+
+		.red-banner, .blue-banner, .white-banner
+		{
+			margin: 5% auto;
+			text-align: center;
+			padding: 20px 10px;
+
+			p {
+				color: $white;
+			}
+		}
+
+		.red-banner 
+		{
+			background: $brand_red;
+			
+			@media (min-width: 970px) {
+				padding: 87px 50px 92px;
+			}
+
+			p
+			{
+				font-size: 2.8125rem;
+			}
+		}
+
+		.blue-banner 
+		{
+			background: $brand_blue;
+
+			@media (min-width: 970px) {
+				padding: 59px 100px 51px;
+			}
+			
+
+			p
+			{
+				font-size: 32px;
+				margin: 0 auto;
+				width: 85%;
+			}
+		}
+
+		.white-banner 
+		{
+			background: $white;
+
+			@media (min-width: 970px) {
+				padding: auto 100px 51px;
+			}
+
+			p {
+				color: $brand_red;
+
+				@media (min-width: 970px) {
+					font-size: 40px;
+				}
+			}
+		}
+
+		.video-content 
+		{
+			@media (min-width: 750px) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 		}
 	}
 

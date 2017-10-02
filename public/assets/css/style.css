@@ -1089,11 +1089,11 @@ body .divider {
   width: 100%;
 }
 
-body .our-plans, body .reach-out, body .your-tools {
+body .our-plans, body .reach-out, body .your-tools, body .our-mission {
   margin-bottom: 75px;
 }
 
-body .our-plans h2, body .reach-out h2, body .your-tools h2 {
+body .our-plans h2, body .reach-out h2, body .your-tools h2, body .our-mission h2 {
   color: #f26e6d;
   font-weight: 300;
   margin-bottom: 25px;
@@ -1102,12 +1102,12 @@ body .our-plans h2, body .reach-out h2, body .your-tools h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  body .our-plans h2, body .reach-out h2, body .your-tools h2 {
+  body .our-plans h2, body .reach-out h2, body .your-tools h2, body .our-mission h2 {
     font-size: 26px;
   }
 }
 
-body .our-plans p, body .reach-out p, body .your-tools p {
+body .our-plans p, body .reach-out p, body .your-tools p, body .our-mission p {
   color: #9b9b9b;
 }
 
@@ -1214,6 +1214,97 @@ body .prescription_search .blue-bg img {
 
 body .prescription_search .btn {
   margin-bottom: 30px;
+}
+
+body .our-mission h2, body .our-mission h3 {
+  text-transform: uppercase;
+}
+
+body .our-mission a {
+  color: #9b9b9b;
+  border-bottom: solid 2px #79ccc9;
+  text-decoration: none;
+}
+
+body .our-mission .intro h3 {
+  color: #79ccc9;
+}
+
+body .our-mission .intro p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body .our-mission .intro img {
+  margin: 5% 0;
+}
+
+body .our-mission .red-banner, body .our-mission .blue-banner, body .our-mission .white-banner {
+  margin: 5% auto;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+body .our-mission .red-banner p, body .our-mission .blue-banner p, body .our-mission .white-banner p {
+  color: white;
+}
+
+body .our-mission .red-banner {
+  background: #f26e6d;
+}
+
+@media (min-width: 970px) {
+  body .our-mission .red-banner {
+    padding: 87px 50px 92px;
+  }
+}
+
+body .our-mission .red-banner p {
+  font-size: 2.8125rem;
+}
+
+body .our-mission .blue-banner {
+  background: #79ccc9;
+}
+
+@media (min-width: 970px) {
+  body .our-mission .blue-banner {
+    padding: 59px 100px 51px;
+  }
+}
+
+body .our-mission .blue-banner p {
+  font-size: 32px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+body .our-mission .white-banner {
+  background: white;
+}
+
+@media (min-width: 970px) {
+  body .our-mission .white-banner {
+    padding: auto 100px 51px;
+  }
+}
+
+body .our-mission .white-banner p {
+  color: #f26e6d;
+}
+
+@media (min-width: 970px) {
+  body .our-mission .white-banner p {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 750px) {
+  body .our-mission .video-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 body .contact .row {
