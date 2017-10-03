@@ -1391,7 +1391,7 @@ body
 				color: $brand_red;
 				opacity: 0.8;
 			 } 
-			&:-ms-input-placeholder // Internet Explorer 10+
+			&::-ms-input-placeholder // Internet Explorer 10+
 			{ 
 				color: $brand_red; 
 				opacity: 0.8;
