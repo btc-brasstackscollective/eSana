@@ -50,19 +50,19 @@
 		                    <div id="nav_links" class="nav navbar-nav social_links">
 								<ul>
 									<li>
-										<a href="/">Home</a>
+										<a href="/" {% if currentUrl == '/' %} class="active"{% endif %}>Home</a>
 									</li>
 									<li>
-										<a href="/plans">Plans</a>
+										<a href="/plans" {% if currentUrl == '/plans' %} class="active"{% endif %}>Plans</a>
 									</li>
 									<li>
-										<a href="/tools">Tools</a>
+										<a href="/tools" {% if currentUrl == '/tools' %} class="active"{% endif %}>Tools</a>
 									</li>
 									<li>
-										<a href="/mission">Mission</a>
+										<a href="/mission" {% if currentUrl == '/mission' %} class="active"{% endif %}>Mission</a>
 									</li>
 									<li>
-										<a href="/contact">Contact</a>
+										<a href="/contact" {% if currentUrl == '/contact' %} class="active"{% endif %}>Contact</a>
 									</li>
 								</ul>
 		                    </div>
