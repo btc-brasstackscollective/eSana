@@ -32,7 +32,11 @@
 			$.ajax({
 				type:'POST',
 				url:'/contact-submit',
-				data:$(this).serialize()
+				data:$(this).serialize(),
+				success: function(data, textStatus, jQ)
+				{
+					console.log('success');
+				}
 			});
 		});
 		

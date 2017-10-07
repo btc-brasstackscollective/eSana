@@ -598,19 +598,29 @@ nav
 .nav_contact_number {
             margin-top: 40px;
             text-align: center; } }
-      @media only screen and (max-width: 762px) {
-        body
+      body
 header
 nav
 #navigation_bar_container
 .esana_logo {
-          -webkit-transform: translateY(-50%);
-          -moz-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          -o-transform: translateY(-50%);
-          transform: translateY(-50%);
-          position: absolute;
-          top: 54%; } }
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+        -o-transform: translateY(4px);
+        transform: translateY(4px); }
+        @media only screen and (max-width: 762px) {
+          body
+header
+nav
+#navigation_bar_container
+.esana_logo {
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: absolute;
+            top: 54%; } }
     @media only screen and (max-width: 769px) {
       body
 header
@@ -710,6 +720,12 @@ p {
 .hero_left_content_container
 .hero_panel_controls {
         margin-top: 30px; }
+        @media only screen and (max-width: 769px) {
+          body.home
+#home_hero_container
+.hero_left_content_container
+.hero_panel_controls {
+            text-align: center; } }
         body.home
 #home_hero_container
 .hero_left_content_container
@@ -733,115 +749,131 @@ p {
             background-color: white; }
     body.home
 #home_hero_container
+.hero_right_container {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      box-ordinal-group: 2;
+      -webkit-order: 2;
+      -moz-order: 2;
+      order: 2;
+      -ms-flex-order: 2; }
+      body.home
+#home_hero_container
 .hero_right_container
 .hero_panel_item {
-      -webkit-transition: all 500ms ease-in-out;
-      -moz-transition: all 500ms ease-in-out;
-      transition: all 500ms ease-in-out;
-      display: none;
-      z-index: -1; }
-      body.home
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+        display: none;
+        z-index: -1; }
+        body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item.active {
-        display: block;
-        z-index: 1; }
-      body.home
-#home_hero_container
-.hero_right_container
-.hero_panel_item
-> div {
-        margin-bottom: 15px; }
-      body.home
-#home_hero_container
-.hero_right_container
-.hero_panel_item
-.plan_price_container {
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-        border: solid 3px rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        height: 99px;
-        left: 50%;
-        margin-bottom: 15px;
-        position: relative;
-        text-align: center;
-        width: 99px; }
+          display: block;
+          z-index: 1; }
         @media only screen and (max-width: 769px) {
           body.home
 #home_hero_container
 .hero_right_container
-.hero_panel_item
-.plan_price_container {
-            height: 70px;
-            width: 70px; } }
+.hero_panel_item.top_padding {
+            padding-top: 20px; } }
         body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
-.plan_price_container
-h3 {
-          -webkit-transform: translateY(-50%);
-          -moz-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          -o-transform: translateY(-50%);
-          transform: translateY(-50%);
-          color: white;
-          font-size: 42px;
+> div {
+          margin-bottom: 15px; }
+        body.home
+#home_hero_container
+.hero_right_container
+.hero_panel_item
+.plan_price_container {
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          border: solid 3px rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          height: 99px;
+          left: 50%;
+          margin-bottom: 15px;
           position: relative;
-          top: 50%; }
+          text-align: center;
+          width: 99px; }
           @media only screen and (max-width: 769px) {
             body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
-.plan_price_container
-h3 {
-              font-size: 26px; } }
+.plan_price_container {
+              height: 70px;
+              width: 70px; } }
           body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
 .plan_price_container
-h3
-sup {
-            font-size: 35%;
-            letter-spacing: 0;
-            top: -1.5em; }
+h3 {
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            color: white;
+            font-size: 42px;
+            position: relative;
+            top: 50%; }
             @media only screen and (max-width: 769px) {
               body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
 .plan_price_container
+h3 {
+                font-size: 26px; } }
+            body.home
+#home_hero_container
+.hero_right_container
+.hero_panel_item
+.plan_price_container
 h3
 sup {
-                font-size: 46%;
-                top: -1em; } }
-      body.home
+              font-size: 35%;
+              letter-spacing: 0;
+              top: -1.5em; }
+              @media only screen and (max-width: 769px) {
+                body.home
+#home_hero_container
+.hero_right_container
+.hero_panel_item
+.plan_price_container
+h3
+sup {
+                  font-size: 46%;
+                  top: -1em; } }
+        body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
 h3 {
-        color: white;
-        font-size: 26px;
-        text-align: center; }
-        @media only screen and (max-width: 769px) {
-          body.home
+          color: white;
+          font-size: 26px;
+          text-align: center; }
+          @media only screen and (max-width: 769px) {
+            body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
 h3 {
-            font-size: 20px; } }
-      body.home
+              font-size: 20px; } }
+        body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
 img {
-        width: 100%; }
+          width: 100%; }
   body.home
 .body_content_container {
     margin-bottom: 80px; }
@@ -1042,108 +1074,28 @@ a:hover::after {
   body.home
 .savings_calculator
 .savings_calulator_container {
-    background-color: #71c499;
-    margin-bottom: 40px;
-    padding: 25px 50px 50px 50px; }
+    margin-bottom: 40px; }
     body.home
 .savings_calculator
 .savings_calulator_container
-h3 {
-      font-size: 36px;
-      font-weight: 200;
-      margin-bottom: 55px;
-      text-align: center; }
-    body.home
-.savings_calculator
-.savings_calulator_container
-h4 {
-      color: white;
-      font-size: 30px;
-      font-weight: 300;
-      text-align: center; }
-    body.home
-.savings_calculator
-.savings_calulator_container
-p {
-      border: solid 3px white;
-      color: white;
-      font-size: 18px;
-      margin-bottom: 40px;
-      padding: 15px 15px 50px 15px; }
-    body.home
-.savings_calculator
-.savings_calulator_container
-.cost_input_container {
-      position: relative; }
-    body.home
-.savings_calculator
-.savings_calulator_container
-input[type="text"] {
-      background-color: transparent;
-      border: solid 3px white;
-      color: white;
-      font-size: 16px;
-      padding: 10px 15px;
-      width: 100%; }
-    body.home
-.savings_calculator
-.savings_calulator_container
-a.saving_submit_btn {
-      -webkit-transform: translateY(calc(-50% - 2px));
-      -moz-transform: translateY(calc(-50% - 2px));
-      -ms-transform: translateY(calc(-50% - 2px));
-      -o-transform: translateY(calc(-50% - 2px));
-      transform: translateY(calc(-50% - 2px));
-      font-size: 16px;
-      height: 45px;
-      position: absolute;
-      text-decoration: none;
-      right: 0;
-      top: 50%;
-      width: 30px; }
-      body.home
-.savings_calculator
-.savings_calulator_container
-a.saving_submit_btn::after,
-      body.home
-.savings_calculator
-.savings_calulator_container
-a.saving_submit_btn::before {
-        -webkit-transform-origin: center right;
-        -moz-transform-origin: center right;
-        -ms-transform-origin: center right;
-        -o-transform-origin: center right;
-        transform-origin: center right;
-        content: '';
-        background-color: white;
-        height: 3px;
-        position: absolute;
-        right: 7px;
-        width: 20px; }
-      body.home
-.savings_calculator
-.savings_calulator_container
-a.saving_submit_btn::before {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-        top: calc(50% + 1px); }
-      body.home
-.savings_calculator
-.savings_calulator_container
-a.saving_submit_btn::after {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        top: calc(50% - 1px); }
+img {
+      margin: 0 auto; }
   body.home
 .esana_lifestyle
 .sign_up_callout_container {
     margin-top: 40px; }
+    @media only screen and (max-width: 769px) {
+      body.home
+.esana_lifestyle
+.sign_up_callout_container
+.content_section {
+        margin: 20px 0; } }
+    @media only screen and (max-width: 769px) {
+      body.home
+.esana_lifestyle
+.sign_up_callout_container
+img {
+        margin: 0 auto; } }
     body.home
 .esana_lifestyle
 .sign_up_callout_container h2, body.home
@@ -1195,7 +1147,7 @@ ol li {
     @media only screen and (max-width: 768px) {
       body p, body
 ol li {
-        font-size: 14px; } }
+        font-size: 16px !important; } }
   body
 u {
     border-bottom: solid 2px #79ccc9;

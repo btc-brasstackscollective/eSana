@@ -27,3 +27,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+$container['ContactController'] = function($c) {
+    $view = $c->get("view"); // retrieve the 'view' from the container
+    return new App\Controllers\ContactController($view);
+};

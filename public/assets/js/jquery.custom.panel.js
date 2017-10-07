@@ -3,6 +3,7 @@
 	var currentPanelIndex = 0;
 	var panelItemCount = 0;
 	var resizeTimer;
+	var heroPanelInterval;
 
 	$.customPanel = function(element, options)
 	{
@@ -10,8 +11,8 @@
 			slideItemSelector: '.hero_panel_item',
 			panelControlsSelector: '.hero_panel_controls',
 			panelControlItemSelector: '.home_hero_panel_control_item',
-			slideDelay: '3000ms',
-			slideSpeed: '500ms'
+			slideDelay: '10000',
+			slideSpeed: '500'
 		};
 		
 		var panel = this;
@@ -28,6 +29,7 @@
 			//panel.setPanelHeight();
 			currentPanelIndex = 0;
 			panel.changePanel();
+			panel.autoPanelChange();
 		}
 		
 		panel.setPanelHeight = function()
@@ -74,6 +76,28 @@
 			}
 		}
 		
+		panel.autoPanelChange = function()
+		{
+			panel.cancelAutoPanelChange();
+			
+			heroPanelInterval = setInterval(function()
+			{
+				if(currentPanelIndex < (panelItemCount - 1))
+					currentPanelIndex++;
+					
+				else
+					currentPanelIndex = 0;
+					
+				panel.changePanel();
+				
+			}, panel.settings.slideDelay);
+		}
+		
+		panel.cancelAutoPanelChange = function()
+		{
+			clearTimeout(heroPanelInterval);
+		}
+		
 		panel.changePanel = function()
 		{
 			$('.hero_left_content_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
@@ -89,11 +113,23 @@
 		
 		panel.init();
 		
+		// Panel Indicator click
 		$(panel.settings.panelControlItemSelector).on('click', function()
 		{
 			currentPanelIndex = $(panel.settings.panelControlItemSelector).index($(this));
 			
 			panel.changePanel();
+			panel.cancelAutoPanelChange();
+		});
+		
+		// Panel Item Hover to pause auto change
+		$(panel.settings.slideItemSelector).on({
+		    mouseenter: function () {
+		        panel.cancelAutoPanelChange();
+		    },
+		    mouseleave: function () {
+		        panel.autoPanelChange();
+		    }
 		});
 	}
 	

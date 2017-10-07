@@ -1,3 +1,7 @@
+<?php
+	
+namespace App\Controllers;
+
 class ContactController
 {
 	protected $view;
@@ -9,8 +13,8 @@ class ContactController
 	    //$recipient = 'info@esanahealth.com';
 	    $recipient = 'dougingalls@gmail.com';
 	    
-		$headers = 'From: '. $args['email'] .' . "\r\n" .
-		    'Reply-To: '. $args['email'] .' . "\r\n" .
+		$headers = 'From: '. $args['email'] . "\r\n" . 
+			'Reply-To: '. $args['email'] . "\r\n" .
 		    'X-Mailer: PHP/' . phpversion();
 			
 		$subject = $args['subject'];
@@ -24,6 +28,6 @@ class ContactController
 		    echo $errorMessage;
 		}
 		
-		return $response;
+		//return true;
     }
 }

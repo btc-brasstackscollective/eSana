@@ -35,4 +35,4 @@ $app->get('/contact', function($request, $response, array $args) {
 	return $this->view->render($response, 'contact.html.twig', $args);
 });
 
-$app->post('/contact-submit', \src\Controllers\ContactController::class . ':send');
+$app->post('/contact-submit', 'ContactController:send');

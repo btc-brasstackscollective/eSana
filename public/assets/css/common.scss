@@ -216,6 +216,8 @@ body
 				
 				.esana_logo
 				{
+					@include transform(translateY(4px));
+					
 					@media only screen and (max-width : 762px)
 					{
 						@include transform(translateY(-50%));
@@ -330,6 +332,11 @@ body
 				{
 					margin-top:30px;
 					
+					@media only screen and (max-width : 769px)
+					{
+						text-align:center;
+					}
+					
 					.home_hero_panel_control_item
 					{
 						@include transition(all 500ms ease-in-out);
@@ -352,6 +359,8 @@ body
 			
 			.hero_right_container
 			{
+				@include order(2);
+				
 				.hero_panel_item
 				{
 					@include transition(all 500ms ease-in-out);
@@ -363,6 +372,14 @@ body
 					{
 						display:block;
 						z-index:1;
+					}
+					
+					&.top_padding
+					{
+						@media only screen and (max-width : 769px)
+						{
+							padding-top:20px;
+						}
 					}
 					
 					> div
@@ -612,88 +629,11 @@ body
 		{
 			.savings_calulator_container
 			{
-				background-color:$brand_green;
 				margin-bottom:40px;
-				padding:25px 50px 50px 50px;
 				
-				h3
+				img
 				{
-					font-size:36px;
-					font-weight:200;
-					margin-bottom:55px;
-					text-align:center;
-				}
-				
-				h4
-				{
-					color:$white;
-					font-size:30px;
-					font-weight:300;
-					text-align:center;
-				}
-				
-				p
-				{
-					border:solid 3px $white;
-					color:$white;
-					font-size:18px;
-					margin-bottom:40px;
-					padding:15px 15px 50px 15px;
-				}
-				
-				.cost_input_container
-				{
-					position:relative;
-				}
-				
-				input[type="text"]
-				{
-					background-color:transparent;
-					border:solid 3px $white;
-					color:$white;
-					font-size:16px;
-					padding:10px 15px;
-					width:100%;
-				}
-				
-				a.saving_submit_btn
-				{
-					@include transform(translateY(calc(-50% - 2px)));
-					
-					font-size:16px;
-					height:45px;
-					position:absolute;
-					text-decoration:none;
-					right:0;
-					top:50%;
-					width:30px;
-					
-					&::after,
-					&::before
-					{
-						@include transform-origin(center right);
-						
-						content:'';
-						background-color:$white;
-						height:3px;
-						position:absolute;
-						right:7px;
-						width:20px;
-					}
-					
-					&::before
-					{
-						@include transform(rotate(45deg));
-						
-						top:calc(50% + 1px);
-					}
-					
-					&::after
-					{
-						@include transform(rotate(-45deg));
-						
-						top:calc(50% - 1px);
-					}
+					margin:0 auto;
 				}
 			}
 		}
@@ -703,6 +643,22 @@ body
 			.sign_up_callout_container
 			{
 				margin-top:40px;
+				
+				.content_section
+				{
+					@media only screen and (max-width : 769px)
+					{
+						margin:20px 0;	
+					}
+				}
+				
+				img
+				{
+					@media only screen and (max-width : 769px)
+					{
+						margin:0 auto;	
+					}
+				}
 				
 				h2, p
 				{
@@ -774,7 +730,7 @@ body
 		
 		@media only screen and (max-width : 768px)
 		{
-			font-size:14px;
+			font-size:16px !important;
 		}
 	}
 	
