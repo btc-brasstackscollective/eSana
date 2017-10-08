@@ -35,7 +35,11 @@
 				data:$(this).serialize(),
 				success: function(data, textStatus, jQ)
 				{
-					console.log('success');
+					$('.contact_us_form_message p').addClass('success').text('Thank you. Your message has been sent.');
+				},
+				fail: function(jQ, textStatus, errorThrown)
+				{
+					$('.contact_us_form_message p').addClass('fail').text('There seems to have been an error. Please try sending your message again at a later time.');
 				}
 			});
 		});

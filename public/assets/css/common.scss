@@ -684,9 +684,11 @@ body
 							
 								&::after
 								{
-									content:'\2714';
+									content:'';
+									background:transparent url('../img/common/img-checkmark-white-icon.png') 50% 50% no-repeat;
+									background-size:22px 17px;
 									border-color:$white;
-									color:$white;	
+									color:$white;
 								}
 							}
 						}
@@ -982,6 +984,72 @@ body
 		}
 	}
 	
+	.red-banner, .blue-banner, .white-banner
+	{
+		margin: 5% auto;
+		text-align: center;
+		padding:20px 10px;
+
+		p {
+			color: $white;
+			line-height: 2rem;
+			
+			@media (min-width: 970px) {
+				line-height: 3.5rem;
+			}
+		}
+	}
+
+	.red-banner 
+	{
+		background: $brand_red;
+		
+		@media (min-width: 970px) {
+			padding: 87px 0 92px;
+		}
+
+		p
+		{
+			font-size: 2.8125rem;
+			line-height:1.2;
+		}
+	}
+
+	.blue-banner 
+	{
+		background: $brand_blue;
+
+		@media (min-width: 970px)
+		{
+			padding: 59px 0 51px;
+		}
+		
+		p
+		{
+			font-size: 32px;
+			line-height:1.2;
+			margin: 0 auto;
+		}
+	}
+
+	.white-banner 
+	{
+		background: $white;
+
+		@media (min-width: 970px) {
+			padding: auto 0 51px;
+		}
+
+		p {
+			color: $brand_red;
+
+			@media (min-width: 970px) {
+				font-size: 40px;
+				line-height:1.2;
+			}
+		}
+	}
+	
 	.nav_contact_number
 	{
 		color:$brand_red;
@@ -1049,7 +1117,7 @@ body
 		width:100%;
 	}
 
-	.our-plans, .reach-out, .your-tools, .our-mission
+	.our-plans, .reach-out, .your-tools, .our-mission, .savings_calculator_content_wrapper
 	{
 		margin-bottom: 75px;
 
@@ -1072,7 +1140,46 @@ body
 			color:$gray_body_copy;
 		}
 	}
-
+	
+	.savings_calculator_content_wrapper
+	{
+		.saving_calculator_container
+		{	
+			margin-top:70px;
+			
+			.savings_calculator_field_selector_item
+			{
+				color:$brand_blue;
+				display:inline-block;
+				padding:0 15px;
+				text-align:center;
+				
+				p
+				{
+					color:$brand_blue;
+					margin:0 0 10px 0;
+				}
+				
+				.savings_calculator_field_selector_trigger
+				{
+					@include transition(all 500ms ease-in-out);
+					
+					border:solid 2px $brand_blue;
+					border-radius:50%;
+					cursor:pointer;
+					margin:0 auto;
+					height:38px;
+					width:38px;
+					
+					&:hover, &.active
+					{
+						background-color:$brand_blue;
+					}
+				}
+			}
+		}
+	}
+		
 	.savings_calc
 	{
 
@@ -1081,6 +1188,11 @@ body
 			color: $brand_green;
 			font-size: 2.5em;
 			padding-top: 18%;
+			
+			@media only screen and (max-width : 992px)
+			{
+				padding-top:30px;	
+			}
 		}
 
 		p
@@ -1113,6 +1225,11 @@ body
 		{
 			margin-bottom: 30px;
 		}
+		
+		@media only screen and (max-width : 992px)
+		{
+			margin-bottom:30px;	
+		}
 	}
 	
 	.provider_search
@@ -1123,6 +1240,11 @@ body
 			color: $brand_red;
 			font-size: 2.5em;
 			padding-top: 18%;
+			
+			@media only screen and (max-width : 992px)
+			{
+				padding-top:30px;	
+			}
 		}
 
 		p
@@ -1169,6 +1291,11 @@ body
 
 			
 		}
+		
+		@media only screen and (max-width : 992px)
+		{
+			margin-bottom:30px;	
+		}
 	}
 
 	.prescription_search
@@ -1179,6 +1306,11 @@ body
 			color: $brand_blue;
 			font-size: 2.5em;
 			padding-top: 18%;
+			
+			@media only screen and (max-width : 992px)
+			{
+				padding-top:30px;	
+			}
 		}
 
 		p
@@ -1213,6 +1345,11 @@ body
 		{
 			margin-bottom: 30px;
 		}
+		
+		@media only screen and (max-width : 992px)
+		{
+			margin-bottom:30px;	
+		}
 	}
 
 	.our-mission
@@ -1246,73 +1383,6 @@ body
 			img 
 			{
 				margin: 5% 0;
-			}
-		}
-
-		.red-banner, .blue-banner, .white-banner
-		{
-			margin: 5% auto;
-			text-align: center;
-			padding: 20px 10px;
-
-			p {
-				color: $white;
-				line-height: 2rem;
-				
-				@media (min-width: 970px) {
-					line-height: 3.5rem;
-				}
-			}
-		}
-
-		.red-banner 
-		{
-			background: $brand_red;
-			
-			@media (min-width: 970px) {
-				padding: 87px 50px 92px;
-			}
-
-			p
-			{
-				font-size: 2.8125rem;
-				line-height:1.2;
-			}
-		}
-
-		.blue-banner 
-		{
-			background: $brand_blue;
-
-			@media (min-width: 970px) {
-				padding: 59px 100px 51px;
-			}
-			
-
-			p
-			{
-				font-size: 32px;
-				line-height:1.2;
-				margin: 0 auto;
-				width: 85%;
-			}
-		}
-
-		.white-banner 
-		{
-			background: $white;
-
-			@media (min-width: 970px) {
-				padding: auto 100px 51px;
-			}
-
-			p {
-				color: $brand_red;
-
-				@media (min-width: 970px) {
-					font-size: 40px;
-					line-height:1.2;
-				}
 			}
 		}
 
@@ -1371,6 +1441,25 @@ body
 
 	.contact-form
 	{
+		.contact_us_form_message
+		{
+			p
+			{
+				padding:20px 30px;
+				
+				&.success
+				{
+					background-color:$brand_blue;
+					color:$white;
+				}
+				
+				&.fail
+				{
+					color:red;
+				}
+			}	
+		}
+		
 		form
 		{
 			margin-bottom: 100px;

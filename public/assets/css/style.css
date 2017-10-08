@@ -1215,7 +1215,9 @@ a:hover {
 .plan_detail_info_container
 .plan_detail_sign_up_container
 a:hover::after {
-            content: '\2714';
+            content: '';
+            background: transparent url("../img/common/img-checkmark-white-icon.png") 50% 50% no-repeat;
+            background-size: 22px 17px;
             border-color: white;
             color: white; }
   body.home
@@ -1481,6 +1483,59 @@ u {
     content: '';
     clear: both;
     overflow: hidden; }
+  body .red-banner, body .blue-banner, body
+.white-banner {
+    margin: 5% auto;
+    text-align: center;
+    padding: 20px 10px; }
+    body .red-banner p, body .blue-banner p, body
+.white-banner p {
+      color: white;
+      line-height: 2rem; }
+      @media (min-width: 970px) {
+        body .red-banner p, body .blue-banner p, body
+.white-banner p {
+          line-height: 3.5rem; } }
+  body
+.red-banner {
+    background: #f26e6d; }
+    @media (min-width: 970px) {
+      body
+.red-banner {
+        padding: 87px 0 92px; } }
+    body
+.red-banner
+p {
+      font-size: 2.8125rem;
+      line-height: 1.2; }
+  body
+.blue-banner {
+    background: #79ccc9; }
+    @media (min-width: 970px) {
+      body
+.blue-banner {
+        padding: 59px 0 51px; } }
+    body
+.blue-banner
+p {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 auto; }
+  body
+.white-banner {
+    background: white; }
+    @media (min-width: 970px) {
+      body
+.white-banner {
+        padding: auto 0 51px; } }
+    body
+.white-banner p {
+      color: #f26e6d; }
+      @media (min-width: 970px) {
+        body
+.white-banner p {
+          font-size: 40px;
+          line-height: 1.2; } }
   body
 .nav_contact_number {
     color: #f26e6d;
@@ -1539,8 +1594,8 @@ img {
     height: 1px;
     margin: 15px 0;
     width: 100%; }
-  body .our-plans, body .reach-out, body .your-tools, body
-.our-mission {
+  body .our-plans, body .reach-out, body .your-tools, body .our-mission, body
+.savings_calculator_content_wrapper {
     margin-bottom: 75px; }
     body .our-plans
 h2
@@ -1548,8 +1603,10 @@ h2
 h2
 , body .your-tools
 h2
+, body .our-mission
+h2
 , body
-.our-mission
+.savings_calculator_content_wrapper
 h2 {
       color: #f26e6d;
       font-weight: 300;
@@ -1563,8 +1620,10 @@ h2
 h2
 , body .your-tools
 h2
+, body .our-mission
+h2
 , body
-.our-mission
+.savings_calculator_content_wrapper
 h2 {
           font-size: 26px; } }
     body .our-plans
@@ -1573,16 +1632,66 @@ p
 p
 , body .your-tools
 p
+, body .our-mission
+p
 , body
-.our-mission
+.savings_calculator_content_wrapper
 p {
       color: #666666; }
+  body
+.savings_calculator_content_wrapper
+.saving_calculator_container {
+    margin-top: 70px; }
+    body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item {
+      color: #79ccc9;
+      display: inline-block;
+      padding: 0 15px;
+      text-align: center; }
+      body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item
+p {
+        color: #79ccc9;
+        margin: 0 0 10px 0; }
+      body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item
+.savings_calculator_field_selector_trigger {
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+        border: solid 2px #79ccc9;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 auto;
+        height: 38px;
+        width: 38px; }
+        body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item
+.savings_calculator_field_selector_trigger:hover, body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item
+.savings_calculator_field_selector_trigger.active {
+          background-color: #79ccc9; }
   body
 .savings_calc
 h3 {
     color: #71c499;
     font-size: 2.5em;
     padding-top: 18%; }
+    @media only screen and (max-width: 992px) {
+      body
+.savings_calc
+h3 {
+        padding-top: 30px; } }
   body
 .savings_calc
 p {
@@ -1611,12 +1720,21 @@ img {
 .savings_calc
 .btn {
     margin-bottom: 30px; }
+  @media only screen and (max-width: 992px) {
+    body
+.savings_calc {
+      margin-bottom: 30px; } }
   body
 .provider_search
 h3 {
     color: #f26e6d;
     font-size: 2.5em;
     padding-top: 18%; }
+    @media only screen and (max-width: 992px) {
+      body
+.provider_search
+h3 {
+        padding-top: 30px; } }
   body
 .provider_search
 p {
@@ -1654,12 +1772,21 @@ img {
 .btn.red:hover {
         color: white;
         background-color: #f26e6d; }
+  @media only screen and (max-width: 992px) {
+    body
+.provider_search {
+      margin-bottom: 30px; } }
   body
 .prescription_search
 h3 {
     color: #79ccc9;
     font-size: 2.5em;
     padding-top: 18%; }
+    @media only screen and (max-width: 992px) {
+      body
+.prescription_search
+h3 {
+        padding-top: 30px; } }
   body
 .prescription_search
 p {
@@ -1688,6 +1815,10 @@ img {
 .prescription_search
 .btn {
     margin-bottom: 30px; }
+  @media only screen and (max-width: 992px) {
+    body
+.prescription_search {
+      margin-bottom: 30px; } }
   body
 .our-mission h2, body
 .our-mission
@@ -1716,79 +1847,6 @@ h3 {
 .intro
 img {
     margin: 5% 0; }
-  body
-.our-mission .red-banner, body
-.our-mission .blue-banner, body
-.our-mission
-.white-banner {
-    margin: 5% auto;
-    text-align: center;
-    padding: 20px 10px; }
-    body
-.our-mission .red-banner p, body
-.our-mission .blue-banner p, body
-.our-mission
-.white-banner p {
-      color: white;
-      line-height: 2rem; }
-      @media (min-width: 970px) {
-        body
-.our-mission .red-banner p, body
-.our-mission .blue-banner p, body
-.our-mission
-.white-banner p {
-          line-height: 3.5rem; } }
-  body
-.our-mission
-.red-banner {
-    background: #f26e6d; }
-    @media (min-width: 970px) {
-      body
-.our-mission
-.red-banner {
-        padding: 87px 50px 92px; } }
-    body
-.our-mission
-.red-banner
-p {
-      font-size: 2.8125rem;
-      line-height: 1.2; }
-  body
-.our-mission
-.blue-banner {
-    background: #79ccc9; }
-    @media (min-width: 970px) {
-      body
-.our-mission
-.blue-banner {
-        padding: 59px 100px 51px; } }
-    body
-.our-mission
-.blue-banner
-p {
-      font-size: 32px;
-      line-height: 1.2;
-      margin: 0 auto;
-      width: 85%; }
-  body
-.our-mission
-.white-banner {
-    background: white; }
-    @media (min-width: 970px) {
-      body
-.our-mission
-.white-banner {
-        padding: auto 100px 51px; } }
-    body
-.our-mission
-.white-banner p {
-      color: #f26e6d; }
-      @media (min-width: 970px) {
-        body
-.our-mission
-.white-banner p {
-          font-size: 40px;
-          line-height: 1.2; } }
   @media (min-width: 750px) {
     body
 .our-mission
@@ -1831,6 +1889,22 @@ a {
     color: #f26e6d;
     font-size: 18px;
     line-height: 22px; }
+  body
+.contact-form
+.contact_us_form_message
+p {
+    padding: 20px 30px; }
+    body
+.contact-form
+.contact_us_form_message
+p.success {
+      background-color: #79ccc9;
+      color: white; }
+    body
+.contact-form
+.contact_us_form_message
+p.fail {
+      color: red; }
   body
 .contact-form
 form {

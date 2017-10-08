@@ -23,6 +23,12 @@ $app->get('/tools', function($request, $response, array $args) {
 	return $this->view->render($response, 'tools.html.twig', $args);
 });
 
+// Tools Page
+$app->get('/tools/savings-calculator', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'tools_savings_calculator.html.twig', $args);
+});
+
 // Mission Page
 $app->get('/mission', function($request, $response, array $args) {
 	$args['currentUrl'] = $request->getUri()->getPath();

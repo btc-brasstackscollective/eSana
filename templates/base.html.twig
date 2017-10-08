@@ -56,10 +56,10 @@
 										<a href="/plans" {% if currentUrl == '/plans' %} class="active"{% endif %}>Plans</a>
 									</li>
 									<li>
-										<a href="/tools" {% if currentUrl == '/tools' %} class="active"{% endif %}>Tools</a>
+										<a href="/tools" {% if currentUrl == '/tools' or currentUrl == '/tools/savings-calculator' %} class="active"{% endif %}>Tools</a>
 										
 										<ul class="sub_nav_links">
-											<li><a href="">Savings Calculator</a></li>
+											<li><a href="/tools/savings-calculator" {% if currentUrl == '/tools/savings-calculator' %} class="active"{% endif %}>Savings Calculator</a></li>
 											<li><a href="">Plan Assessment</a></li>
 											<li><a href="">Provider Locator</a></li>
 										</ul>
