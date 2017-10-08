@@ -1703,7 +1703,9 @@ a {
 .our-mission
 .intro
 h3 {
-    color: #79ccc9; }
+    color: #79ccc9;
+    font-size: 32px;
+    margin-bottom: 15px; }
   body
 .our-mission
 .intro p {
@@ -1727,7 +1729,15 @@ img {
 .our-mission .blue-banner p, body
 .our-mission
 .white-banner p {
-      color: white; }
+      color: white;
+      line-height: 2rem; }
+      @media (min-width: 970px) {
+        body
+.our-mission .red-banner p, body
+.our-mission .blue-banner p, body
+.our-mission
+.white-banner p {
+          line-height: 3.5rem; } }
   body
 .our-mission
 .red-banner {
@@ -1904,7 +1914,7 @@ sup {
   body
 .dental-plus {
     background-color: #f26e6d;
-    background-image: url(/assets/img/plans/ToothPattern.png); }
+    background-image: url("../img/plans/ToothPattern.png"); }
     body
 .dental-plus
 .content_container {
@@ -1935,7 +1945,7 @@ h4 {
   body
 .med-plus {
     background-color: #f26e6d;
-    background-image: url(/assets/img/plans/BandaidPattern.png); }
+    background-image: url("../img/plans/BandaidPattern.png"); }
     body
 .med-plus
 .content_container {
@@ -1966,7 +1976,7 @@ h4 {
   body
 .deluxe-plus {
     background-color: #f26e6d;
-    background-image: url(/assets/img/plans/ClipboardPattern.png); }
+    background-image: url("../img/plans/ClipboardPattern.png"); }
     body
 .deluxe-plus
 .content_container {

@@ -1234,6 +1234,8 @@ body
 			h3 
 			{
 				color: $brand_blue;
+				font-size: 32px;
+				margin-bottom: 15px;
 			}
 
 			p {
@@ -1255,6 +1257,11 @@ body
 
 			p {
 				color: $white;
+				line-height: 2rem;
+				
+				@media (min-width: 970px) {
+					line-height: 3.5rem;
+				}
 			}
 		}
 
@@ -1455,7 +1462,7 @@ body
 	{
 
 		background-color:$brand_red;
-		background-image: url(/assets/img/plans/ToothPattern.png);
+		background-image: url('../img/plans/ToothPattern.png');
 
 		.content_container
 		{
@@ -1493,7 +1500,7 @@ body
 	{
 
 		background-color:$brand_red;
-		background-image: url(/assets/img/plans/BandaidPattern.png);
+		background-image: url('../img/plans/BandaidPattern.png');
 
 		.content_container
 		{
@@ -1530,7 +1537,7 @@ body
 	{
 
 		background-color:$brand_red;
-		background-image: url(/assets/img/plans/ClipboardPattern.png);
+		background-image: url('../img/plans/ClipboardPattern.png');
 
 		.content_container
 		{
