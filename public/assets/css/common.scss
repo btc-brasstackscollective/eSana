@@ -144,9 +144,11 @@ body
 							margin:0;
 							padding:0;
 							
-							li
+							> li
 							{
 								display:inline-block;
+								position:relative;
+								z-index:6;
 								
 								@media only screen and (max-width : 769px)
 								{
@@ -154,7 +156,7 @@ body
 									margin-bottom:5px;
 								}
 								
-								a
+								> a
 								{
 									color:$gray_body_copy;
 									font-size:16px;
@@ -173,6 +175,11 @@ body
 									&::after
 									{
 										@include transition(all 500ms ease);
+									}
+									
+									&.active
+									{
+										color:$brand_red;
 									}
 									
 									&:hover,
@@ -196,6 +203,76 @@ body
 											@media only screen and (max-width : 769px)
 											{
 												display:none;
+											}
+										}
+									}
+								}
+								
+								.sub_nav_links
+								{
+									@include transform(translate(-22px, 0));
+									
+									background-color:$white;
+									display:none;
+									list-style:none;
+									margin:0;
+									min-width:200px;
+									padding:10px 15px;
+									text-align:left;
+									z-index:5;
+									
+									@media only screen and (max-width : 769px)
+									{
+										background-color:transparent;
+										display:block;
+										margin:0 0 0 30px;
+										position:relative !important;
+										
+										li
+										{
+											margin:0 !important;
+											
+											a
+											{
+												color:$white !important;
+												
+												&:hover
+												{
+													color:$brand_red !important;
+													text-decoration:none !important;
+												}
+											}	
+										}	
+									}
+								}
+								
+								&:hover
+								{
+									.sub_nav_links
+									{
+										display:block;
+										position:absolute;
+										
+										li
+										{
+											display:block;
+											margin:10px 0;
+											width:100%;
+											
+											a
+											{
+												color:$brand_red;
+												display:block;
+												
+												&:hover
+												{
+													text-decoration:underline;
+												}
+												
+												&::after
+												{
+													display:none;
+												}
 											}
 										}
 									}
@@ -334,7 +411,8 @@ body
 					
 					@media only screen and (max-width : 769px)
 					{
-						text-align:center;
+						@include justify-content(center);
+						@include display(flex);
 					}
 					
 					.home_hero_panel_control_item
@@ -445,6 +523,13 @@ body
 						{
 							font-size:20px;	
 						}
+					}
+					
+					&.img_container
+					{
+						background-repeat:no-repeat;
+						background-size:cover;
+						width:100%;
 					}
 					
 					img
@@ -558,22 +643,6 @@ body
 						@include flex-grow(1);
 						
 						padding:25px 15px 0;
-						
-						ul
-						{
-							list-style:none;
-							margin:0;
-							padding:0;
-							
-							li
-							{
-								color:$white;
-								font-size:18px;
-								list-style:none;
-								margin:0 0 20px 0;
-								padding:0;
-							}
-						}
 					}
 					
 					.plan_detail_sign_up_container
@@ -609,13 +678,14 @@ body
 							
 							&:hover
 							{
-								background-color:$brand_red;
+								background-color:$brand_blue;
 								border-color:$brand_blue;
 								color:$white;
 							
 								&::after
 								{
-									border-color:$brand_blue;
+									content:'\2714';
+									border-color:$white;
 									color:$white;	
 								}
 							}
@@ -709,6 +779,8 @@ body
 	h3
 	{
 		color:$white;
+		font-size:36px;
+		line-height:1.2;
 		
 		@media only screen and (max-width : 768px)
 		{
@@ -725,12 +797,37 @@ body
 	
 	p, ol li
 	{
-		font-weight:300;
+		font-weight:400;
 		margin:15px 0;
 		
 		@media only screen and (max-width : 768px)
 		{
 			font-size:16px !important;
+		}
+	}
+	
+	ul.plus_sign_list
+	{
+		list-style:none;
+		margin:0;
+		padding:0 0 0 20px;
+		
+		li
+		{
+			color:$white;
+			font-size:18px;
+			font-weight:400;
+			list-style:none;
+			margin:0 0 20px 0;
+			padding:0;
+			position:relative;
+			
+			&::before
+			{
+				content:'+';
+				left:-12px;
+				position:absolute;
+			}
 		}
 	}
 	
@@ -798,6 +895,24 @@ body
 		@media only screen and (max-width : 768px)
 		{
 			display:block;	
+		}
+	}
+	
+	.video_container
+	{
+		position:relative;
+		
+		&:after
+		{
+			@include transform(translate(-50%, -50%));
+			
+			content:'';
+			background:transparent url('../img/common/img-play-btn.png') 0 0 no-repeat;
+			height:50px;
+			left:50%;
+			position:absolute;
+			top:50%;
+			width:50px;
 		}
 	}
 	
@@ -885,6 +1000,23 @@ body
 				left:-22px;
 				position:absolute;
 				width:17px;
+				
+				@media only screen and (max-width : 769px)
+				{
+					background:transparent url('../img/common/img-phone-outline-icon-white.png') 0 0 no-repeat;
+					height:20px;
+				}
+			}
+			
+			a
+			{
+				color:$brand_red;
+				text-decoration:none;
+				
+				&:hover
+				{
+					border-bottom:solid 2px $brand_red;
+				}
 			}
 		}
 	}
@@ -899,16 +1031,11 @@ body
 			{
 				display:block;
 				margin:0 auto;
+				max-width:170px;
 				
 				@media only screen and (max-width : 992px)
 				{
-					max-width:95%;
-				}
-				
-				@media only screen and (max-width : 769px)
-				{
-					margin:0;
-					max-width:100%;
+					max-width:200px;
 				}
 			}
 		}
@@ -1142,6 +1269,7 @@ body
 			p
 			{
 				font-size: 2.8125rem;
+				line-height:1.2;
 			}
 		}
 
@@ -1157,6 +1285,7 @@ body
 			p
 			{
 				font-size: 32px;
+				line-height:1.2;
 				margin: 0 auto;
 				width: 85%;
 			}
@@ -1175,6 +1304,7 @@ body
 
 				@media (min-width: 970px) {
 					font-size: 40px;
+					line-height:1.2;
 				}
 			}
 		}
@@ -1187,6 +1317,15 @@ body
 				justify-content: center;
 			}
 		}
+	}
+	
+	.mission_hero_banner_container
+	{
+		background:transparent url('../img/mission/Couple.jpg') 50% 50% no-repeat;
+		background-size:cover;
+		height:40vh;
+		margin-bottom:75px;
+		width:100%;
 	}
 
 	.contact
@@ -1302,13 +1441,14 @@ body
 
 	.dental-plus, .med-plus, .deluxe-plus
 	{
-
+		background-repeat:no-repeat;
+		background-size:cover;
+		
 		.btn.red
 		{
 			position: relative;
 			top: 45px;
 		}
-		
 	}
 
 	.dental-plus
@@ -1435,6 +1575,7 @@ body
 		p
 		{
 			font-size: 1.65em;
+			margin:0 !important;
 		}
 		p, a
 		{
@@ -1445,6 +1586,22 @@ body
 		{
 			text-decoration: underline;
 			text-decoration-color:$brand_blue;
+		}
+		
+		ul.plus_sign_list
+		{
+			li
+			{
+				color:$brand_blue;
+			}
+		}
+		
+		> div.content_container > div.row > div:last-child
+		{
+			@media only screen and (max-width : 992px)
+			{
+				margin-top:30px;
+			}
 		}
 	}
 

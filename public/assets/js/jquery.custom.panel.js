@@ -11,7 +11,7 @@
 			slideItemSelector: '.hero_panel_item',
 			panelControlsSelector: '.hero_panel_controls',
 			panelControlItemSelector: '.home_hero_panel_control_item',
-			slideDelay: '10000',
+			slideDelay: '5000',
 			slideSpeed: '500'
 		};
 		
@@ -29,7 +29,15 @@
 			//panel.setPanelHeight();
 			currentPanelIndex = 0;
 			panel.changePanel();
-			panel.autoPanelChange();
+			//panel.autoPanelChange();
+		}
+		
+		panel.setSideImageSize = function()
+		{
+			var leftSideHeight = parseFloat($('.hero_left_content_container').outerHeight());
+
+			if($('.hero_right_container .hero_panel_item.active').hasClass('img_container'))
+			$('.hero_right_container .hero_panel_item.active').css('height', leftSideHeight);
 		}
 		
 		panel.setPanelHeight = function()
@@ -103,6 +111,7 @@
 			$('.hero_left_content_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
 			$('.hero_right_container '+panel.settings.slideItemSelector).removeClass('active').eq(currentPanelIndex).addClass('active');
 			
+			panel.setSideImageSize();
 			panel.updatePanelControlItem();
 		}
 		
@@ -128,7 +137,7 @@
 		        panel.cancelAutoPanelChange();
 		    },
 		    mouseleave: function () {
-		        panel.autoPanelChange();
+		        //panel.autoPanelChange();
 		    }
 		});
 	}
