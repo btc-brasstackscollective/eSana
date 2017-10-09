@@ -1494,8 +1494,9 @@ body .savings_calc h3 {
 }
 
 body .savings_calc p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
+  word-wrap: break-word;
   color: #666666;
 }
 
@@ -1538,8 +1539,9 @@ body .provider_search h3 {
 }
 
 body .provider_search p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
+  word-wrap: break-word;
   color: #666666;
 }
 
@@ -1591,8 +1593,9 @@ body .prescription_search h3 {
 }
 
 body .prescription_search p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
+  word-wrap: break-word;
   color: #666666;
 }
 
