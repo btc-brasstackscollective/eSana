@@ -22,12 +22,12 @@ class ContactController
 		$body = $args['message'];
 			
 		$success = mail($recipient, $subject, $body, $headers);
-			
+		
 		if (!$success) {
 		    $errorMessage = error_get_last()['message'];
-		    echo $errorMessage;
+		    return $errorMessage;
 		}
 		
-		//return true;
+		return $success;
     }
 }

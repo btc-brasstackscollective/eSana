@@ -1891,20 +1891,24 @@ a {
     line-height: 22px; }
   body
 .contact-form
+.contact_us_form_message {
+    display: none; }
+    body
+.contact-form
 .contact_us_form_message
 p {
-    padding: 20px 30px; }
-    body
+      padding: 20px 30px; }
+      body
 .contact-form
 .contact_us_form_message
 p.success {
-      background-color: #79ccc9;
-      color: white; }
-    body
+        background-color: #79ccc9;
+        color: white; }
+      body
 .contact-form
 .contact_us_form_message
 p.fail {
-      color: red; }
+        color: red; }
   body
 .contact-form
 form {

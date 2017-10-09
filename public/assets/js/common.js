@@ -24,23 +24,32 @@
 	    	$(navigationwrapper+', .navbar, body').toggleClass('slide-active');
 		});
 		
+		if($('.saving_calculator_container').length)
+		{
+			// Savings Calculator Knob
+			$('.saving_calulator_knob').knob();
+		}
+		
 		// Contact Us Form Submit
 		$('#contact_us_form').on('submit', function(e)
 		{
 			e.preventDefault();
 			
-			$.ajax({
+			var request = $.ajax({
 				type:'POST',
 				url:'/contact-submit',
 				data:$(this).serialize(),
-				success: function(data, textStatus, jQ)
-				{
-					$('.contact_us_form_message p').addClass('success').text('Thank you. Your message has been sent.');
-				},
-				fail: function(jQ, textStatus, errorThrown)
-				{
-					$('.contact_us_form_message p').addClass('fail').text('There seems to have been an error. Please try sending your message again at a later time.');
-				}
+				dataType:'text'
+			});
+			
+			request.done(function(msg)
+			{
+				$('.contact_us_form_message p').addClass('success').text('Thank you. Your message has been sent.').parent().fadeIn().delay(5000).fadeOut();
+			});
+			
+			request.fail(function(jqXHR, textStatus)
+			{
+				$('.contact_us_form_message p').addClass('fail').text('There seems to have been an error. Please try sending your message again at a later time.').parent().fadeIn().delay(5000).fadeOut();
 			});
 		});
 		
