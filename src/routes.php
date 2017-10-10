@@ -17,6 +17,12 @@ $app->get('/plans', function($request, $response, array $args) {
 	return $this->view->render($response, 'plans.html.twig', $args);
 });
 
+// Savings Page
+$app->get('/savinga', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'savings.html.twig', $args);
+});
+
 // Tools Page
 $app->get('/tools', function($request, $response, array $args) {
 	$args['currentUrl'] = $request->getUri()->getPath();

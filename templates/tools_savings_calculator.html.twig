@@ -19,54 +19,72 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-offset-2 col-md-8 text-center">
 					<div class="savings_calculator_field_selector_container">
-						<div class="savings_calculator_field_selector_item">
+						<div class="savings_calculator_field_selector_item" data-question="On average, how much does a regular teeth cleaning at the dentist cost you?" data-average-cost="117" data-esana-cost="46">
 							<p>Dental</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
 						</div>
 						
-						<div class="savings_calculator_field_selector_item">
+						<!-- <div class="savings_calculator_field_selector_item" data-question="" data-average-cost="" data-esana-cost="">
 							<p>Rx</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
-						</div>
+						</div> -->
 						
-						<div class="savings_calculator_field_selector_item">
+						<div class="savings_calculator_field_selector_item" data-question="How much do you spend on Complete Blood Count tests?" data-average-cost="39" data-esana-cost="31">
 							<p>Ancillary</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
 						</div>
 						
-						<div class="savings_calculator_field_selector_item">
+						<div class="savings_calculator_field_selector_item" data-question="How much do you spend on a comprehensive hearing test?" data-average-cost="112" data-esana-cost="73">
 							<p>Hearing</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
 						</div>
 						
-						<div class="savings_calculator_field_selector_item">
+						<div class="savings_calculator_field_selector_item" data-question="How much does a chiropractic adjustment cost for you? (spine)" data-average-cost="91" data-esana-cost="63">
 							<p>Chiropractic</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
 						</div>
 						
-						<div class="savings_calculator_field_selector_item">
+						<div class="savings_calculator_field_selector_item" data-question="How much do you spend on eye examinations? (with photos)" data-average-cost="276" data-esana-cost="138">
 							<p>Vision</p>
 							
 							<div class="savings_calculator_field_selector_trigger"></div>
 						</div>
 					</div>
 					
-					<div class="savings_calculator_dental_container">
+					<div class="savings_calculator_question_container">
 						<div class="col-xs-12">
+							<h3 class="savings_calculator_question"></h3>
+							
+							<div class="saving_calculator_cost_form">
+								<input type="text" class="saving_calculator_cost_form_input" />
+								<a href="" class="saving_calculator_cost_form_submit btn blue">NEXT</a>
+							</div>
+						</div>
 						
+						<div class="col-sm-6 col-xs-12 knob_dial">
+							<input class="saving_calulator_knob" data-bgColor="#D5EDE0" data-fgColor="#71C499" data-angleOffset="0" data-rotation="anticlockwise" data-thickness=".1" data-linecap="round" value="0" readonly>
 						</div>
 						
 						<div class="col-sm-6 col-xs-12">
-							<input class="saving_calulator_knob" data-angleOffset="0" data-rotation="anticlockwise" data-thickness=".1" data-linecap="round" value="35" readonly>
-						</div>
-						
-						<div class="col-sm-6 col-xs-12">
-						
+							<div class="saving_calculator_cost_container">
+								<span>Your cost</span>
+								<span class="saving_calculator_your_cost"></span>
+							</div>
+							
+							<div class="saving_calculator_cost_container">
+								<span>Average cost</span>
+								<span class="saving_calculator_average_cost"></span>
+							</div>
+							
+							<div class="saving_calculator_cost_container">
+								<span>eSana cost</span>
+								<span class="saving_calculator_esana_cost"></span>
+							</div>
 						</div>
 					</div>
 				</div>

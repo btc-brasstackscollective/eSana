@@ -11,15 +11,18 @@ class ContactController
     }
     public function send($request, $response, $args) {
 	    //$recipient = 'info@esanahealth.com';
+	    
+	    $params = $request->getParsedBody(); 
+	    
 	    $recipient = 'dougingalls@gmail.com';
 	    
-		$headers = 'From: '. $args['email'] . "\r\n" . 
-			'Reply-To: '. $args['email'] . "\r\n" .
+		$headers = 'From: '. $params['email'] . "\r\n" . 
+			'Reply-To: '. $params['email'] . "\r\n" .
 		    'X-Mailer: PHP/' . phpversion();
 			
-		$subject = $args['subject'];
+		$subject = $params['subject'];
 			
-		$body = $args['message'];
+		$body = $params['message'];
 			
 		$success = mail($recipient, $subject, $body, $headers);
 		
