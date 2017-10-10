@@ -1792,8 +1792,9 @@ h3 {
   body
 .savings_calc
 p {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
     color: #666666; }
   body
 .savings_calc
@@ -1835,8 +1836,9 @@ h3 {
   body
 .provider_search
 p {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
     color: #666666; }
   body
 .provider_search
@@ -1887,8 +1889,9 @@ h3 {
   body
 .prescription_search
 p {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
     color: #666666; }
   body
 .prescription_search
@@ -2251,7 +2254,8 @@ li
 .deluxe-plus-copy
 ul.plus_sign_list
 li {
-      color: #79ccc9; }
+      color: #79ccc9;
+      font-weight: bold; }
     @media only screen and (max-width: 992px) {
       body .dental-plus-copy
 > div.content_container > div.row > div:last-child
