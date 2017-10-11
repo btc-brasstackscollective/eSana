@@ -29,7 +29,7 @@
 			//panel.setPanelHeight();
 			currentPanelIndex = 0;
 			panel.changePanel();
-			//panel.autoPanelChange();
+			panel.autoPanelChange();
 		}
 		
 		panel.setSideImageSize = function()
