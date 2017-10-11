@@ -77,11 +77,11 @@
 				{
 					top: y + 'px',
 					left: x + 'px'
-				}).fadeIn();
+				}).stop().fadeIn();
 				
 			}).on('mouseleave', function()
 			{
-				$('.tool_top_container').fadeOut(function()
+				$('.tool_top_container').stop().fadeOut(function()
 				{
 					$(this).text('');
 				});
