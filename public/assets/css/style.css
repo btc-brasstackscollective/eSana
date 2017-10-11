@@ -1461,11 +1461,23 @@ u {
     border: solid 5px #79ccc9;
     border-radius: 10px;
     color: #79ccc9;
+    display: none;
     font-size: 14px;
     line-height: 1.2;
     padding: 10px;
     position: absolute;
     max-width: 300px; }
+    @media only screen and (max-width: 768px) {
+      body
+.tool_top_container {
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: fixed;
+        top: 50%; } }
     body
 .tool_top_container::before {
       content: '';
@@ -1477,6 +1489,10 @@ u {
       left: -17px;
       position: absolute;
       width: 22px; }
+      @media only screen and (max-width: 768px) {
+        body
+.tool_top_container::before {
+          display: none; } }
   body
 .price_text {
     font-family: 'Oswald', sans-serif; }
