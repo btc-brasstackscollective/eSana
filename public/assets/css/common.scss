@@ -896,13 +896,13 @@ body
 		&.red
 		{
 			border:solid 3px $brand_red;
-			color:$brand_blue;
+			color:$brand_red;
 			background-color: $white;
 			
 			&:hover
 			{
-				background-color:$brand_blue;
-				border-color:$brand_blue;
+				background-color:$brand_red;
+				border-color:$brand_red;
 				color:$white;
 			}
 		}
@@ -1318,179 +1318,94 @@ body
 			}
 		}
 	}
-		
-	.savings_calc
+	
+	.tool_description_container
 	{
-
-		h3
-		{
-			color: $brand_green;
-			font-size: 2.5em;
-			padding-top: 18%;
-			
-			@media only screen and (max-width : 992px)
-			{
-				padding-top:30px;	
-			}
-		}
-
-		p
-		{
-			font-size: 16px;
-			line-height: 20px;	
-			word-wrap: break-word;	
-			color:$gray_body_copy;
-		}
-
-		.green-bg
-		{
-			background-color: $brand_green;
-			height: 375px;
-			
-			h3
-			{
-				font-weight: 200;
-				font-size: 2.75em;
-				padding: 30px 0px;
-				color: $white;
-			}
-
-			img
-			{
-				padding-bottom: 50px;
-			}
-		}
-
-		.btn
-		{
-			margin-bottom: 30px;
-		}
-		
 		@media only screen and (max-width : 992px)
 		{
-			margin-bottom:30px;	
+			margin-bottom:80px;
 		}
-	}
-	
-	.provider_search
-	{
-
-		h3
+		
+		&.green_bg
 		{
-			color: $brand_red;
-			font-size: 2.5em;
-			padding-top: 18%;
+			.image_row
+			{
+				background-color:$brand_green;
+			}
 			
-			@media only screen and (max-width : 992px)
+			.content_row h3
 			{
-				padding-top:30px;	
+				color:$brand_green;
 			}
 		}
-
-		p
+		
+		&.red_bg
 		{
-			font-size: 16px;
-			line-height: 20px;	
-			word-wrap: break-word;		
-			color:$gray_body_copy;
-		}
-
-		.red-bg
-		{
-			background-color: $brand_red;
-			height: 375px;
-
-			h3
+			.image_row
 			{
-				font-weight: 200;
-				font-size: 2.75em;
-				padding: 30px 0px;
-				color: $white;
+				background-color:$brand_red;
 			}
-
-			img
-			{
-				padding-bottom: 50px;
-			}
-		}
-
-		.btn
-		{
-
-			margin-bottom: 30px;
-
-			&.red
+			
+			.content_row h3
 			{
 				color:$brand_red;
-			
-				&:hover
-				{
-					color:$white;	
-					background-color: $brand_red;			
-				}		
 			}
-
-			
 		}
 		
-		@media only screen and (max-width : 992px)
+		&.blue_bg
 		{
-			margin-bottom:30px;	
-		}
-	}
-
-	.prescription_search
-	{
-
-		h3
-		{
-			color: $brand_blue;
-			font-size: 2.5em;
-			padding-top: 18%;
-			
-			@media only screen and (max-width : 992px)
+			.image_row
 			{
-				padding-top:30px;	
+				background-color:$brand_blue;
+			}
+			
+			.content_row h3
+			{
+				color:$brand_blue;
 			}
 		}
-
-		p
+		
+		.image_row
 		{
-			font-size: 16px;
-			line-height: 20px;	
-			word-wrap: break-word;			
-			color:$gray_body_copy;
+			height:50vh;
 			
-		}
-
-		.blue-bg
-		{
-			background-color: $brand_blue;
-			height: 375px;
-
-			h3
+			@media only screen and (max-width : 768px)
 			{
-				font-weight: 200;
-				font-size: 2.75em;
-				padding: 30px 0px;
-				color: $white;
+				height:auto;
+				padding:15px 0;
 			}
-
+			
 			img
 			{
-				padding-bottom: 50px;
+				margin-top:30px;
 			}
-			
-		}
-
-		.btn
-		{
-			margin-bottom: 30px;
 		}
 		
-		@media only screen and (max-width : 992px)
+		.content_row
 		{
-			margin-bottom:30px;	
+			@media only screen and (max-width : 768px)
+			{
+				margin-top:30px;
+			}
+		}
+		
+		.pull-right
+		{
+			@include order(2);
+		}
+		
+		p
+		{
+			color:$gray_body_copy;	
+			word-wrap:break-word;
+		}
+		
+		h3
+		{
+			color:$white;
+			font-size:2.75em;
+			font-weight:200;
+			padding:0;
 		}
 	}
 

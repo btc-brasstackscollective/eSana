@@ -1379,12 +1379,12 @@ u {
     body
 .btn.red {
       border: solid 3px #f26e6d;
-      color: #79ccc9;
+      color: #f26e6d;
       background-color: white; }
       body
 .btn.red:hover {
-        background-color: #79ccc9;
-        border-color: #79ccc9;
+        background-color: #f26e6d;
+        border-color: #f26e6d;
         color: white; }
     body
 .btn.white {
@@ -1838,147 +1838,76 @@ span.saving_calculator_average_cost {
 .saving_calculator_cost_container
 span.saving_calculator_esana_cost {
             color: #71c499; }
-  body
-.savings_calc
-h3 {
-    color: #71c499;
-    font-size: 2.5em;
-    padding-top: 18%; }
-    @media only screen and (max-width: 992px) {
-      body
-.savings_calc
-h3 {
-        padding-top: 30px; } }
-  body
-.savings_calc
-p {
-    font-size: 16px;
-    line-height: 20px;
-    word-wrap: break-word;
-    color: #666666; }
-  body
-.savings_calc
-.green-bg {
-    background-color: #71c499;
-    height: 375px; }
-    body
-.savings_calc
-.green-bg
-h3 {
-      font-weight: 200;
-      font-size: 2.75em;
-      padding: 30px 0px;
-      color: white; }
-    body
-.savings_calc
-.green-bg
-img {
-      padding-bottom: 50px; }
-  body
-.savings_calc
-.btn {
-    margin-bottom: 30px; }
   @media only screen and (max-width: 992px) {
     body
-.savings_calc {
-      margin-bottom: 30px; } }
+.tool_description_container {
+      margin-bottom: 80px; } }
   body
-.provider_search
-h3 {
-    color: #f26e6d;
-    font-size: 2.5em;
-    padding-top: 18%; }
-    @media only screen and (max-width: 992px) {
+.tool_description_container.green_bg
+.image_row {
+    background-color: #71c499; }
+  body
+.tool_description_container.green_bg
+.content_row h3 {
+    color: #71c499; }
+  body
+.tool_description_container.red_bg
+.image_row {
+    background-color: #f26e6d; }
+  body
+.tool_description_container.red_bg
+.content_row h3 {
+    color: #f26e6d; }
+  body
+.tool_description_container.blue_bg
+.image_row {
+    background-color: #79ccc9; }
+  body
+.tool_description_container.blue_bg
+.content_row h3 {
+    color: #79ccc9; }
+  body
+.tool_description_container
+.image_row {
+    height: 50vh; }
+    @media only screen and (max-width: 768px) {
       body
-.provider_search
-h3 {
-        padding-top: 30px; } }
-  body
-.provider_search
-p {
-    font-size: 16px;
-    line-height: 20px;
-    word-wrap: break-word;
-    color: #666666; }
-  body
-.provider_search
-.red-bg {
-    background-color: #f26e6d;
-    height: 375px; }
+.tool_description_container
+.image_row {
+        height: auto;
+        padding: 15px 0; } }
     body
-.provider_search
-.red-bg
-h3 {
-      font-weight: 200;
-      font-size: 2.75em;
-      padding: 30px 0px;
-      color: white; }
-    body
-.provider_search
-.red-bg
+.tool_description_container
+.image_row
 img {
-      padding-bottom: 50px; }
-  body
-.provider_search
-.btn {
-    margin-bottom: 30px; }
+      margin-top: 30px; }
+  @media only screen and (max-width: 768px) {
     body
-.provider_search
-.btn.red {
-      color: #f26e6d; }
-      body
-.provider_search
-.btn.red:hover {
-        color: white;
-        background-color: #f26e6d; }
-  @media only screen and (max-width: 992px) {
-    body
-.provider_search {
-      margin-bottom: 30px; } }
+.tool_description_container
+.content_row {
+      margin-top: 30px; } }
   body
-.prescription_search
-h3 {
-    color: #79ccc9;
-    font-size: 2.5em;
-    padding-top: 18%; }
-    @media only screen and (max-width: 992px) {
-      body
-.prescription_search
-h3 {
-        padding-top: 30px; } }
+.tool_description_container
+.pull-right {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    order: 2;
+    -ms-flex-order: 2; }
   body
-.prescription_search
+.tool_description_container
 p {
-    font-size: 16px;
-    line-height: 20px;
-    word-wrap: break-word;
-    color: #666666; }
+    color: #666666;
+    word-wrap: break-word; }
   body
-.prescription_search
-.blue-bg {
-    background-color: #79ccc9;
-    height: 375px; }
-    body
-.prescription_search
-.blue-bg
+.tool_description_container
 h3 {
-      font-weight: 200;
-      font-size: 2.75em;
-      padding: 30px 0px;
-      color: white; }
-    body
-.prescription_search
-.blue-bg
-img {
-      padding-bottom: 50px; }
-  body
-.prescription_search
-.btn {
-    margin-bottom: 30px; }
-  @media only screen and (max-width: 992px) {
-    body
-.prescription_search {
-      margin-bottom: 30px; } }
+    color: white;
+    font-size: 2.75em;
+    font-weight: 200;
+    padding: 0; }
   body
 .our-mission h2, body
 .our-mission
