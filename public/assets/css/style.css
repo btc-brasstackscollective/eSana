@@ -1456,6 +1456,28 @@ u {
       top: 0;
       width: 12px; }
   body
+.tool_top_container {
+    background-color: white;
+    border: solid 5px #79ccc9;
+    border-radius: 10px;
+    color: #79ccc9;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 10px;
+    position: absolute;
+    max-width: 300px; }
+    body
+.tool_top_container::before {
+      content: '';
+      background: transparent url("../img/common/img-tool-tip-point-corner.png") 50% 50% no-repeat;
+      background-size: 15px 22px;
+      bottom: -5px;
+      display: block;
+      height: 22px;
+      left: -17px;
+      position: absolute;
+      width: 22px; }
+  body
 .price_text {
     font-family: 'Oswald', sans-serif; }
   body

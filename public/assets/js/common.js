@@ -64,6 +64,27 @@
 			$('.saving_calulator_knob').val(totalSavingsPercentage).trigger('change');
 		});
 		
+		$('.tool_tip').on('mouseenter', function(e)
+		{
+			$('.tool_top_container').text($(this).data('tool-tip'));
+			
+			var x = e.pageX + 20;
+			var y = e.pageY - 40 - $('.tool_top_container').height();
+			
+			$('.tool_top_container').css(
+			{
+				top: y + 'px',
+				left: x + 'px'
+			}).fadeIn();
+			
+		}).on('mouseleave', function()
+		{
+			$('.tool_top_container').fadeOut(function()
+			{
+				$(this).text('');
+			});
+		});
+		
 		// Contact Us Form Submit
 		$('#contact_us_form').on('submit', function(e)
 		{
