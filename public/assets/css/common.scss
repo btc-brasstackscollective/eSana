@@ -431,14 +431,17 @@ body
 				
 				.hero_panel_controls
 				{
-					@include align-self(flex-start);
+					bottom:15px;
+					position:absolute;
 					
 					@media only screen and (max-width : 769px)
 					{
 						@include justify-content(center);
 						@include display(flex);
 						
+						bottom:0;
 						padding-top:20px;
+						position:relative;
 					}
 					
 					.home_hero_panel_control_item
