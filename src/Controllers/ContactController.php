@@ -14,7 +14,7 @@ class ContactController
 	    
 	    $params = $request->getParsedBody(); 
 	    
-	    $recipient = 'dougingalls@gmail.com';
+	    $recipient = 'info@brasstackscollective.com';
 	    
 		$headers = 'From: '. $params['email'] . "\r\n" . 
 			'Reply-To: '. $params['email'] . "\r\n" .
