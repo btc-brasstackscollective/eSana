@@ -377,7 +377,7 @@ body
 			.hero_right_container .hero_panel_item,
 			.hero_right_container .hero_panel_item > div
 			{
-				height:45vh;
+				height:50vh;
 				
 				@media only screen and (max-width : 769px)
 				{
@@ -560,6 +560,7 @@ body
 					
 					&.img_container
 					{
+						background-position:50% 50%;
 						background-repeat:no-repeat;
 						background-size:cover;
 						width:100%;

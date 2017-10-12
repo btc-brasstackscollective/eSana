@@ -831,7 +831,7 @@ header
     body.home
 #home_hero_container
 .hero_right_container .hero_panel_item > div {
-      height: 45vh; }
+      height: 50vh; }
       @media only screen and (max-width: 769px) {
         body.home
 #home_hero_container .hero_left_content_container,
@@ -1072,6 +1072,7 @@ h3 {
 #home_hero_container
 .hero_right_container
 .hero_panel_item.img_container {
+        background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%; }
