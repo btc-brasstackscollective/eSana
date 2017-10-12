@@ -819,7 +819,6 @@ header
     background-color: #79ccc9;
     overflow: hidden;
     margin-bottom: 80px;
-    min-height: 60vh;
     position: relative; }
     @media only screen and (max-width: 769px) {
       body.home
@@ -828,19 +827,19 @@ header
     body.home
 #home_hero_container .hero_left_content_container,
     body.home
-#home_hero_container .hero_right_container,
+#home_hero_container .hero_right_container .hero_panel_item,
     body.home
 #home_hero_container
-.hero_right_container .hero_panel_item {
-      height: 60vh; }
+.hero_right_container .hero_panel_item > div {
+      height: 45vh; }
       @media only screen and (max-width: 769px) {
         body.home
 #home_hero_container .hero_left_content_container,
         body.home
-#home_hero_container .hero_right_container,
+#home_hero_container .hero_right_container .hero_panel_item,
         body.home
 #home_hero_container
-.hero_right_container .hero_panel_item {
+.hero_right_container .hero_panel_item > div {
           height: auto; } }
     body.home
 #home_hero_container
@@ -852,7 +851,12 @@ header
       -moz-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      padding: 30px 30px 20px 30px; }
+      padding: 30px 30px 20px 70px; }
+      @media only screen and (max-width: 769px) {
+        body.home
+#home_hero_container
+.hero_left_content_container {
+          padding: 30px 30px 20px 30px; } }
       body.home
 #home_hero_container
 .hero_left_content_container
@@ -874,6 +878,7 @@ header
 .hero_panel_item
 h2 {
           color: white;
+          font-size: 32px;
           font-weight: 500; }
         body.home
 #home_hero_container
@@ -948,7 +953,8 @@ p {
       -moz-transition: all 500ms ease-in-out;
       transition: all 500ms ease-in-out;
       display: none;
-      z-index: -1; }
+      z-index: -1;
+      width: 100%; }
       body.home
 #home_hero_container
 .hero_right_container
@@ -958,13 +964,25 @@ p {
       body.home
 #home_hero_container
 .hero_right_container
+.hero_panel_item:not(.img_container) > div {
+        width: 100%; }
+      body.home
+#home_hero_container
+.hero_right_container
+.hero_panel_item
+.inner_content_wrapper {
+        overflow: hidden;
+        width: 100%; }
+      body.home
+#home_hero_container
+.hero_right_container
 .hero_panel_item.padding_vertical {
         padding: 10px 0; }
       body.home
 #home_hero_container
 .hero_right_container
 .hero_panel_item
-> div {
+> div > div > div:first-child {
         margin-bottom: 15px; }
       body.home
 #home_hero_container
@@ -1014,7 +1032,7 @@ h3 {
 .hero_panel_item
 .plan_price_container
 h3 {
-              font-size: 26px; } }
+              font-size: 24px; } }
           body.home
 #home_hero_container
 .hero_right_container
@@ -1049,7 +1067,7 @@ h3 {
 .hero_right_container
 .hero_panel_item
 h3 {
-            font-size: 20px; } }
+            font-size: 17px; } }
       body.home
 #home_hero_container
 .hero_right_container
@@ -1057,6 +1075,12 @@ h3 {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%; }
+        @media only screen and (max-width: 769px) {
+          body.home
+#home_hero_container
+.hero_right_container
+.hero_panel_item.img_container {
+            height: 200px !important; } }
       body.home
 #home_hero_container
 .hero_right_container
@@ -1308,6 +1332,14 @@ h3 {
       body
 h3 {
         font-size: 20px; } }
+  body
+h4 {
+    font-size: 18px;
+    line-height: 26px; }
+    @media only screen and (max-width: 768px) {
+      body
+h4 {
+        font-size: 16px; } }
   body
 p {
     color: #666666;
@@ -1666,10 +1698,10 @@ img {
 .divider {
     background-color: #666666;
     height: 1px;
-    margin: 15px 0;
+    margin: 25px 0;
     width: 100%; }
-  body .our-plans, body .reach-out, body .your-tools, body .our-mission, body
-.savings_calculator_content_wrapper {
+  body .our-plans, body .reach-out, body .your-tools, body .our-mission, body .savings_calculator_content_wrapper, body
+.disclaimer_content {
     margin-bottom: 75px; }
     body .our-plans
 h2
@@ -1679,8 +1711,10 @@ h2
 h2
 , body .our-mission
 h2
+, body .savings_calculator_content_wrapper
+h2
 , body
-.savings_calculator_content_wrapper
+.disclaimer_content
 h2 {
       color: #f26e6d;
       font-weight: 300;
@@ -1696,8 +1730,10 @@ h2
 h2
 , body .our-mission
 h2
+, body .savings_calculator_content_wrapper
+h2
 , body
-.savings_calculator_content_wrapper
+.disclaimer_content
 h2 {
           font-size: 26px; } }
     body .our-plans
@@ -1708,8 +1744,10 @@ p
 p
 , body .our-mission
 p
+, body .savings_calculator_content_wrapper
+p
 , body
-.savings_calculator_content_wrapper
+.disclaimer_content
 p {
       color: #666666; }
   body
