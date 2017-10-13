@@ -1,3 +1,6 @@
+var currentIndex = 0;
+var savingsCalculatorCategoryCount = 0;
+
 (function( $ ) {
 	$(document).ready(function()
 	{
@@ -26,6 +29,10 @@
 		
 		if($('.saving_calculator_container').length)
 		{
+			savingsCalculatorCategoryCount = $('.savings_calculator_field_selector_container .savings_calculator_field_selector_item').length;
+			console.log(savingsCalculatorCategoryCount);
+			
+			setSavingsCalculatorActionBtns();
 			savingsCalculatorChange(0);
 			
 			// Savings Calculator Knob
@@ -43,7 +50,8 @@
 		
 		$('.savings_calculator_field_selector_trigger').on('click', function()
 		{
-			var currentIndex = $('.savings_calculator_field_selector_item').index($(this).parent());
+			currentIndex = $('.savings_calculator_field_selector_item').index($(this).parent());
+			setSavingsCalculatorActionBtns();
 			clearSavingsCalculator();
 			savingsCalculatorChange(currentIndex);
 		});
@@ -127,6 +135,26 @@
 			});
 		});
 		
+		$('.savings_calculator_action_btn_container .previous_btn').on('click', function(e)
+		{
+			e.preventDefault();
+			
+			currentIndex--;
+			setSavingsCalculatorActionBtns();
+			clearSavingsCalculator();
+			savingsCalculatorChange();
+		});
+		
+		$('.savings_calculator_action_btn_container .next_btn').on('click', function(e)
+		{
+			e.preventDefault();
+			
+			currentIndex++;
+			setSavingsCalculatorActionBtns();
+			clearSavingsCalculator();
+			savingsCalculatorChange();
+		});
+		
 		$(window).on('resize', function(e)
 	   	{
 		  	clearTimeout(resizeTimer);
@@ -145,18 +173,41 @@
 		}
 	});
 	
-	var savingsCalculatorChange = function(index)
+	var savingsCalculatorChange = function()
 	{
 		$('.savings_calculator_field_selector_item .savings_calculator_field_selector_trigger').removeClass('active');
-		$('.savings_calculator_field_selector_item:eq('+index+') .savings_calculator_field_selector_trigger').addClass('active');
+		$('.savings_calculator_field_selector_item:eq('+currentIndex+') .savings_calculator_field_selector_trigger').addClass('active');
 		
-		var question = $('.savings_calculator_field_selector_item').eq(index).data('question');
-		var averageCost = $('.savings_calculator_field_selector_item').eq(index).data('average-cost');
-		var esanaCost = $('.savings_calculator_field_selector_item').eq(index).data('esana-cost');
+		var question = $('.savings_calculator_field_selector_item').eq(currentIndex).data('question');
+		var averageCost = $('.savings_calculator_field_selector_item').eq(currentIndex).data('average-cost');
+		var esanaCost = $('.savings_calculator_field_selector_item').eq(currentIndex).data('esana-cost');
 		
 		$('.savings_calculator_question_container .savings_calculator_question').text(question);
 		$('.savings_calculator_question_container .saving_calculator_average_cost').text('$'+averageCost);
 		$('.savings_calculator_question_container .saving_calculator_esana_cost').text('$'+esanaCost);
+	}
+	
+	var setSavingsCalculatorActionBtns = function()
+	{
+		if((currentIndex - 1) < 0)
+		{
+			$('.savings_calculator_action_btn_container .previous_btn').hide();
+		}
+		
+		else
+		{
+			$('.savings_calculator_action_btn_container .previous_btn').show();
+		}
+		
+		if((currentIndex + 1) >= savingsCalculatorCategoryCount)
+		{
+			$('.savings_calculator_action_btn_container .next_btn').hide();
+		}
+		
+		else
+		{
+			$('.savings_calculator_action_btn_container .next_btn').show();
+		}
 	}
 	
 	var clearSavingsCalculator = function()

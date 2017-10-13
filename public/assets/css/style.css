@@ -1701,8 +1701,8 @@ img {
     height: 1px;
     margin: 25px 0;
     width: 100%; }
-  body .our-plans, body .reach-out, body .your-tools, body .our-mission, body .savings_calculator_content_wrapper, body
-.disclaimer_content {
+  body .our-plans, body .reach-out, body .your-tools, body .our-mission, body .savings_calculator_content_wrapper, body .disclaimer_content, body
+#savings_page_container {
     margin-bottom: 75px; }
     body .our-plans
 h2
@@ -1714,8 +1714,10 @@ h2
 h2
 , body .savings_calculator_content_wrapper
 h2
+, body .disclaimer_content
+h2
 , body
-.disclaimer_content
+#savings_page_container
 h2 {
       color: #f26e6d;
       font-weight: 300;
@@ -1733,8 +1735,10 @@ h2
 h2
 , body .savings_calculator_content_wrapper
 h2
+, body .disclaimer_content
+h2
 , body
-.disclaimer_content
+#savings_page_container
 h2 {
           font-size: 26px; } }
     body .our-plans
@@ -1747,10 +1751,138 @@ p
 p
 , body .savings_calculator_content_wrapper
 p
+, body .disclaimer_content
+p
 , body
-.disclaimer_content
+#savings_page_container
 p {
       color: #666666; }
+  body
+#savings_page_container
+.top_container {
+    margin-bottom: 60px; }
+  body
+#savings_page_container
+h2 {
+    color: #f26e6d; }
+  body
+#savings_page_container
+h3 {
+    color: #79ccc9; }
+  body
+#savings_page_container
+.savings_chart {
+    margin-top: 50px; }
+  body
+#savings_page_container
+.saving_chart_container {
+    margin-top: 30px; }
+    body
+#savings_page_container
+.saving_chart_container
+.savings_chart_headline {
+      background-color: #f26e6d;
+      color: white;
+      font-size: 16px;
+      padding: 20px;
+      text-align: center; }
+    body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header {
+      background-color: #ffeccf;
+      border-bottom: solid 1px #f26e6d;
+      overflow: hidden; }
+      body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header
+> div {
+        color: #f26e6d;
+        font-weight: 500;
+        padding: 10px;
+        text-align: center; }
+        @media only screen and (max-width: 768px) {
+          body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header
+> div {
+            font-size: 10px; } }
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header
+> div:first-child {
+          text-align: left; }
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header
+> div:last-child,
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_header
+> div:nth-last-child(2) {
+          color: #79ccc9; }
+    body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items {
+      overflow: hidden; }
+      body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items:last-child {
+        border-bottom: solid 1px #f26e6d; }
+      body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items:nth-child(even) {
+        background-color: #ffeccf; }
+      body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items
+> div {
+        border-right: solid 1px #f26e6d;
+        color: #f26e6d;
+        padding: 10px;
+        text-align: center; }
+        @media only screen and (max-width: 768px) {
+          body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items
+> div {
+            font-size: 7px; } }
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items
+> div:first-child {
+          border-left: solid 1px #f26e6d;
+          text-align: left; }
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items
+> div:last-child,
+        body
+#savings_page_container
+.saving_chart_container
+.savings_chart_content
+.saving_chart_content_items
+> div:nth-last-child(2) {
+          color: #79ccc9; }
   body
 .savings_calculator_content_wrapper
 .saving_calculator_container {
@@ -1794,6 +1926,12 @@ p {
 .savings_calculator_field_selector_item
 .savings_calculator_field_selector_trigger.active {
           background-color: #79ccc9; }
+      @media only screen and (max-width: 768px) {
+        body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_field_selector_item {
+          margin-top: 15px; } }
     body
 .savings_calculator_content_wrapper
 .saving_calculator_container
@@ -1808,6 +1946,13 @@ h3 {
         color: #79ccc9;
         font-size: 45px;
         font-weight: 400; }
+        @media only screen and (max-width: 768px) {
+          body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_question_container
+h3 {
+            font-size: 26px; } }
       body
 .savings_calculator_content_wrapper
 .saving_calculator_container
@@ -1827,6 +1972,22 @@ input[type="text"] {
           margin-right: 20px;
           padding: 15px;
           min-width: 60%; }
+          @media only screen and (max-width: 768px) {
+            body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_question_container
+.saving_calculator_cost_form
+input[type="text"] {
+              margin-right: 0; } }
+        @media only screen and (max-width: 768px) {
+          body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_question_container
+.saving_calculator_cost_form
+.saving_calculator_cost_form_submit {
+            margin-top: 15px; } }
       body
 .savings_calculator_content_wrapper
 .saving_calculator_container
@@ -1842,6 +2003,13 @@ input[type="text"] {
 .saving_calulator_knob::after {
           content: 'savings';
           display: block; }
+      @media only screen and (max-width: 768px) {
+        body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_question_container
+.knob_dial {
+          margin-bottom: 40px; } }
       body
 .savings_calculator_content_wrapper
 .saving_calculator_container
@@ -1877,6 +2045,29 @@ span.saving_calculator_average_cost {
 .saving_calculator_cost_container
 span.saving_calculator_esana_cost {
             color: #71c499; }
+          @media only screen and (max-width: 768px) {
+            body
+.savings_calculator_content_wrapper
+.saving_calculator_container
+.savings_calculator_question_container
+.saving_calculator_cost_container
+span {
+              font-size: 22px; } }
+  body
+.savings_calculator_content_wrapper
+.savings_calculator_action_btn_container {
+    margin-top: 40px; }
+    body
+.savings_calculator_content_wrapper
+.savings_calculator_action_btn_container
+> a:first-child {
+      margin-right: 20px; }
+      @media only screen and (max-width: 768px) {
+        body
+.savings_calculator_content_wrapper
+.savings_calculator_action_btn_container
+> a:first-child {
+          margin-right: 0; } }
   @media only screen and (max-width: 992px) {
     body
 .tool_description_container {

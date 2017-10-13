@@ -18,7 +18,7 @@ $app->get('/plans', function($request, $response, array $args) {
 });
 
 // Savings Page
-$app->get('/savinga', function($request, $response, array $args) {
+$app->get('/savings', function($request, $response, array $args) {
 	$args['currentUrl'] = $request->getUri()->getPath();
 	return $this->view->render($response, 'savings.html.twig', $args);
 });
