@@ -1771,6 +1771,8 @@ body
 		border-radius: 50%;
 		text-align: center;
 		margin: -75px auto 0px;
+		position: relative;
+		z-index: 1;
 
 		h3
 		{
@@ -1830,6 +1832,7 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
+			line-height: 1.2;
 
 			@media only screen and (max-width : 768px)
 			{
@@ -1868,6 +1871,7 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
+			line-height: 1.2;
 
 			@media only screen and (max-width : 768px)
 			{
@@ -1907,6 +1911,7 @@ body
 			color:$white;
 			font-size: 2.5em;
 			font-weight: 300; 
+			line-height: 1.2;
 
 			@media only screen and (max-width : 768px)
 			{
@@ -1918,14 +1923,16 @@ body
 		{
 			@include transform(translateY(-50%));
 			
-			left:0;
-			position:absolute;
-			top:50%;
+			left:74%;
+			position: relative;;
+			top:-61px;
+			z-index: 0;
 			
 			@media only screen and (max-width : 768px)
 			{
 				@include transform(translateY(0));
-				top:31%;
+				top: 10px;
+				left: 0;
 			}
 		}
 	}
@@ -1949,11 +1956,6 @@ body
 			color:$gray_body_copy;
 		}
 
-		a
-		{
-			text-decoration: underline;
-			text-decoration-color:$brand_blue;
-		}
 		
 		ul.plus_sign_list
 		{
