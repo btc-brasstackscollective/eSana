@@ -112,9 +112,29 @@ var savingsCalculatorCategoryCount = 0;
 			});
 		}
 		
+		if($('.video_container video').length)
+		{
+			$('.video_container').each(function(index)
+			{
+				var videoContainerHeight = $(this).parent().height();
+				$(this).height(videoContainerHeight);
+				$(this).find('video').height(videoContainerHeight);
+			})
+		}
+		
 		$('.video_container').on('click', function()
 		{
-			$(this).find('video').play();
+			if($(this).find('.inner_video_container').hasClass('play'))
+			{
+				$(this).find('.inner_video_container').removeClass('play');
+				$(this).find('video').get(0).pause();
+			}
+				
+			else
+			{
+				$(this).find('.inner_video_container').addClass('play');
+				$(this).find('video').get(0).play();	
+			}
 		});
 		
 		// Contact Us Form Submit
