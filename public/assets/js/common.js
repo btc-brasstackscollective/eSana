@@ -112,6 +112,11 @@ var savingsCalculatorCategoryCount = 0;
 			});
 		}
 		
+		$('.video_container').on('click', function()
+		{
+			$(this).find('video').play();
+		});
+		
 		// Contact Us Form Submit
 		$('#contact_us_form').on('submit', function(e)
 		{
