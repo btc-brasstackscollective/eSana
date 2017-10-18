@@ -3,6 +3,36 @@ body
 	background-color:$white;
 	font-family:'Montserrat', sans-serif;
 	
+	&.overlay
+	{
+		&::after
+		{
+			@include animation-name(fadeIn);
+			@include animation-duration(2s);
+			@include animation-timing-function(ease);
+			@include animation-iteration-count(1);
+			
+			@include keyframes(fadeIn)
+			{
+				from {
+			    	@include transform(scale(0));
+			  	}
+			  	to {
+			    	@include transform(scale(1));
+			  	}
+			}
+			
+			content:'';
+			background-color:rgba(black, .7);
+			height:100%;
+			left:0;
+			position:fixed;
+			top:0;
+			width:100%;
+			z-index:99;
+		}
+	}
+	
 	article
 	{
 		@media only screen and (max-width : 992px)
@@ -974,6 +1004,88 @@ body
 		}
 	}
 	
+	.video_modal
+	{
+		@include transform(translate(-50%, -50%));
+		@include transition(all 300ms ease-in-out);
+	
+		display:none;
+		height:50%;
+		left:50%;
+		position:fixed;
+		top:50%;
+		width:70%;
+		z-index:100;
+		
+		&.active
+		{
+			display:block;
+		}
+		
+		@media only screen and (max-width : 768px)
+		{
+			width:90%;
+		}
+		
+		.close_btn
+		{
+			background-color:transparent;
+			border:solid 1px $white;
+			border-radius:50%;
+			cursor:pointer;
+			height:30px;
+			padding:10px;
+			position:absolute;
+			right:-15px;
+			top:-15px;
+			width:30px;
+	
+			@include transition(all 500ms ease);
+			
+			&:before, &:after
+			{
+				content:'';
+				background-color:$white;
+				height:18px;
+				left:50%;
+				position:absolute;
+				top:50%;
+				width:2px;
+	
+				@include transition(all 500ms ease);
+			}
+	
+			&:before
+			{
+				@include transform(rotate(135deg) translate3d(-6px, 7px, 0px));
+			}
+	
+			&:after
+			{
+				@include transform(rotate(-135deg) translate3d(7px, 6px, 0px));
+			}
+	
+			&:hover
+			{
+				&:before
+				{
+					@include transform(rotate(48deg) translate3d(-7px, -5px, 0px));
+				}
+	
+				&:after
+				{
+					@include transform(rotate(-48deg) translate3d(6px, -6px, 0px));
+				}
+			}
+		}
+		
+		video
+		{
+			height:100%;
+			width:100%;
+		}
+	}
+	
 	.video_container
 	{
 		position:relative;
@@ -1733,8 +1845,12 @@ body
 				
 				&.success
 				{
-					background-color:$brand_blue;
-					color:$white;
+					color:$brand_blue;
+					font-size:36px !important;
+					line-height:1.2 !important;
+					margin-top:60px;
+					padding:0;
+					text-align:center;
 				}
 				
 				&.fail

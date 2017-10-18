@@ -10,11 +10,9 @@ class ContactController
         $this->view = $view;
     }
     public function send($request, $response, $args) {
-	    //$recipient = 'info@esanahealth.com';
-	    
 	    $params = $request->getParsedBody(); 
 	    
-	    $recipient = 'info@brasstackscollective.com';
+	    $recipient = 'info@esanahealth.com';
 	    
 		$headers = 'From: '. $params['email'] . "\r\n" . 
 			'Reply-To: '. $params['email'] . "\r\n" .

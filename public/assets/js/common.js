@@ -6,6 +6,9 @@ var savingsCalculatorCategoryCount = 0;
 	{
 		var resizeTimer;
 		
+		if(getCookie('visited') == '')
+			initialLoadVideo();
+		
 		// Home Page Hero Panel
 		if($('#home_hero_container').length)
 			$('#home_hero_container').customPanel();
@@ -30,7 +33,6 @@ var savingsCalculatorCategoryCount = 0;
 		if($('.saving_calculator_container').length)
 		{
 			savingsCalculatorCategoryCount = $('.savings_calculator_field_selector_container .savings_calculator_field_selector_item').length;
-			console.log(savingsCalculatorCategoryCount);
 			
 			setSavingsCalculatorActionBtns();
 			savingsCalculatorChange(0);
@@ -137,6 +139,22 @@ var savingsCalculatorCategoryCount = 0;
 			}
 		});
 		
+		$('.trigger_video').on('click', function(e)
+		{
+			e.preventDefault();
+			
+			var videoName = $(this).data('video');
+			
+			showVideoModal(videoName);
+		});
+		
+		$('.close_btn').on('click', function()
+		{
+			$('body').removeClass('overlay');
+			$('.video_modal').removeClass('active');
+			$('.video_modal video').remove();
+		});
+		
 		// Contact Us Form Submit
 		$('#contact_us_form').on('submit', function(e)
 		{
@@ -151,7 +169,8 @@ var savingsCalculatorCategoryCount = 0;
 			
 			request.done(function(msg)
 			{
-				$('.contact_us_form_message p').addClass('success').text('Thank you. Your message has been sent.').parent().fadeIn().delay(5000).fadeOut();
+				$('.contact_us_form_message p').addClass('success').text('Thank you. Your message has been sent.').parent().fadeIn();
+				$('#contact_us_form').fadeOut();
 			});
 			
 			request.fail(function(jqXHR, textStatus)
@@ -240,5 +259,42 @@ var savingsCalculatorCategoryCount = 0;
 		$('.saving_calculator_cost_form_input').val('');
 		$('.saving_calculator_your_cost').text('');
 		$('.saving_calulator_knob').val(0).trigger('change');
+	}
+	
+	var initialLoadVideo = function()
+	{
+		showVideoModal('eSana_video_3');
+		setCookie('visited', 'true', 5);
+	}
+	
+	var showVideoModal = function(videoName)
+	{
+		$('body').addClass('overlay');
+		$('.video_modal').append('<video controls><source src="/assets/videos/'+videoName+'.mp4" type="video/mp4"><source src="/assets/videos/'+videoName+'.webm" type="video/webm"></video>').addClass('active');
+	}
+	
+	var setCookie = function(cname, cvalue, exdays)
+	{
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	    var expires = "expires="+ d.toUTCString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	
+	var getCookie = function(cname)
+	{
+	    var name = cname + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i <ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
 	}
 })( jQuery );
