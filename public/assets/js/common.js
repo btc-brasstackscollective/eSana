@@ -6,8 +6,7 @@ var savingsCalculatorCategoryCount = 0;
 	{
 		var resizeTimer;
 		
-		if(getCookie('visited') == '')
-			initialLoadVideo();
+		updateVideoHeight();
 		
 		// Home Page Hero Panel
 		if($('#home_hero_container').length)
@@ -114,16 +113,6 @@ var savingsCalculatorCategoryCount = 0;
 			});
 		}
 		
-		if($('.video_container video').length)
-		{
-			$('.video_container').each(function(index)
-			{
-				var videoContainerHeight = $(this).parent().height();
-				$(this).height(videoContainerHeight);
-				$(this).find('video').height(videoContainerHeight);
-			})
-		}
-		
 		$('.video_container').on('click', function()
 		{
 			if($(this).find('.inner_video_container').hasClass('play'))
@@ -211,11 +200,22 @@ var savingsCalculatorCategoryCount = 0;
 	
 		var windowResize = function()
 		{
-			if(window.innerWidth <= 769)
-			{
-			}
+			updateVideoHeight();
 		}
 	});
+	
+	var updateVideoHeight = function()
+	{
+		if($('.video_container video').length)
+		{
+			$('.video_container').each(function(index)
+			{
+				var videoContainerHeight = $(this).parent().height();
+				$(this).height(videoContainerHeight);
+				$(this).find('video').height(videoContainerHeight);
+			})
+		}
+	}
 	
 	var savingsCalculatorChange = function()
 	{
@@ -261,35 +261,9 @@ var savingsCalculatorCategoryCount = 0;
 		$('.saving_calulator_knob').val(0).trigger('change');
 	}
 	
-
 	var showVideoModal = function(videoName)
 	{
 		$('body').addClass('overlay');
 		$('.video_modal').append('<video controls autoplay><source src="/assets/videos/'+videoName+'.mp4" type="video/mp4"><source src="/assets/videos/'+videoName+'.webm" type="video/webm"></video>').addClass('active');
-	}
-	
-	var setCookie = function(cname, cvalue, exdays)
-	{
-	    var d = new Date();
-	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	    var expires = "expires="+ d.toUTCString();
-	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-	}
-	
-	var getCookie = function(cname)
-	{
-	    var name = cname + "=";
-	    var decodedCookie = decodeURIComponent(document.cookie);
-	    var ca = decodedCookie.split(';');
-	    for(var i = 0; i <ca.length; i++) {
-	        var c = ca[i];
-	        while (c.charAt(0) == ' ') {
-	            c = c.substring(1);
-	        }
-	        if (c.indexOf(name) == 0) {
-	            return c.substring(name.length, c.length);
-	        }
-	    }
-	    return "";
 	}
 })( jQuery );
