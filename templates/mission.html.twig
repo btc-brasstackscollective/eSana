@@ -77,8 +77,15 @@
 	
 	<div class="content_container our-mission">
 		<div class="row video-content">
-			<div class="col-sm-6">
-				<img src="assets/img/mission/VideoStill.png" class="video_container img-reponsive" />
+			<div class="video_container col-sm-6">
+				
+				<div class="inner_video_container">
+						<video poster="{{ baseUrl }}/assets/img/mission/VideoStill.png">
+							<source src="{{ baseUrl }}/assets/videos/eSana_video_3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+							<source src="{{ baseUrl }}/assets/videos/eSana_video_3.webm" type="video/webm">
+							Your browser does not support the video tag.
+						</video>
+				</div>
 			</div>
 			
 			<div class="col-sm-6">
