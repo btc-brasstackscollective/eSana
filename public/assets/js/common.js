@@ -270,7 +270,7 @@ var savingsCalculatorCategoryCount = 0;
 	var showVideoModal = function(videoName)
 	{
 		$('body').addClass('overlay');
-		$('.video_modal').append('<video controls><source src="/assets/videos/'+videoName+'.mp4" type="video/mp4"><source src="/assets/videos/'+videoName+'.webm" type="video/webm"></video>').addClass('active');
+		$('.video_modal').append('<video controls autoplay><source src="/assets/videos/'+videoName+'.mp4" type="video/mp4"><source src="/assets/videos/'+videoName+'.webm" type="video/webm"></video>').addClass('active');
 	}
 	
 	var setCookie = function(cname, cvalue, exdays)

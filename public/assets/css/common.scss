@@ -8,7 +8,7 @@ body
 		&::after
 		{
 			@include animation-name(fadeIn);
-			@include animation-duration(2s);
+			@include animation-duration(1s);
 			@include animation-timing-function(ease);
 			@include animation-iteration-count(1);
 			
