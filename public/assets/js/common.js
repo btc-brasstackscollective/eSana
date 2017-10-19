@@ -261,12 +261,7 @@ var savingsCalculatorCategoryCount = 0;
 		$('.saving_calulator_knob').val(0).trigger('change');
 	}
 	
-	var initialLoadVideo = function()
-	{
-		showVideoModal('eSana_video_3');
-		setCookie('visited', 'true', 5);
-	}
-	
+
 	var showVideoModal = function(videoName)
 	{
 		$('body').addClass('overlay');
