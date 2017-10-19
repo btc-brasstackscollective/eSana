@@ -255,9 +255,9 @@ body {
     -webkit-animation-name: fadeIn;
     -moz-animation-name: fadeIn;
     animation-name: fadeIn;
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-timing-function: ease;
     -moz-animation-timing-function: ease;
     animation-timing-function: ease;
@@ -1488,6 +1488,9 @@ u {
       body
 .btn {
         display: block; } }
+  body video[poster] {
+    height: 100%;
+    width: 100%; }
   body
 .video_modal {
     -webkit-transform: translate(-50%, -50%);
@@ -1502,7 +1505,7 @@ u {
     height: 50%;
     left: 50%;
     position: fixed;
-    top: 50%;
+    top: 35%;
     width: 70%;
     z-index: 100; }
     body
@@ -1522,8 +1525,8 @@ u {
       height: 30px;
       padding: 10px;
       position: absolute;
-      right: -15px;
-      top: -15px;
+      right: -30px;
+      top: -30px;
       width: 30px;
       -webkit-transition: all 500ms ease;
       -moz-transition: all 500ms ease;
@@ -1578,7 +1581,7 @@ u {
     body
 .video_modal
 video {
-      height: 100%;
+      height: auto;
       width: 100%; }
   body
 .video_container {
@@ -2337,13 +2340,15 @@ h3 {
 .intro
 img {
     margin: 5% 0; }
-  @media (min-width: 750px) {
-    body
+  body
 .our-mission
 .video-content {
-      display: flex;
-      align-items: center;
-      justify-content: center; } }
+    min-height: 40vh; }
+    @media only screen and (max-width: 768px) {
+      body
+.our-mission
+.video-content {
+        min-height: auto; } }
   body
 .mission_hero_banner_container {
     background: transparent url("../img/mission/Couple.jpg") 50% 50% no-repeat;
