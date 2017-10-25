@@ -53,4 +53,10 @@ $app->get('/privacy-policy', function($request, $response, array $args) {
 	return $this->view->render($response, 'privacy.html.twig', $args);
 });
 
+// FAQs
+$app->get('/faqs', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'faqs.html.twig', $args);
+});
+
 $app->post('/contact-submit', 'ContactController:send');
