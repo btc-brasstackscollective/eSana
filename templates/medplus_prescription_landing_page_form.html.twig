@@ -1,0 +1,33 @@
+{# app/Resources/views/medplus_prescription_form.html.twig #}
+
+{% extends 'base_landingpage.html.twig' %}
+
+{% block title %}MedPlus Prescription Page{% endblock %}
+
+{% block bodyID %}med_plus_prescription_form{% endblock %}
+{% block bodyClass %}landingpage landing_page_form{% endblock %}
+
+{% block body %}
+	<div class="landing_content_container col-md-8 col-md-offset-2 col-xs-12 text-center">
+		<h1>Ready to See How Much You Could Save? Let’s Get In Touch.</h1>
+				
+		<form class="col-md-8 col-md-offset-2 col-xs-12" action="" method="post">
+			<input type="text" name="" placeholder="First Name" />
+			<input type="text" name="" placeholder="Last Name" />
+			<input type="email" name="" placeholder="Email" />
+			<input type="tel" name="" placeholder="Phone Number" />
+			
+			<p>
+				<input type="checkbox" name="" value="yes">
+				<label for="">Preferred Form of Contact</label>
+			</p>
+			
+			<p>
+				<input type="checkbox" name="" value="yes">
+				<label for="">Interesting in Hearing About Other Products</label>
+			</p>
+			
+			<input type="submit" class="btn red inverse" value="SUBMIT" />
+		</form>
+	</div>
+{% endblock %}

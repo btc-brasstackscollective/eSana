@@ -12,7 +12,7 @@
 		<div class="hero_right_container no-gutter pull-right center_align col-md-8 col-sm-6 col-xs-12">
 			<!-- <div class="hero_panel_item empty"></div> -->
 			
-			<div class="hero_panel_item padding_vertical">
+			<!-- <div class="hero_panel_item padding_vertical">
 				<div class="va-item">
 					<div class="inner_content_wrapper">
 						<div class="col-md-8 col-md-offset-2 col-xs-12">
@@ -46,6 +46,16 @@
 						</div>
 					</div>
 				</div>
+			</div> -->
+			
+			<div class="hero_panel_item video_container">
+				<div class="inner_video_container">
+					<video poster="{{ baseUrl }}/assets/img/common/img-esana-video-3-poster.jpg" muted>
+						<source src="{{ baseUrl }}/assets/videos/eSana_video_3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						<source src="{{ baseUrl }}/assets/videos/eSana_video_3.webm" type="video/webm">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 			
 			<div class="hero_panel_item img_container" style="background-image:url({{ baseUrl }}/assets/img/home/img-home-slider-2.jpg);">
@@ -73,21 +83,21 @@
 					<h2>Join eSana today and start saving!</h2>
 					<p>eSana members save an average of $600 per month for their entire <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>. See what you could be saving!</p>
 					
-					<a href="#" class="trigger_video slider_item_btn btn white" data-video="eSana_video_3">HOW IT WORKS</a>
+					<a href="/membership" class="slider_item_btn btn white" onclick="dataLayer.push({'event': 'Link-to-Membership'});">LEARN MORE</a>
 				</div>
 				
 				<div class="hero_panel_item">
 					<h2>Telemedicine brings the care to you, 24/7</h2>
 					<p>For only $25 per call, you can speak directly with a doctor or pharmacist for advice and prescriptions. Our providers are available 24 hours a day, 7 days a week via phone or email.</p>
 					
-					<a href="/plans#medical_section" class="slider_item_btn btn white">LEARN MORE</a>
+					<a href="/membership#medical_section" class="slider_item_btn btn white" onclick="dataLayer.push({'event': 'Link-to-Membership-MedPlus'});">LEARN MORE</a>
 				</div>
 				
 				<div class="hero_panel_item">
 					<h2>Because they matter, take care.</h2>
-					<p>A single eSana plan covers the whole <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>, whether or not you're related. Find the right plan to cover the needs of those you care about.</p>
+					<p>An eSana membership covers the whole <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>, whether or not you're related. Find the right plan to cover the needs of those you care about.</p>
 					
-					<a href="/plans" class="slider_item_btn btn white">SIGN UP</a>
+					<a href="/membership" class="slider_item_btn btn white" onclick="dataLayer.push({'event': 'Link-to-Membership'});">SIGN UP</a>
 				</div>
 			</div>
 			
@@ -95,54 +105,17 @@
 		</div>
 	</div>
 	
-	<div class="help_you_save body_content_container">
-		<div class="content_container">
-			<div class="row">
-				<div class="col-xs-12 text_center">
-					<h2>WE'RE HERE TO HELP YOU SAVE</h2>
-					
-					<div class="help_you_save_containers row va-item">
-						<div class="col-md-4 col-xs-12 text_center">
-							<img src="{{ baseUrl }}/assets/img/home/img-icons-doctor-dentist.png" class="img-responsive" />
-							
-							<h3>THOUSANDS OF PROVIDERS</h3>
-							<p>Our network includes providers all over the country in medical, dental, vision, and chiropractic. From hospitals and clinics to individual providers, you’ll never be short on options when it comes to taking care of your health.</p>
-						</div>
-						
-						<div class="col-md-4 col-xs-12 text_center">
-							<img src="{{ baseUrl }}/assets/img/home/img-icons-phone-mail.png" class="img-responsive" />
-							
-							<h3>24-7 ACCESS WITH TELEMEDICINE</h3>
-							<p>Imagine if you could talk to a doctor any time, day or night, and have your questions answered for just $25. With eSana, you can do just that. What’s more, you can have your prescriptions filled any time for free!</p>
-						</div>
-						
-						<div class="col-md-4 col-xs-12 text_center">
-							<img src="{{ baseUrl }}/assets/img/home/img-icons-cash-coin.png" class="img-responsive" />
-							
-							<h3>$1 BILLION SAVED BY CARDHOLDERS</h3>
-							<p>The eSana community is over 1 million strong. Our cardholders have saved over $1 billion on their health care costs. Imagine what your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span> savings could be like with an eSana membership! </p>
-						</div>
-					</div>
-					
-					<div class="col-md-8 col-md-offset-2 col-xs-12 text_center">
-						<p>eSana was founded as the new solution to an age-old problem - getting the quality care you need at a price you can afford. The price of premiums and co-pays are rising each year, but fewer services are actually being covered. This leaves too many Americans underinsured and uninsured. With eSana, you don't have to worry about the barriers put up by traditional insurance. Because eSana isn't insurance — it's a discount health care card. Our three discount plans are designed to cover the needs of your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>, starting at as little as $24.95 per month. With eSana, you can choose a plan that lets you save on the services you use regularly. Imagine dental cleanings for only $32 or braces for just $2200. Your savings start with eSana.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
 	<div class="your_saving_plan body_content_container">
 		<div class="content_container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
-					<h1>YOUR SAVINGS PLAN</h1>
+					<h1>START YOUR SAVINGS TODAY</h1>
 					
 					<p>From doctor's visits to prescription medicines, eSana plans help you save on the care you need. Find the plan that best fits your needs by selecting one below to learn more.</p>
 				</div>
 			</div>
 			
-			<div class="plan_detail_container row row-eq-height">
+			<div class="plan_detail_container row-eq-height">
 			
 				<!-- MedPlus -->
 				<div class="col-md-4 col-xs-12">
@@ -162,17 +135,14 @@
 						
 						<div class="plan_detail_description_container">
 							<ul class="plus_sign_list">
-								<li>24/7 Telemedicine for $25/call</li>
-								<li>Surgery Saver up to 66%</li>
-								<li>Bill Negotiator</li>
-								<li>Ancillary Services Discounts up to 70%</li>
+								<li><span class="tool_tip" data-tool-tip="eSana gives you 24/7 access to doctors and pharmacists via your phone and email, a convenient alternative to in-office visits.">24/7 Telemedicine for $25/call</span></li>
+								<li><span class="tool_tip" data-tool-tip="Diagnostic imaging and radiology services, such as MRI’s, Cat-Scans, and blood work can all be discounted with eSana.">Lab Work, Cat Scans, MRI, Blood Work up to 70%</span></li>
 								<li>Prescription Discounts up to 85%</li>
-								<li>Healthcare Navigator</li>
 							</ul>
 						</div>
 						
 						<div class="plan_detail_sign_up_container center_align">
-							<a href="/plans#medical_section" class="btn">SELECT</a>
+							<a href="/membership#medical_section" class="btn" onclick="dataLayer.push({'event': 'Link-to-Membership-MedPlus'});">SELECT</a>
 						</div>
 					</div>
 				</div>
@@ -199,12 +169,11 @@
 								<li>Vision Discounts up to 60%</li>
 								<li>Chiropractic Discounts up to 50%</li>
 								<li>Prescription Discounts up to 85%</li>
-								<li>Wellness Screenings</li>
 							</ul>
 						</div>
 						
 						<div class="plan_detail_sign_up_container center_align">
-							<a href="/plans#dental_section" class="btn">SELECT</a>
+							<a href="/membership#dental_section" class="btn" onclick="dataLayer.push({'event': 'Link-to-Membership-DentalPlus'});">SELECT</a>
 						</div>
 					</div>
 				</div>
@@ -230,14 +199,14 @@
 								<li>Dental Discounts up to 75%</li>
 								<li>Vision Discounts up to 60%</li>
 								<li>Chiropractic Discounts up to 50%</li>
-								<li>24/7 Telemedicine for $25/call</li>
+								<li><span class="tool_tip" data-tool-tip="eSana gives you 24/7 access to doctors and pharmacists via your phone and email, a convenient alternative to in-office visits.">24/7 Telemedicine for $25/call</span></li>
 								<li>Prescription Discounts up to 85%</li>
 								<li>Much More</li>
 							</ul>
 						</div>
 						
 						<div class="plan_detail_sign_up_container center_align">
-							<a href="/plans#deluxe_section" class="btn">SELECT</a>
+							<a href="/membership#deluxe_section" class="btn" onclick="dataLayer.push({'event': 'Link-to-Membership-Deluxe'});">SELECT</a>
 						</div>
 					</div>
 				</div>
@@ -245,7 +214,66 @@
 			
 			<div class="row">
 				<div class="col-xs-12 body_btn_container center_align">
-					<a href="/plans" class="btn blue">MORE DETAILS</a>
+					<a href="/membership" class="btn blue" onclick="dataLayer.push({'event': 'Link-to-Membership'});">MORE DETAILS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="help_you_save body_content_container">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 text_center">
+					<h2>WE'RE HERE TO HELP YOU SAVE</h2>
+					
+					<div class="help_you_save_containers row va-item">
+						<div class="col-md-4 col-xs-12 text_center">
+							<img src="{{ baseUrl }}/assets/img/home/img-icons-doctor-dentist.png" class="img-responsive" />
+							
+							<h3>OVER 155,000 PROVIDERS</h3>
+							<p>Our network includes providers all over the country in medical, dental, vision, and chiropractic. From hospitals and clinics to individual providers, you'll never be short on options when it comes to taking care of your health.</p>
+						</div>
+						
+						<div class="col-md-4 col-xs-12 text_center">
+							<img src="{{ baseUrl }}/assets/img/home/img-icons-phone-mail.png" class="img-responsive" />
+							
+							<h3>24-7 ACCESS WITH TELEMEDICINE</h3>
+							<p>Imagine if you could talk to a doctor any time, day or night, and have your questions answered for just $25. With eSana, you can do just that. What’s more, you can have your prescriptions filled any time for free!</p>
+						</div>
+						
+						<div class="col-md-4 col-xs-12 text_center">
+							<img src="{{ baseUrl }}/assets/img/home/img-icons-cash-coin.png" class="img-responsive" />
+							
+							<h3>$1 BILLION SAVED BY CARDHOLDERS</h3>
+							<p>The eSana community is over 1 million strong. Our cardholders have saved over $1 billion on their health care costs. Imagine what your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span> savings could be like with an eSana membership! </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="red-banner">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-12">
+					<p>Our three discount plans are designed to cover the needs of your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>, starting at as little as $24.95 per month. With eSana, you can choose a plan that lets you save on the services you use regularly. Imagine dental cleanings for only $48 or braces for just $2200. Your savings start with eSana.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="stay_connected_container body_content_container">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+					<h1>BRANDS YOU TRUST</h1>
+					
+					<p>Gain access to a wide network of providers. eSana makes it easy for you to find the services you’re looking for. Use our provider search tool to locate the closest one to you.</p>
+				</div>
+				
+				<div class="img_container col-xs-12">
+					<img src="{{ baseURL }}/assets/img/home/img-provider-logo.png" class="img-responsive" />
 				</div>
 			</div>
 		</div>
@@ -276,7 +304,7 @@
 					<p>With the savings calculator tool, you'll be able to see just how much money you can save when choosing eSana. Our system is designed to provide you with maximum savings.</p>
 					
 					<div class="body_btn_container center_align">
-						<a href="/tools/savings-calculator" class="btn blue">TRY IT</a>
+						<a href="/tools/savings-calculator" class="btn blue" onclick="dataLayer.push({'event': 'Link-to-Savings-Calculator'});">TRY IT</a>
 					</div>
 				</div>
 			</div>
@@ -289,22 +317,22 @@
 				<div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
 					<h1>eSANA IS A LIFESTYLE</h1>
 					
-					<p><a href="/mission">Learn</a> more about what makes eSana more than just a health card.</p>
+					<p>eSana was founded as the new solution to an age-old problem - getting the quality care you need at a price you can afford. The price of premiums and co-pays are rising each year, but fewer services are actually being covered. This leaves too many Americans underinsured and uninsured. With eSana, you don't have to worry about the barriers put up by traditional insurance. Because eSana isn't insurance — it's a discount health care card. <a href="/mission" onclick="dataLayer.push({'event': 'Link-to-Mission'});">Learn</a> more about what makes eSana more than just a health card.</p>
 				</div>
 			</div>
 			
 			<div class="sign_up_callout_container row center_align va-item">
 				<div class="col-md-4 col-xs-12">
-					<a href="/mission"><img src="{{ baseUrl }}/assets/img/home/img-home-vet-photo.png" class="img-responsive" /></a>
+					<a href="/mission" onclick="dataLayer.push({'event': 'Link-to-Mission'});"><img src="{{ baseUrl }}/assets/img/home/img-home-vet-photo.png" class="img-responsive" /></a>
 				</div>
 				
 				<div class="col-md-4 col-xs-12 content_section text-center">
 					<h2>JOIN eSANA</h2>
 					
-					<p>Ready to start saving? Sign up and let us find the perfect plan for your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>.</p>
+					<p>Ready to start saving? Sign up and let us find the perfect membership for your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>.</p>
 					
 					<div class="body_btn_container center_align">
-						<a href="/plans" class="btn blue">SIGN UP</a>
+						<a href="/membership" class="btn blue" onclick="dataLayer.push({'event': 'Link-to-Membership'});">SIGN UP</a>
 					</div>
 				</div>
 				

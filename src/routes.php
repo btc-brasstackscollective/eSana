@@ -11,11 +11,13 @@ $app->get('/', function($request, $response, array $args) {
 	return $this->view->render($response, 'home.html.twig', $args);
 });
 
-// Plans Page
-$app->get('/plans', function($request, $response, array $args) {
+// Membership Page
+/*$app->get('/membership', function($request, $response, array $args) {
 	$args['currentUrl'] = $request->getUri()->getPath();
-	return $this->view->render($response, 'plans.html.twig', $args);
-});
+	return $this->view->render($response, 'membership.html.twig', $args);
+});*/
+
+$app->get('/membership', 'MembershipController');
 
 // Savings Page
 $app->get('/savings', function($request, $response, array $args) {
@@ -60,3 +62,46 @@ $app->get('/faqs', function($request, $response, array $args) {
 });
 
 $app->post('/contact-submit', 'ContactController:send');
+
+// create User ID for Referral ID
+$app->post('/api/referralid/{referralid}/userid/{userid}', 'ReferralIDController:createUserID');
+
+// delete unused Referral ID entry
+$app->post('/api/referralid/{referralid}/delete', 'ReferralIDController:deleteReferralID');
+
+// Landing Pages
+// MedPlus Prescription 1
+$app->get('/landingpage/medplus/prescription', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'medplus_prescription_landing_page.html.twig', $args);
+});
+
+// MedPlus Prescription Form
+$app->get('/landingpage/medplus/prescription/form', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'medplus_prescription_landing_page_form.html.twig', $args);
+});
+
+// MedPlus Telemedicine 1
+$app->get('/landingpage/medplus/telemedicine', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'medplus_telemedicine_landing_page.html.twig', $args);
+});
+
+// MedPlus Telemedicine Form
+$app->get('/landingpage/medplus/telemedicine/form', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'medplus_telemedicine_landing_page_form.html.twig', $args);
+});
+
+// Dental Option 1
+$app->get('/landingpage/dental', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'dental_landing_page.html.twig', $args);
+});
+
+// Dental Option Form
+$app->get('/landingpage/dental/form', function($request, $response, array $args) {
+	$args['currentUrl'] = $request->getUri()->getPath();
+	return $this->view->render($response, 'dental_landing_page_form.html.twig', $args);
+});

@@ -1,0 +1,113 @@
+{# app/Resources/views/dental_option_1.html.twig #}
+
+{% extends 'base_landingpage.html.twig' %}
+
+{% block title %}DentalPlus Landing Page{% endblock %}
+
+{% block bodyID %}dental_landing{% endblock %}
+{% block bodyClass %}landingpage{% endblock %}
+
+{% block body %}
+	<div class="hero_content_section">
+		<div class="content_container">
+			<div class="row">
+				<div class="landing_content_container col-md-10 col-md-offset-1 col-xs-12 text-center">
+					<h1>Start saving immediately on your dental care</h1>
+					
+					<div class="esana_cost_chart col-md-8 col-md-offset-2">
+						<div class="row">
+							<div class="col-sm-3">Service</div>
+							<div class="col-sm-3">National Average</div>
+							<div class="col-sm-2">eSana Cost</div>
+							<div class="col-sm-2">$ Savings</div>
+							<div class="col-sm-2">% Savings</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-3" data-title="Service">Dental Checkup</div>
+							<div class="col-sm-3" data-title="National Average">$68</div>
+							<div class="col-sm-2" data-title="eSana Cost">$15</div>
+							<div class="col-sm-2" data-title="$ Savings">$53</div>
+							<div class="col-sm-2" data-title="% Savings">75%</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3" data-title="Service">X-Rays</div>
+							<div class="col-sm-3" data-title="National Average">$182</div>
+							<div class="col-sm-2" data-title="eSana Cost">$55</div>
+							<div class="col-sm-2" data-title="$ Savings">$127</div>
+							<div class="col-sm-2" data-title="% Savings">70%</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3" data-title="Service">Teeth Cleaning</div>
+							<div class="col-sm-3" data-title="National Average">$123</div>
+							<div class="col-sm-2" data-title="eSana Cost">$48</div>
+							<div class="col-sm-2" data-title="$ Savings">$75</div>
+							<div class="col-sm-2" data-title="% Savings">78%</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3" data-title="Service">Filling</div>
+							<div class="col-sm-3" data-title="National Average">$182</div>
+							<div class="col-sm-2" data-title="eSana Cost">$45</div>
+							<div class="col-sm-2" data-title="$ Savings">$137</div>
+							<div class="col-sm-2" data-title="% Savings">75%</div>
+						</div>
+					</div>
+					
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=447" target="_blank" class="btn red inverse text-center" onclick="dataLayer.push({'event': 'Buy-btn-DentalPlus'});">
+						BUY NOW
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="dental_section" class="dental-plus"> 
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-4 col-xs-12 col-md-offset-0 col-md-3">
+					<div class="price price_text">
+						<h3><sup>$</sup>24<sup>.95</sup></h3>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 text-center">
+					<h2>DentalPlus</h2>
+					<h4>For the household looking for more than just dental services</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="dental-plus-copy">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<p>
+						The DentalPlus membership provides discounts on a wide range of health care services. More than just dental; your vision, prescription, and chiropractic needs are all available at a discounted price through DentalPlus. See the full list of discounts and services offered through DentalPlus <a href="{{ baseUrl }}/assets/pdf/eSana_Brochure_Dental.pdf" target="_blank" onclick="dataLayer.push({'event': 'Link-to-DentalPlus-Brochure'});">here</a>.
+					</p>
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list blue">
+								<li>Dental Discounts up to 75%</li>
+								<li>Vision Discounts up to 60%</li>
+								<li>Chiropractic Discounts up to 50%</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li>Prescription Discounts up to 85%</li>
+								<li>Wellness Screenings</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 body_btn_container center_align">
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=447" target="_blank" class="btn red inverse" onclick="dataLayer.push({'event': 'Buy-btn-DentalPlus'});">BUY NOW</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

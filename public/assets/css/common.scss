@@ -70,6 +70,12 @@ body
 					float:none;
 					min-height:100% !important;
 					position:relative;
+					
+					@media only screen and (max-width : 769px)
+					{
+						padding-left:0;
+						padding-right:0;
+					}
 				}
 				
 				.navbar-header
@@ -157,7 +163,7 @@ body
 					
 					@media only screen and (max-width : 769px)
 					{
-						padding:40px;	
+						padding:20px 40px;	
 					}
 					
 					#nav_links
@@ -183,7 +189,6 @@ body
 								@media only screen and (max-width : 769px)
 								{
 									display:block;
-									margin-bottom:5px;
 								}
 								
 								> a
@@ -194,12 +199,18 @@ body
 									position:relative;
 									text-decoration:none;
 									
+									@media only screen and (max-width : 1150px)
+									{
+										font-size:12px;
+										margin-right:12px;
+									}
+									
 									@media only screen and (max-width : 769px)
 									{
 										color:$white;
 										display:block;
-										font-size:18px;
-										padding:12px 0;
+										font-size:16px;
+										padding:7px 0;
 									}
 									
 									&::after
@@ -311,11 +322,11 @@ body
 						}
 					}
 					
-					.nav_contact_number
+					.nav_contact_number, .nav_live_chat
 					{
 						@media only screen and (max-width : 769px)
 						{
-							margin-top:40px;
+							margin-top:20px;
 							text-align:center;
 						}
 					}
@@ -446,6 +457,11 @@ body
 						color:$white;
 						font-size:32px;
 						font-weight:500;
+						
+						@media only screen and (max-width : 992px)
+						{
+							font-size:26px;	
+						}
 					}
 					
 					p
@@ -453,11 +469,21 @@ body
 						color:$white;
 						font-size:20px;
 						line-height:30px;
+						
+						@media only screen and (max-width : 992px)
+						{
+							font-size:16px;	
+						}
 					}
 					
 					.btn
 					{
 						font-size:19px;
+						
+						@media only screen and (max-width : 992px)
+						{
+							font-size:16px;
+						}
 					}
 				}
 				
@@ -465,6 +491,11 @@ body
 				{
 					bottom:15px;
 					position:absolute;
+					
+					@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+					{
+						left:70px;
+					}
 					
 					@media only screen and (max-width : 769px)
 					{
@@ -491,6 +522,11 @@ body
 						&.active
 						{
 							background-color:$white;
+						}
+						
+						@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+						{
+							float:left;	
 						}
 					}
 				}
@@ -623,14 +659,14 @@ body
 		{
 			.plan_detail_container
 			{
-				margin:40px 0 100px 0;
+				margin:40px -30px 100px -30px;
 				
 				> div
 				{
-					padding-left:30px;
-					padding-right:30px;
+					padding-left:15px;
+					padding-right:15px;
 					
-					@media only screen and (max-width : 769px)
+					@media only screen and (max-width : 992px)
 					{
 						margin-bottom:100px;
 					}
@@ -661,6 +697,11 @@ body
 						position:absolute;
 						text-align:center;
 						width:92px;
+						
+						@media only screen and (max-width : 992px)
+						{
+							@include transform(translate(30px, -25px));
+						}
 						
 						h3
 						{
@@ -721,6 +762,12 @@ body
 					
 					.plan_detail_sign_up_container
 					{
+						@media only screen and (max-width : 769px)
+						{
+							margin:0 auto;
+							width:90%;	
+						}
+						
 						a
 						{
 							@include transition(all 500ms ease-in-out);
@@ -866,14 +913,26 @@ body
 		}
 	}
 	
+	&.membership
+	{
+		.stay_connected_container
+		{
+			margin-bottom:80px;	
+		}
+	}
+	
 	.content_container
 	{
 		margin:0 auto;
-		max-width:990px;
+		max-width:1200px;
 	}
 	
 	h1
 	{
+		color:$brand_red;
+		font-size:50px;
+		font-weight:300;
+			
 		@media only screen and (max-width : 768px)
 		{
 			font-size:32px !important;
@@ -923,7 +982,7 @@ body
 		{
 			color:inherit;
 			border-bottom:solid 2px $brand_blue;
-			text-decoration:none;
+			text-decoration:none !important;
 			
 			&:hover
 			{
@@ -1003,6 +1062,20 @@ body
 			border:solid 3px $brand_red;
 			color:$brand_red;
 			background-color: $white;
+			
+			&.inverse
+			{
+				border:solid 3px $brand_red;
+				color:$white;
+				background-color: $brand_red;
+				
+				&:hover
+				{
+					background-color:$white;
+					border-color:$brand_red;
+					color:$brand_red;
+				}
+			}
 			
 			&:hover
 			{
@@ -1331,6 +1404,11 @@ body
 			font-size:45px;
 			line-height:1.2;
 		}
+		
+		p
+		{
+			color:$white;
+		}
 	}
 
 	.red-banner 
@@ -1357,6 +1435,20 @@ body
 				color:inherit;
 			}
 		}
+		
+		@media only screen and (max-width : 769px)
+		{
+			margin:20px 0 0 0;
+			padding:0 15px;
+		}
+	}
+	
+	.stay_connected_container
+	{
+		.img_container img
+		{
+			margin:30px auto 20px auto;
+		}
 	}
 	
 	.nav_contact_number
@@ -1364,10 +1456,20 @@ body
 		color:$brand_red;
 		font-size:16px;
 		
+		@media only screen and (max-width : 992px)
+		{
+			font-size:12px;
+		}
+		
 		span
 		{
 			margin-left:22px;
 			position:relative;
+			
+			@media only screen and (max-width : 992px)
+			{
+				margin-left:17px;	
+			}
 			
 			&::before
 			{
@@ -1378,10 +1480,18 @@ body
 				position:absolute;
 				width:17px;
 				
+				@media only screen and (max-width : 992px)
+				{
+					background-size:contain;
+					height:14px;
+					left:-18px;
+					width:13px;	
+				}
+				
 				@media only screen and (max-width : 769px)
 				{
 					background:transparent url('../img/common/img-phone-outline-icon-white.png') 0 0 no-repeat;
-					height:20px;
+					background-size:contain;
 				}
 			}
 			
@@ -1395,6 +1505,82 @@ body
 					border-bottom:solid 2px $brand_red;
 				}
 			}
+		}
+	}
+	
+	.nav_live_chat
+	{
+		color:$brand_red;
+		font-size:16px;
+		margin-left:15px;
+		
+		@media only screen and (max-width : 992px)
+		{
+			font-size:12px;
+		}
+		
+		span
+		{
+			margin-left:33px;
+			position:relative;
+			
+			&::before
+			{
+				content:'';
+				background:transparent url('../img/common/img-chat-box.png') 0 0 no-repeat;
+				height:20px;
+				left:-33px;
+				position:absolute;
+				width:28px;
+				
+				@media only screen and (max-width : 992px)
+				{
+					background-size:contain;
+					height:16px;
+					left:-26px;
+					width:22px;	
+				}
+				
+				@media only screen and (max-width : 769px)
+				{
+					background:transparent url('../img/common/img-chat-box-white.png') 0 0 no-repeat;
+					background-size:contain;
+				}
+			}
+			
+			a
+			{
+				color:$brand_red;
+				text-decoration:none;
+				
+				&:hover
+				{
+					border-bottom:solid 2px $brand_red;
+				}
+			}
+		}
+	}
+	
+	.nav_buy_now_btn
+	{
+		margin-left:15px;
+		
+		a
+		{
+			font-size:14px;
+			padding:10px 20px;
+			min-width:auto;
+			
+			@media only screen and (max-width : 992px)
+			{
+				font-size:12px;
+				padding:10px;	
+			}
+		}
+		
+		@media only screen and (max-width : 769px)
+		{
+			margin-top:20px;
 		}
 	}
 	
@@ -1412,7 +1598,7 @@ body
 				
 				@media only screen and (max-width : 992px)
 				{
-					max-width:200px;
+					max-width:150px;
 				}
 			}
 		}
@@ -1980,6 +2166,18 @@ body
 			padding: 12px 30px;
 		}
 	}
+	
+	footer
+	{
+		.contact-form
+		{
+			.contact_us_form_message
+			{
+				margin-bottom:80px;
+			}
+		}
+	}
+	
 	.price
 	{
 		height: 138px;
@@ -2159,7 +2357,7 @@ body
 	{
 		margin: 100px 0px;
 		
-		span
+		span:not('.tool_tip')
 		{
 			color:$brand_blue; 
 			font-size: 1.4em;
@@ -2246,7 +2444,21 @@ body
 				text-align:center;
 			}
 		}
-			
+		
+		.nav_contact_number
+		{
+			@media only screen and (max-width : 768px)
+			{
+				margin-bottom:20px;
+				text-align:center;
+				
+				span
+				{
+					margin-left:0;
+				}
+			}
+		}
+		
 		.footer_social_links
 		{
 			@include justify-content(flex-end);
@@ -2265,7 +2477,7 @@ body
 			
 			@media only screen and (max-width : 768px)
 			{
-				text-align:right;	
+				text-align:center;	
 			}
 		}
 		
@@ -2333,6 +2545,519 @@ body
 						}
 					}
 				}	
+			}
+		}
+	}
+	
+	.chat_online_container
+	{
+		@include transition(all 500ms ease-in-out);
+		
+		bottom:20px;
+		position:fixed;
+		right:20px;
+		
+		&:hover
+		{
+			@include transform(scale(.8));
+		}
+		
+		@media only screen and (max-width : 768px)
+		{
+			height:40px;
+			width:40px;
+		}
+	}
+	
+	// Landing Pages
+	&#med_plus_landing .hero_content_section
+	{
+		background:transparent url('../img/landingPage/img-family-1.jpg') 50% 0% no-repeat;
+		background-size:cover;
+	}
+	
+	&#dental_landing .hero_content_section,
+	&#dental_plan_form
+	{
+		background:transparent url('../img/landingPage/img-family-2.jpg') 50% 0% no-repeat;
+		background-size:cover;
+	}
+	
+	&#med_plus_telemedicine_form
+	{
+		background:#73C2BF url('../img/landingPage/img-bkgd-teal-pattern.png') 0 0 repeat;
+		background-size:contain;
+	}
+	
+	&#med_plus_prescription_form
+	{
+		background:#F26E6D url('../img/landingPage/img-bkgd-red-pattern.png') 0 0 repeat;
+		background-size:contain;
+	}
+	
+	&.landingpage
+	{	
+		header
+		{
+			@media only screen and (max-width : 768px)
+			{
+				overflow:hidden;
+				
+				#esana_contact_container a
+				{
+					font-size:13px !important;
+				}
+			}
+		}
+		
+		.hero_content_section
+		{
+			padding:140px 0 100px;
+			
+			@media only screen and (max-width : 768px)
+			{
+				padding-left:15px;
+				padding-right:15px;	
+			}
+			
+			h1
+			{
+				color:#ffffff;
+				font-size:50px;
+				font-weight:normal;
+				line-height:1.2;
+				margin:0;
+			}
+				
+			p
+			{
+				color:$white;
+				font-size:30px !important;
+				line-height:1.2 !important;
+				margin:40px 0;
+				
+				@media only screen and (max-width : 768px)
+				{
+					font-size:18px !important;	
+				}
+			}
+		}
+		
+		#medical_section, #dental_section
+		{
+			margin-bottom:60px;
+			
+			.content_container
+			{
+				padding:40px 0;
+				
+				h2
+				{
+					margin-top:0;
+				}
+			}
+		}
+		
+		.med-plus-copy, .dental-plus-copy
+		{
+			@media only screen and (max-width : 768px)
+			{
+				padding-left:15px;
+				padding-right:15px;	
+			}
+			
+			.content_container > .row > div:first-child
+			{
+				@media only screen and (max-width : 768px)
+				{
+					margin-bottom:30px;	
+				}
+			}
+		}
+		
+		.body_btn_container
+		{
+			margin-top:40px;
+		}
+		
+		.esana_cost_chart
+		{
+			margin-top:40px;
+			margin-bottom:40px;
+			
+			.row
+			{
+				&:first-child
+				{
+					border-top:solid 1px $white;
+					
+					@media only screen and (max-width: 800px) {
+						> div
+						{
+							position: absolute;
+							top: -9999px;
+							left: -9999px;
+						}
+					}
+				}
+				
+				&:last-child
+				{
+					border-bottom:solid 1px $white;
+					
+					> div
+					{
+						border-bottom:0 !important;
+					}
+				}
+						
+				> div
+				{
+					padding:15px 5px;
+					
+					&:not(:last-child)
+					{
+						border-right:solid 1px $white;
+					}
+					
+					@media only screen and (max-width: 800px) {
+						border:none;
+				        padding-left:50%;
+				        position:relative;
+				        text-align:left;
+				        white-space:normal;
+				        
+				        &::before
+				        {
+					        content:attr(data-title);
+					        font-weight:bold;
+					        left:6px;
+					        padding-right:10px;
+					        position:absolute;
+					        text-align:left;
+					        top:50%;
+					        white-space:nowrap;
+					        width:45%;
+					        
+					        @include transform(translateY(-50%));
+				        }
+					}
+				}
+				
+				> div:first-child
+				{
+					background-color:$white;
+					color:#000000;
+					
+					&:not(:last-child)
+					{
+						border-bottom:solid 1px $gray;
+					}
+				}
+				
+				> div:nth-child(2)
+				{
+					background-color:$gray;
+					color:$white;
+				}
+				
+				> div:nth-child(3),
+				> div:nth-child(4),
+				> div:nth-child(5)
+				{
+					background-color:$brand_red;
+					color:$white;
+				}
+				
+				> div:last-child
+				{
+					border-right:solid 1px $white;
+				}
+				
+				> div:not(:first-child)
+				{
+					border-bottom:solid 1px $white;
+				}
+			}
+		}
+	}
+	
+	&#dental_plan_form,
+	&.landingpage
+	{
+		header
+		{
+			background-color:transparent;
+			padding:0 40px 0 0;
+			position:absolute;
+			top:0;
+			width:100%;
+			
+			@media only screen and (max-width : 768px)
+			{
+				padding:0;	
+			}
+			
+			#esana_logo_container
+			{
+				background-color:#ffffff;
+				border-bottom-right-radius:50px;
+				padding:20px 40px;
+				
+				@media only screen and (max-width : 768px)
+				{
+					padding:20px 22px;
+				}
+			}
+			
+			#esana_contact_container
+			{
+				@include justify-content(flex-end);
+				
+				@media only screen and (max-width : 768px)
+				{
+					padding:20px 15px 20px 0;
+				}
+				
+				a
+				{
+					color:#ffffff;
+					font-size:20px;
+					
+					&:not(:last-child)
+					{
+						margin-right:15px;
+					}
+					
+					&.esana_contact_phone
+					{
+						margin-left:22px;
+						position:relative;
+						
+						&::before
+						{
+							@include transform(translateY(-50%));
+							
+							content:'';
+							background:transparent url('../img/landingPage/img-phone-outline-icon-white.png') 0 0 no-repeat;
+							display:block;
+							height:20px;
+							left:-22px;
+							position:absolute;
+							top:50%;
+							width:17px;
+							
+							@media only screen and (max-width : 768px)
+							{
+								background-size:cover;
+								height:15px;
+								left:-18px;
+								width:13px;	
+							}
+						}
+					}
+					
+					&.esana_contact_email
+					{
+						margin-left:25px;
+						position:relative;
+						
+						&::before
+						{
+							@include transform(translateY(-50%));
+							
+							content:'';
+							background:transparent url('../img/landingPage/img-email-icon-white.png') 0 0 no-repeat;
+							display:block;
+							height:15px;
+							left:-25px;
+							position:absolute;
+							top:50%;
+							width:20px;
+							
+							@media only screen and (max-width : 768px)
+							{
+								background-size:cover;
+								height:13px;
+								left:-22px;
+								width:17px;	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&#dental_plan_form
+	{
+		header
+		{
+			#esana_contact_container
+			{
+				a
+				{					
+					&.esana_contact_phone
+					{
+						&::before
+						{
+							background:transparent url('../img/landingPage/img-phone-outline-icon-white.png') 0 0 no-repeat !important;
+							height:20px !important;
+						}
+					}
+					
+					&.esana_contact_email
+					{
+						&::before
+						{
+							background:transparent url('../img/landingPage/img-email-icon-white.png') 0 0 no-repeat !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.landing_page_form
+	{
+		header
+		{
+			background-color:#ffffff;
+			padding:0 40px;
+			position:relative;
+			
+			@media only screen and (max-width : 768px)
+			{
+				padding:0 20px;	
+			}
+			
+			#esana_logo_container
+			{
+				background-color:transparent;
+				padding:20px 40px;
+				
+				@media only screen and (max-width : 768px)
+				{
+					padding:20px 0;	
+				}
+			}
+			
+			#esana_contact_container
+			{
+				a
+				{
+					color:#EC565A;
+				
+					&.esana_contact_phone
+					{
+						&::before
+						{
+							background:transparent url('../img/landingPage/img-phone-outline-icon.png') 0 0 no-repeat;
+							height:19px;
+							
+							@media only screen and (max-width : 768px)
+							{
+								background-size:cover;
+								height:15px;
+								left:-18px;
+								width:13px;	
+							}
+						}
+					}
+					
+					&.esana_contact_email
+					{
+						&::before
+						{
+							background:transparent url('../img/landingPage/img-email-icon.png') 0 0 no-repeat;
+							
+							@media only screen and (max-width : 768px)
+							{
+								background-size:cover;
+								height:13px;
+								left:-22px;
+								width:17px;	
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		section
+		{
+			@include transform(translateY(0%));
+		
+			margin:60px 0;
+			top:0;
+			
+			@media only screen and (max-width : 768px)
+			{
+				margin:30px 0;	
+			}
+			
+			.landing_content_container
+			{
+				background-color:#ffffff;
+				padding:40px;
+				
+				h1
+				{
+					color:#35BAB0;
+				}
+				
+				form
+				{
+					margin-top:50px;
+					
+					input[type="checkbox"]
+					{
+						border:solid 2px #979797;
+						border-radius:0;
+						height:20px;
+						width:20px;
+					}
+					
+					input[type="text"], input[type="email"], input[type="tel"]
+					{
+						border:solid 3px #79CCC9;
+						color:#F2776D;
+						display:block;
+						font-size:20px;
+						margin-bottom:20px;
+						padding:15px 20px;
+						width:100%;
+					}
+					
+					input[type="submit"]
+					{
+						margin-top:30px;
+					}
+					
+					p
+					{
+						margin:0 0 10px 0;
+						padding:0;
+						text-align:left;
+					}
+					
+					label
+					{
+						color:#454545;
+						font-weight:normal;
+					}
+				}
+			}
+		}	
+	}
+	
+	&#dental_plan_form
+	{
+		section
+		{
+			.landing_content_container
+			{
+				border:solid 2px #F26E6D;	
 			}
 		}
 	}

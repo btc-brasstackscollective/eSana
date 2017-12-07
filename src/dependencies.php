@@ -28,7 +28,33 @@ $container['logger'] = function ($c) {
     return $logger;
 };
 
+// Service factory for the ORM
+$container['db'] = function ($container) {
+    $capsule = new \Illuminate\Database\Capsule\Manager;
+    $capsule->addConnection($container['settings']['db']);
+
+    $capsule->setAsGlobal();
+    $capsule->bootEloquent();
+
+    return $capsule;
+};
+
+// Controller Classes
+$container['MembershipController'] = function($c) {
+    $view = $c->get("view"); // retrieve the 'view' from the container
+    $logger = $c->get('logger');
+    $table = $c->get('db')->table('esana_referral');
+    return new App\Controllers\MembershipController($view, $logger, $table);
+};
+
 $container['ContactController'] = function($c) {
     $view = $c->get("view"); // retrieve the 'view' from the container
     return new App\Controllers\ContactController($view);
+};
+
+$container['ReferralIDController'] = function ($c) {
+    $view = $c->get('view');
+    $logger = $c->get('logger');
+    $table = $c->get('db')->table('esana_referral');
+    return new App\Controllers\ReferralIDController($view, $logger, $table);
 };

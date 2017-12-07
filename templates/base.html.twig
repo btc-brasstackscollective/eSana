@@ -21,6 +21,14 @@
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ baseUrl }}/assets/css/style.css" />
 	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TH6M7ZR');</script>
+	<!-- End Google Tag Manager -->
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108446245-1"></script>
 	<script>
@@ -33,6 +41,10 @@
 </head>
 
 <body class="{% block bodyClass %}{% endblock %}">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TH6M7ZR"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 	<article>
 		<!-- Header Navigation -->
@@ -50,45 +62,53 @@
 		                </div>
 		
 		                <!-- eSana Logo -->
-		                <div class="esana_logo no-gutter col-md-3 col-sm-4 col-xs-6">
+		                <div class="esana_logo no-gutter col-sm-2 col-xs-6">
 		                    <a href="/" title="">
 		                        <img src="{{ baseUrl }}/assets/img/common/img-esana-logo.png" alt="eSana" class="img-responsive" />
 		                    </a>
 		                </div>
 		
-		                <div id="utility_nav_slide_right" class="utility_nav pull-right text-right col-md-9 col-sm-8">
+		                <div id="utility_nav_slide_right" class="va-item utility_nav pull-right text-right col-sm-10">
 		                    <div id="nav_links" class="nav navbar-nav social_links">
 								<ul>
 									<li>
-										<a href="/" {% if currentUrl == '/' %} class="active"{% endif %}>Home</a>
+										<a href="/" {% if currentUrl == '/' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Home'});">Home</a>
 									</li>
 									<li>
-										<a href="/plans" {% if currentUrl == '/plans' %} class="active"{% endif %}>Plans</a>
+										<a href="/membership" {% if currentUrl == '/membership' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Membership'});">Membership</a>
 									</li>
 									<li>
-										<a href="/savings" {% if currentUrl == '/savings' %} class="active"{% endif %}>Savings</a>
+										<a href="/savings" {% if currentUrl == '/savings' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Savings'});">Savings</a>
 									</li>
 									<li>
-										<a href="/tools" {% if currentUrl == '/tools' or currentUrl == '/tools/savings-calculator' %} class="active"{% endif %}>Tools</a>
+										<a href="/tools" {% if currentUrl == '/tools' or currentUrl == '/tools/savings-calculator' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Tools'});">Tools</a>
 										
 										<ul class="sub_nav_links">
-											<li><a href="/tools/savings-calculator" {% if currentUrl == '/tools/savings-calculator' %} class="active"{% endif %}>Savings Calculator</a></li>
+											<li><a href="/tools/savings-calculator" {% if currentUrl == '/tools/savings-calculator' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Savings-Calculator'});">Savings Calculator</a></li>
 											<!-- <li><a href="">Plan Assessment</a></li> -->
-											<li><a href="https://esana.savewithdiscounthealthcare.com/esana/providersearch" target="_blank">Provider Locator</a></li>
-											<li><a href="https://esana.savewithdiscounthealthcare.com/esana/RXTools" target="_blank">Prescription Search</a></li>
+											<li><a href="https://esana.savewithdiscounthealthcare.com/esana/providersearch" target="_blank" onclick="dataLayer.push({'event': 'Link-to-Provider-Locator'});">Provider Locator</a></li>
+											<li><a href="https://esana.savewithdiscounthealthcare.com/esana/RXTools" target="_blank" onclick="dataLayer.push({'event': 'Link-to-Prescription-Search'});">Prescription Search</a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="/mission" {% if currentUrl == '/mission' %} class="active"{% endif %}>Mission</a>
+										<a href="/mission" {% if currentUrl == '/mission' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Mission'});">Mission</a>
 									</li>
 									<li>
-										<a href="/contact" {% if currentUrl == '/contact' %} class="active"{% endif %}>Contact</a>
+										<a href="/contact" {% if currentUrl == '/contact' %} class="active"{% endif %} onclick="dataLayer.push({'event': 'Link-to-Contact'});">Contact</a>
 									</li>
 								</ul>
 		                    </div>
 		                    
-		                    <div class="nav_contact_number" class="">
-		                        <span><a href="tel:1-888-241-7489">1-888-241-7489</a></span>
+		                    <div class="nav_contact_number">
+		                        <span><a href="tel:1-888-241-7489" onclick="dataLayer.push({'event': 'Contact-Us-Phone-Number'});">1-888-241-7489</a></span>
+		                    </div>
+		                    
+		                    <div class="nav_live_chat">
+		                        <span><a href="javascript:void($zopim.livechat.window.openPopout())" onclick="dataLayer.push({'event': 'Contact-Us-Live-Chat'});">Live Chat</a></span>
+		                    </div>
+		                    
+		                    <div class="nav_buy_now_btn">
+		                    	<a href="/membership" class="btn red inverse" onclick="dataLayer.push({'event': 'Link-to-Membership-Buy-Now-btn'});">BUY NOW</a>
 		                    </div>
 		                </div>
 					</div>
@@ -104,23 +124,54 @@
 		<footer>
 			<div class="content_container">
 				<div class="clear">
+					
+					{% if currentUrl != '/contact' %}
+						<div class="contact-form text-center">
+							<div class="col-xs-12 no-gutter">
+								<h1>HAVE MORE QUESTIONS?</h1>
+								<p>Let's get in touch.</p>
+								
+								<div class="contact_us_form_message">
+									<p></p>
+								</div>
+								
+								<form id="contact_us_form">
+									<div class="form-group">
+										<label for="name"></label>
+										<input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+									</div>
+									<div class="form-group">
+										<label for="phone"></label>
+										<input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+									</div>
+									<div class="form-group">
+										<label for="email"></label>
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+									</div>
+									
+									<button id="contact_us_form_submit" type="submit" class="btn red inverse">Send Email</button>
+								</form>
+							</div>
+						</div>
+					{% endif %}
+					
 					<div class="col-xs-12 no-gutter va-item">
-						<div class="nav_contact_number col-xs-6 no-gutter">
-	                        <span><a href="tel:1-888-241-7489">1-888-241-7489</a></span>
+						<div class="nav_contact_number col-sm-6 col-xs-12 no-gutter">
+	                        <span><a href="tel:1-888-241-7489" onclick="dataLayer.push({'event': 'Contact-Us-Phone-Number'});">1-888-241-7489</a></span>
 	                    </div>
 	                    
 	                    <!-- Social Links -->
-	                    <div class="footer_social_links col-xs-6 va-item">
-		                    <a href="" target="_blank">
+	                    <div class="footer_social_links col-sm-6 col-xs-12 va-item">
+		                    <a href="https://www.instagram.com/esanahealth/" target="_blank" onclick="dataLayer.push({'event': 'Social-Link-eSana-Health-Instagram'});">
 			                    <img src="{{ baseUrl }}/assets/img/common/img-instagram-icon.png" alt="" class="img-responsive" />
 		                    </a>
-		                    <a href="" target="_blank">
+		                    <a href="https://www.facebook.com/eSanaHealth/" target="_blank" onclick="dataLayer.push({'event': 'Social-Link-eSana-Health-Facebook'});">
 			                    <img src="{{ baseUrl }}/assets/img/common/img-facebook-icon.png" alt="" class="img-responsive" />
 		                    </a>
-		                    <a href="" target="_blank">
+		                    <a href="https://twitter.com/eSanaHealth" target="_blank" onclick="dataLayer.push({'event': 'Social-Link-eSana-Health-Twitter'});">
 			                    <img src="{{ baseUrl }}/assets/img/common/img-twitter-icon.png" alt="" class="img-responsive" />
 		                    </a>
-		                    <a href="" target="_blank">
+		                    <a href="https://www.youtube.com/channel/UCvjYx-8TAN0680-5PMHHYgQ" target="_blank" onclick="dataLayer.push({'event': 'Social-Link-eSana-Health-Youtube'});">
 			                    <img src="{{ baseUrl }}/assets/img/common/img-youtube-icon.png" alt="" class="img-responsive" />
 		                    </a>
 	                    </div>
@@ -132,7 +183,7 @@
 				<div class="clear">
 					<div class="col-xs-12 no-gutter va-item">
 						<div class="esana_logo no-gutter col-md-3 col-sm-4 col-xs-12">
-		                    <a href="/" title="">
+		                    <a href="/" title="" onclick="dataLayer.push({'event': 'Link-to-Home'});">
 		                        <img src="{{ baseUrl }}/assets/img/common/img-esana-logo.png" alt="eSana" class="img-responsive" />
 		                    </a>
 		                </div>
@@ -141,7 +192,7 @@
 							&copy; eSANA Health, LLC. All Rights Reserved
 							
 							<div class="copyright_content_links va-item">
-								<a class="va-item" href="/privacy-policy">Privacy Policy</a>
+								<a class="va-item" href="/privacy-policy" onclick="dataLayer.push({'event': 'Link-to-Privacy-Policy'});">Privacy Policy</a>
 								<!-- <a class="va-item" href="">Terms of Use</a> -->
 							</div>
 						</div>
@@ -152,6 +203,9 @@
 		
 		<div class="tool_top_container"></div>
 		<div class="video_modal"><div class="close_btn"></div></div>
+		<div class="chat_online_container">
+			<a href="javascript:void($zopim.livechat.window.openPopout())" onclick="dataLayer.push({'event': 'Link-to-Home'});"><img src="{{ baseUrl }}/assets/img/common/img-lcon-chat.png" class="img-responsive" /></a>
+		</div>
 	</article>
 
 	<!-- jQuery -->
@@ -170,6 +224,28 @@
 	
 	<!-- Common JS -->
 	<script type="text/javascript" src="{{ baseUrl }}/assets/js/common.js"></script>
+	
+	<!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+                d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                    z.set.
+                        _.push(o)
+                }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute('charset', 'utf-8');
+            $.src = '//v2.zopim.com/?G61FUlOFr0gQ7DOMXCNnnvDXwbKaElW0'; z.t = +new Date; $.
+                type = 'text/javascript'; e.parentNode.insertBefore($, e)
+        })(document, 'script');
+ 
+    </script>
+    <script type="text/javascript">
+        $zopim(function () {
+            $zopim.livechat.addTags('eSana');
+            $zopim.livechat.prechatForm.setGreetings('Hello and Welcome eSana.  Let us know how we can assist you today.');
+            $zopim.livechat.hideAll();
+        });
+    </script>
+    <!--End of Zendesk Chat Script  -->
 
 	<!-- Hotjar Tracking Code for http://www.esanahealth.com -->
 	<script>

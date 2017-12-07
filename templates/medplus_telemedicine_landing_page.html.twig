@@ -1,0 +1,79 @@
+{# app/Resources/views/medplus_telemedicine_1.html.twig #}
+
+{% extends 'base_landingpage.html.twig' %}
+
+{% block title %}MedPlus Telemedicine Landing Page{% endblock %}
+
+{% block bodyID %}med_plus_landing{% endblock %}
+{% block bodyClass %}landingpage{% endblock %}
+
+{% block body %}
+
+	<div class="hero_content_section">
+		<div class="content_container">
+			<div class="row">
+				<div class="landing_content_container col-md-10 col-md-offset-1 col-xs-12 text-center">
+					<h1>Access to doctors whenever you need, from wherever you are</h1>
+					
+					<p>Our members have 24/7 access to doctors through our Telemedicine program at only $25 a call or email.</p>
+					
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=448" target="_blank" class="btn red inverse text-center" onclick="dataLayer.push({'event': 'Buy-btn-MedPlus'});">
+						BUY NOW
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="medical_section" class="med-plus"> 
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-4 col-xs-12 col-md-offset-0 col-md-3">
+					<div class="price price_text">
+						<h3><sup>$</sup>24<sup>.95</sup></h3>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 text-center">
+					<h2>MedPlus</h2>
+					<h4>For the household with 'round the clock needs</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="med-plus-copy">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<p>
+						The MedPlus membership is focused on making your health care accessible. This program offers discounts on primary care and prescriptions, as well as 24/7 access to doctors and pharmacies with our TeleMedicine service. For just $25 per call or email, you can receive advice and prescriptions at any time. See the full list of discounts and services offered through MedPlus <a href="{{ baseUrl }}/assets/pdf/eSana_Brochure_Med.pdf" target="_blank" onclick="dataLayer.push({'event': 'Link-to-MedPlus-Brochure'});">here</a>.
+					</p>
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li>24/7 Telemedicine for $25/call</li>
+								<li>Surgery Saver up to 66%</li>
+								<li>Bill Negotiator</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li>Lab Work, Cat Scans, MRI, Blood Work up to 70%</li>
+								<li>Prescription Discounts up to 85%</li>
+								<li>Healthcare Navigator</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 body_btn_container center_align">
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=448" target="_blank" class="btn red inverse" onclick="dataLayer.push({'event': 'Buy-btn-Medplus'});">BUY NOW</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

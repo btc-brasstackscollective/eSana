@@ -1,12 +1,15 @@
 var currentIndex = 0;
 var savingsCalculatorCategoryCount = 0;
+var membershipReferralID = 0;
 
 (function( $ ) {
 	$(document).ready(function()
 	{
 		var resizeTimer;
 		
-		updateVideoHeight();
+		setTimeout(function(){
+			updateVideoHeight();
+		}, 500);
 		
 		// Home Page Hero Panel
 		if($('#home_hero_container').length)
@@ -18,6 +21,11 @@ var savingsCalculatorCategoryCount = 0;
 	    // Enter your ids or classes
 	    var toggler = '.navbar-toggle';
 	    var navigationwrapper = '.navbar-header';
+	
+		if($('.membership_referral_id').length)
+			membershipReferralID = $('.membership_referral_id').val();
+	
+		// fire when browser is closed
 	
 		$("#main_navigation").on("click load", toggler, function (e)
 		{
@@ -210,6 +218,8 @@ var savingsCalculatorCategoryCount = 0;
 		{
 			$('.video_container').each(function(index)
 			{
+				$(this).find('video').css('height', '');
+				$(this).find('video').css('height', null);
 				var videoContainerHeight = $(this).parent().height();
 				$(this).height(videoContainerHeight);
 				$(this).find('video').height(videoContainerHeight);

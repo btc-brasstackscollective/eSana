@@ -1,0 +1,202 @@
+{# app/Resources/views/plans.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Plans Page{% endblock %}
+
+{% block bodyClass %}membership{% endblock %}
+
+{% block body %}
+
+	<!-- <p class="hidden membership_referral_id">{{ referralID }}</p> -->
+	
+	<div class="our-plans">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-3 col-md-6 text-center">
+					<h2>MEMBERSHIP</h1>
+					<p>It's easy to find the eSana membership plan that is the best fit for your <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span>. We offer three memberships, each designed to bring you the care you need at the most affordable price possible.</p>
+					<p>Learn more about our plans.</p>
+					
+					<div class="body_btn_container center_align">
+						<a href="#" class="trigger_video btn blue" data-video="eSana_video_1" onclick="dataLayer.push({'event': 'Link-to-Video-1'});">WATCH OUR VIDEO</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="stay_connected_container body_content_container">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+					<h1>BRANDS YOU TRUST</h1>
+					
+					<p>Gain access to a wide network of providers. eSana makes it easy for you to find the services you’re looking for. Use our provider search tool to locate the closest one to you.</p>
+				</div>
+				
+				<div class="img_container col-xs-12">
+					<img src="{{ baseURL }}/assets/img/home/img-provider-logo.png" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="dental_section" class="dental-plus"> 
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-4 col-xs-12 col-md-offset-0 col-md-3">
+					<div class="price price_text">
+						<h3><sup>$</sup>24<sup>.95</sup></h3>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 text-center">
+					<h2>DentalPlus</h2>
+					<h4>For the <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span> looking for more than just dental services</h4>
+					<!-- <a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=447&referralID={{ referralID }}" target="_blank" class="btn red text-center" onclick="dataLayer.push({'event': 'Link-to-MedPlus-Brochure'});">
+						BUY NOW
+					</a> -->
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=447" target="_blank" class="btn red text-center" onclick="dataLayer.push({'event': 'Buy-btn-DentalPlus'});">
+						BUY NOW
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dental-plus-copy">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<p>
+						The DentalPlus membership provides discounts on a wide range of health care services. More than just dental; your vision, prescription, and chiropractic needs are all available at a discounted price through DentalPlus. See the full list of discounts and services offered through DentalPlus <a href="{{ baseUrl }}/assets/pdf/eSana_Brochure_Dental.pdf" target="_blank" onclick="dataLayer.push({'event': 'Link-to-DentalPlus-Brochure'});">here</a>.
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list blue">
+								<li>Dental Discounts up to 75%</li>
+								<li>Vision Discounts up to 60%</li>
+								<li>Chiropractic Discounts up to 50%</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li>Prescription Discounts up to 85%</li>
+								<li>Wellness Screenings</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="medical_section" class="med-plus"> 
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-4 col-xs-12 col-md-offset-0 col-md-3">
+					<div class="price price_text">
+						<h3><sup>$</sup>24<sup>.95</sup></h3>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 text-center">
+					<h2>MedPlus</h2>
+					<h4>For the <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span> with ‘round the clock needs</h4>
+					<!-- <a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=448&referralID={{ referralID }}" target="_blank" class="btn red text-center" onclick="dataLayer.push({'event': 'Link-to-MedPlus-Brochure'});">
+						BUY NOW
+					</a> -->
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=448" target="_blank" class="btn red text-center" onclick="dataLayer.push({'event': 'Buy-btn-MedPlus'});">
+						BUY NOW
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="med-plus-copy">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<p>
+						The MedPlus membership is focused on making your health care accessible. This program offers discounts on primary care and prescriptions, as well as 24/7 access to doctors and pharmacies with our <span class="tool_tip" data-tool-tip="eSana gives you 24/7 access to doctors and pharmacists via your phone and email, a convenient alternative to in-office visits.">TeleMedicine service</span>. For just $25 per call or email, you can receive advice and prescriptions at any time. See the full list of discounts and services offered through MedPlus <a href="{{ baseUrl }}/assets/pdf/eSana_Brochure_Med.pdf" target="_blank" onclick="dataLayer.push({'event': 'Link-to-MedPlus-Brochure'});">here</a>.
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li><span class="tool_tip" data-tool-tip="eSana gives you 24/7 access to doctors and pharmacists via your phone and email, a convenient alternative to in-office visits.">24/7 Telemedicine for $25/call</span></li>
+								<li><span class="tool_tip" data-tool-tip="The cost of surgery can vary drastically from provider to provider, so eSana Advisors will search up to five surgical facilities to find you the best possible price.">Surgery Saver up to 66%</span></li>
+								<li><span class="tool_tip" data-tool-tip="eSana Patient Advocates will work directly with your health care provider to help reduce the out-of-pocket cost of any care service over $2500">Bill Negotiator</span></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li><span class="tool_tip" data-tool-tip="Diagnostic imaging and radiology services, such as MRI’s, Cat-Scans, and blood work can all be discounted with eSana.">Lab Work, Cat Scans, MRI, Blood Work up to 70%</span></li>
+								<li>Prescription Discounts up to 85%</li>
+								<li><span class="tool_tip" data-tool-tip="eSana has partnered with Karis360 to offer you a trusted advisor to answer health care questions on everything from cost estimates to alternative medicine treatments.">Healthcare Navigator</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="deluxe_section" class="deluxe-plus"> 
+		<div class="content_container">
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-4 col-xs-12 col-md-offset-0 col-md-3">
+					<div class="price price_text">
+						<h3><sup>$</sup>39<sup>.95</sup></h3>
+					</div>
+					<div class="best_value_ribbon">
+						<img src="{{ baseUrl }}/assets/img/plans/Ribbon.png"/>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 text-center">
+					<h2>DeluxePlus</h2>
+					<h4>For the <span class="tool_tip" data-tool-tip="eSana believes that health care access shouldn’t be limited to immediate family. Now, a household can include extended family and roommates.">household</span> that needs it all</h4>
+					<a href="https://esana.savewithdiscounthealthcare.com/esana/c_main/create?packageid=449&referralID={{ referralID }}" target="_blank" class="btn red text-center" onclick="dataLayer.push({'event': 'Buy-btn-Deluxe'});">
+						BUY NOW
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div class="deluxe-plus-copy">
+		<div class="content_container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<p>
+						DeluxePlus is a combination of the benefits from MedPlus and DentalPlus. For only a few dollars more, you and your family have the convenient access that MedPlus guarantees with the discounted services that DentalPlus offers. See the full list of discounts and services offered through DeluxePlus <a href="{{ baseUrl }}/assets/pdf/eSana_Brochure_Deluxe.pdf" target="_blank" onclick="dataLayer.push({'event': 'Link-to-Deluxe-Brochure'});">here</a>.
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li>Dental Discounts up to 75%</li>
+								<li>Vision Discounts up to 60%</li>
+								<li>Chiropractic Discounts up to 50%</li>
+								<li><span class="tool_tip" data-tool-tip="eSana gives you 24/7 access to doctors and pharmacists via your phone and email, a convenient alternative to in-office visits.">24/7 Telemedicine for $25/call</span></li>
+								<li>Prescription Discounts up to 85%</li>
+								<li><span class="tool_tip" data-tool-tip="eSana has partnered with Karis360 to offer you a trusted advisor to answer health care questions on everything from cost estimates to alternative medicine treatments.">Healthcare Navigator</span></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<ul class="plus_sign_list">
+								<li><span class="tool_tip" data-tool-tip="The cost of surgery can vary drastically from provider to provider, so eSana Advisors will search up to five surgical facilities to find you the best possible price">Surgery Saver up to 66%</span></li>
+								<li><span class="tool_tip" data-tool-tip="eSana Patient Advocates will work directly with your health care provider to help reduce the out-of-pocket cost of any care service over $2500">Bill Negotiator</span></li>
+								<li><span class="tool_tip" data-tool-tip="Diagnostic imaging and radiology services, such as MRI’s, Cat-Scans, and blood work can all be discounted with eSana.">Lab Work, Cat Scans, MRI, Blood Work up to 70%</span></li>
+								<li>Wellness Screenings</li>
+								<li>Hearing</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
