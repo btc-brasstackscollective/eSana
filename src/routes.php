@@ -12,12 +12,12 @@ $app->get('/', function($request, $response, array $args) {
 });
 
 // Membership Page
-/*$app->get('/membership', function($request, $response, array $args) {
+$app->get('/membership', function($request, $response, array $args) {
 	$args['currentUrl'] = $request->getUri()->getPath();
 	return $this->view->render($response, 'membership.html.twig', $args);
-});*/
+});
 
-$app->get('/membership', 'MembershipController');
+//$app->get('/membership', 'MembershipController');
 
 // Savings Page
 $app->get('/savings', function($request, $response, array $args) {
@@ -62,6 +62,8 @@ $app->get('/faqs', function($request, $response, array $args) {
 });
 
 $app->post('/contact-submit', 'ContactController:send');
+
+$app->post('/inquiry-contact-submit', 'ContactController:inquiry_send');
 
 // create User ID for Referral ID
 $app->post('/api/referralid/{referralid}/userid/{userid}', 'ReferralIDController:createUserID');

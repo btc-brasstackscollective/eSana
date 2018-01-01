@@ -3123,6 +3123,13 @@ a:last-child::after {
     background: #F26E6D url("../img/landingPage/img-bkgd-red-pattern.png") 0 0 repeat;
     background-size: contain; }
   @media only screen and (max-width: 768px) {
+    body#med_plus_landing .hero_content_section,
+    body#dental_landing .hero_content_section,
+    body#dental_plan_form,
+    body#med_plus_telemedicine_form,
+    body#med_plus_prescription_form {
+      background: #73C2BF; } }
+  @media only screen and (max-width: 768px) {
     body.landingpage
 header {
       overflow: hidden; }
@@ -3233,7 +3240,7 @@ h2 {
           border: none;
           padding-left: 50%;
           position: relative;
-          text-align: left;
+          text-align: center;
           white-space: normal; }
           body.landingpage
 .esana_cost_chart
@@ -3244,7 +3251,7 @@ h2 {
             left: 6px;
             padding-right: 10px;
             position: absolute;
-            text-align: left;
+            text-align: center;
             top: 50%;
             white-space: nowrap;
             width: 45%;
@@ -3480,146 +3487,102 @@ a.esana_contact_email::before {
                 left: -22px;
                 width: 17px; } }
   body#dental_plan_form
-header
-#esana_contact_container
-a.esana_contact_phone::before {
-    background: transparent url("../img/landingPage/img-phone-outline-icon-white.png") 0 0 no-repeat !important;
-    height: 20px !important; }
-  body#dental_plan_form
-header
-#esana_contact_container
-a.esana_contact_email::before {
-    background: transparent url("../img/landingPage/img-email-icon-white.png") 0 0 no-repeat !important; }
-  body.landing_page_form
-header {
+.form_container
+,
+  body.landingpage
+.form_container {
     background-color: #ffffff;
-    padding: 0 40px;
-    position: relative; }
-    @media only screen and (max-width: 768px) {
-      body.landing_page_form
-header {
-        padding: 0 20px; } }
-    body.landing_page_form
-header
-#esana_logo_container {
-      background-color: transparent;
-      padding: 20px 40px; }
-      @media only screen and (max-width: 768px) {
-        body.landing_page_form
-header
-#esana_logo_container {
-          padding: 20px 0; } }
-    body.landing_page_form
-header
-#esana_contact_container
-a {
-      color: #EC565A; }
-      body.landing_page_form
-header
-#esana_contact_container
-a.esana_contact_phone::before {
-        background: transparent url("../img/landingPage/img-phone-outline-icon.png") 0 0 no-repeat;
-        height: 19px; }
-        @media only screen and (max-width: 768px) {
-          body.landing_page_form
-header
-#esana_contact_container
-a.esana_contact_phone::before {
-            background-size: cover;
-            height: 15px;
-            left: -18px;
-            width: 13px; } }
-      body.landing_page_form
-header
-#esana_contact_container
-a.esana_contact_email::before {
-        background: transparent url("../img/landingPage/img-email-icon.png") 0 0 no-repeat; }
-        @media only screen and (max-width: 768px) {
-          body.landing_page_form
-header
-#esana_contact_container
-a.esana_contact_email::before {
-            background-size: cover;
-            height: 13px;
-            left: -22px;
-            width: 17px; } }
-  body.landing_page_form
-section {
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
-    transform: translateY(0%);
-    margin: 60px 0;
-    top: 0; }
-    @media only screen and (max-width: 768px) {
-      body.landing_page_form
-section {
-        margin: 30px 0; } }
-    body.landing_page_form
-section
-.landing_content_container {
-      background-color: #ffffff;
-      padding: 40px; }
-      body.landing_page_form
-section
-.landing_content_container
+    border: solid 2px #F26E6D;
+    margin-bottom: 60px;
+    padding: 40px; }
+    body#dental_plan_form
+.form_container
+h1
+,
+    body.landingpage
+.form_container
 h1 {
-        color: #35BAB0; }
-      body.landing_page_form
-section
-.landing_content_container
+      color: #35BAB0;
+      font-size: 36px; }
+    body#dental_plan_form
+.form_container
+form
+,
+    body.landingpage
+.form_container
 form {
-        margin-top: 50px; }
-        body.landing_page_form
-section
-.landing_content_container
+      margin-top: 50px; }
+      body#dental_plan_form
+.form_container
+form
+input[type="checkbox"]
+,
+      body.landingpage
+.form_container
 form
 input[type="checkbox"] {
-          border: solid 2px #979797;
-          border-radius: 0;
-          height: 20px;
-          width: 20px; }
-        body.landing_page_form
-section
-.landing_content_container
-form input[type="text"], body.landing_page_form
-section
-.landing_content_container
-form input[type="email"], body.landing_page_form
-section
-.landing_content_container
+        border: solid 2px #979797;
+        border-radius: 0;
+        height: 20px;
+        width: 20px; }
+      body#dental_plan_form
+.form_container
+form
+input[type="text"],
+      body#dental_plan_form
+.form_container
+form
+input[type="email"],
+      body#dental_plan_form
+.form_container
+form
+input[type="tel"]
+,
+      body.landingpage
+.form_container
+form input[type="text"], body.landingpage
+.form_container
+form input[type="email"], body.landingpage
+.form_container
 form
 input[type="tel"] {
-          border: solid 3px #79CCC9;
-          color: #F2776D;
-          display: block;
-          font-size: 20px;
-          margin-bottom: 20px;
-          padding: 15px 20px;
-          width: 100%; }
-        body.landing_page_form
-section
-.landing_content_container
+        border: solid 3px #79CCC9;
+        color: #F2776D;
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        width: 100%; }
+      body#dental_plan_form
+.form_container
+form
+input[type="submit"]
+,
+      body.landingpage
+.form_container
 form
 input[type="submit"] {
-          margin-top: 30px; }
-        body.landing_page_form
-section
-.landing_content_container
+        margin-top: 30px; }
+      body#dental_plan_form
+.form_container
+form
+p
+,
+      body.landingpage
+.form_container
 form
 p {
-          margin: 0 0 10px 0;
-          padding: 0;
-          text-align: left; }
-        body.landing_page_form
-section
-.landing_content_container
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-align: left; }
+      body#dental_plan_form
+.form_container
+form
+label
+,
+      body.landingpage
+.form_container
 form
 label {
-          color: #454545;
-          font-weight: normal; }
-  body#dental_plan_form
-section
-.landing_content_container {
-    border: solid 2px #F26E6D; }
+        color: #454545;
+        font-weight: normal; }

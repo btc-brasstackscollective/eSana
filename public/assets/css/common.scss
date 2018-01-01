@@ -2595,6 +2595,18 @@ body
 		background-size:contain;
 	}
 	
+	&#med_plus_landing .hero_content_section,
+	&#dental_landing .hero_content_section,
+	&#dental_plan_form,
+	&#med_plus_telemedicine_form,
+	&#med_plus_prescription_form
+	{
+		@media only screen and (max-width : 768px)
+		{
+			background:#73C2BF;
+		}
+	}
+	
 	&.landingpage
 	{	
 		header
@@ -2724,7 +2736,7 @@ body
 						border:none;
 				        padding-left:50%;
 				        position:relative;
-				        text-align:left;
+				        text-align:center;
 				        white-space:normal;
 				        
 				        &::before
@@ -2734,7 +2746,7 @@ body
 					        left:6px;
 					        padding-right:10px;
 					        position:absolute;
-					        text-align:left;
+					        text-align:center;
 					        top:50%;
 					        white-space:nowrap;
 					        width:45%;
@@ -2887,177 +2899,60 @@ body
 				}
 			}
 		}
-	}
-	
-	&#dental_plan_form
-	{
-		header
-		{
-			#esana_contact_container
-			{
-				a
-				{					
-					&.esana_contact_phone
-					{
-						&::before
-						{
-							background:transparent url('../img/landingPage/img-phone-outline-icon-white.png') 0 0 no-repeat !important;
-							height:20px !important;
-						}
-					}
-					
-					&.esana_contact_email
-					{
-						&::before
-						{
-							background:transparent url('../img/landingPage/img-email-icon-white.png') 0 0 no-repeat !important;
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	&.landing_page_form
-	{
-		header
+		
+		.form_container
 		{
 			background-color:#ffffff;
-			padding:0 40px;
-			position:relative;
+			border:solid 2px #F26E6D;
+			margin-bottom:60px;
+			padding:40px;
 			
-			@media only screen and (max-width : 768px)
+			h1
 			{
-				padding:0 20px;	
+				color:#35BAB0;
+				font-size:36px;
 			}
 			
-			#esana_logo_container
+			form
 			{
-				background-color:transparent;
-				padding:20px 40px;
+				margin-top:50px;
 				
-				@media only screen and (max-width : 768px)
+				input[type="checkbox"]
 				{
-					padding:20px 0;	
-				}
-			}
-			
-			#esana_contact_container
-			{
-				a
-				{
-					color:#EC565A;
-				
-					&.esana_contact_phone
-					{
-						&::before
-						{
-							background:transparent url('../img/landingPage/img-phone-outline-icon.png') 0 0 no-repeat;
-							height:19px;
-							
-							@media only screen and (max-width : 768px)
-							{
-								background-size:cover;
-								height:15px;
-								left:-18px;
-								width:13px;	
-							}
-						}
-					}
-					
-					&.esana_contact_email
-					{
-						&::before
-						{
-							background:transparent url('../img/landingPage/img-email-icon.png') 0 0 no-repeat;
-							
-							@media only screen and (max-width : 768px)
-							{
-								background-size:cover;
-								height:13px;
-								left:-22px;
-								width:17px;	
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		section
-		{
-			@include transform(translateY(0%));
-		
-			margin:60px 0;
-			top:0;
-			
-			@media only screen and (max-width : 768px)
-			{
-				margin:30px 0;	
-			}
-			
-			.landing_content_container
-			{
-				background-color:#ffffff;
-				padding:40px;
-				
-				h1
-				{
-					color:#35BAB0;
+					border:solid 2px #979797;
+					border-radius:0;
+					height:20px;
+					width:20px;
 				}
 				
-				form
+				input[type="text"], input[type="email"], input[type="tel"]
 				{
-					margin-top:50px;
-					
-					input[type="checkbox"]
-					{
-						border:solid 2px #979797;
-						border-radius:0;
-						height:20px;
-						width:20px;
-					}
-					
-					input[type="text"], input[type="email"], input[type="tel"]
-					{
-						border:solid 3px #79CCC9;
-						color:#F2776D;
-						display:block;
-						font-size:20px;
-						margin-bottom:20px;
-						padding:15px 20px;
-						width:100%;
-					}
-					
-					input[type="submit"]
-					{
-						margin-top:30px;
-					}
-					
-					p
-					{
-						margin:0 0 10px 0;
-						padding:0;
-						text-align:left;
-					}
-					
-					label
-					{
-						color:#454545;
-						font-weight:normal;
-					}
+					border:solid 3px #79CCC9;
+					color:#F2776D;
+					display:block;
+					font-size:20px;
+					margin-bottom:20px;
+					padding:15px 20px;
+					width:100%;
 				}
-			}
-		}	
-	}
-	
-	&#dental_plan_form
-	{
-		section
-		{
-			.landing_content_container
-			{
-				border:solid 2px #F26E6D;	
+				
+				input[type="submit"]
+				{
+					margin-top:30px;
+				}
+				
+				p
+				{
+					margin:0 0 10px 0;
+					padding:0;
+					text-align:left;
+				}
+				
+				label
+				{
+					color:#454545;
+					font-weight:normal;
+				}
 			}
 		}
 	}
